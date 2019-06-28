@@ -10,6 +10,8 @@ public class CarUpdate : MonoBehaviour
     public float NormalSpeed;
     private float speed_;
 
+    private bool forceForward = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,25 +23,38 @@ public class CarUpdate : MonoBehaviour
     {
         transform.position += transform.forward * speed_ * Time.deltaTime;
 
-        RaycastHit hit;
-        if(Physics.Raycast(transform.position, transform.position + (transform.forward * 1.1f), out hit))
+        RaycastHit[] hits = Physics.RaycastAll(transform.position, transform.forward);
+        bool hitCar = false;
+        for (int i = 0; i < hits.Length; i++)
         {
-            if(tag == "CenterTrafficLight")
+            if (hits[i].collider.gameObject != gameObject && hits[i].collider.tag == "Car" ||
+                hits[i].collider.gameObject != gameObject && hits[i].collider.tag == "CenterTrafficLight")
             {
-                Debug.Log("");
-            }
-            if (hit.collider.gameObject != gameObject && tag == "Car" ||
-                hit.collider.gameObject != gameObject && tag == "CenterTrafficLight")
-            {
-                if (hit.distance < 2)
+                if (hits[i].distance < 2)
                 {
                     speed_ = 0;
+                    hitCar = true;
+                    break;
                 }
+
             }
-            if (speed_ == 0)
-            {
-                speed_ = NormalSpeed;
-            }
+        }
+
+        if (!hitCar && speed_ == 0)
+        {
+            speed_ = NormalSpeed;
+        }
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if(other.tag == "ForceForward")
+        {
+            forceForward = true;
+        }
+        else
+        {
+            forceForward = false;
         }
     }
 

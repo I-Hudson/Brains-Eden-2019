@@ -97,10 +97,9 @@ public class CarSpawner : MonoBehaviour
                 line1Colours.Add(rColour);
                 SpawnCar(randomCar, randomSpawnLocation, rColour);
 
-                yield return new WaitForSeconds(0.2f);
+                yield return new WaitForSeconds(0.25f);
             }
             carCount += numOfCarsSpawned;
-            Debug.Log(carCount);
             initalIndex++;
             yield return new WaitForSeconds(Random.Range(3.0f, 3.5f));
         }
