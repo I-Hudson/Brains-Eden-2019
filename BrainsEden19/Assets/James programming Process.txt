@@ -1,0 +1,8 @@
+Player Controls:
+Players select diff traffic lights based around snapping between lights when moving joystick in x or y dir
+players are able to switch modes between placing road obstacles and changing traffic lights by pressing X
+
+Player Has Hotbar with obstacle options, these can be changed by pressing LB, RB.
+
+traffic lights can be changed by press A
+onstacles can be placed by pressing A 
