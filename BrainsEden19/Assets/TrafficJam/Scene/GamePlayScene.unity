@@ -213,7 +213,7 @@ GameObject:
   - component: {fileID: 35505769}
   m_Layer: 0
   m_Name: ObstacleSpawn (10)
-  m_TagString: Untagged
+  m_TagString: ObstacleSpawnPoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -687,7 +687,7 @@ GameObject:
   - component: {fileID: 223834030}
   m_Layer: 0
   m_Name: Traffic Light (4)
-  m_TagString: Untagged
+  m_TagString: TrafficLightControlable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -737,7 +737,7 @@ GameObject:
   - component: {fileID: 275351183}
   m_Layer: 0
   m_Name: ObstacleSpawn
-  m_TagString: Untagged
+  m_TagString: ObstacleSpawnPoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -878,7 +878,7 @@ GameObject:
   - component: {fileID: 307529217}
   m_Layer: 0
   m_Name: Traffic Light (1)
-  m_TagString: Untagged
+  m_TagString: TrafficLightControlable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1112,7 +1112,7 @@ GameObject:
   - component: {fileID: 320059012}
   m_Layer: 0
   m_Name: Traffic Light (5)
-  m_TagString: Untagged
+  m_TagString: TrafficLightControlable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1162,7 +1162,7 @@ GameObject:
   - component: {fileID: 324232490}
   m_Layer: 0
   m_Name: ObstacleSpawn (7)
-  m_TagString: Untagged
+  m_TagString: ObstacleSpawnPoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1210,7 +1210,7 @@ GameObject:
   - component: {fileID: 348764185}
   m_Layer: 0
   m_Name: ObstacleSpawn (13)
-  m_TagString: Untagged
+  m_TagString: ObstacleSpawnPoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1463,7 +1463,7 @@ GameObject:
   - component: {fileID: 428154712}
   m_Layer: 0
   m_Name: Traffic Light (2)
-  m_TagString: Untagged
+  m_TagString: TrafficLightControlable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2667,7 +2667,7 @@ GameObject:
   - component: {fileID: 906063225}
   m_Layer: 0
   m_Name: ObstacleSpawn (15)
-  m_TagString: Untagged
+  m_TagString: ObstacleSpawnPoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2889,7 +2889,7 @@ GameObject:
   - component: {fileID: 933657179}
   m_Layer: 0
   m_Name: Traffic Light (7)
-  m_TagString: Untagged
+  m_TagString: TrafficLightControlable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3123,7 +3123,7 @@ GameObject:
   - component: {fileID: 999390486}
   m_Layer: 0
   m_Name: ObstacleSpawn (11)
-  m_TagString: Untagged
+  m_TagString: ObstacleSpawnPoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3171,7 +3171,7 @@ GameObject:
   - component: {fileID: 999479199}
   m_Layer: 0
   m_Name: ObstacleSpawn (12)
-  m_TagString: Untagged
+  m_TagString: ObstacleSpawnPoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3354,7 +3354,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 6
+  orthographic size: 7
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -3578,7 +3578,7 @@ GameObject:
   - component: {fileID: 1107513064}
   m_Layer: 0
   m_Name: ObstacleSpawn (5)
-  m_TagString: Untagged
+  m_TagString: ObstacleSpawnPoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3891,7 +3891,7 @@ GameObject:
   - component: {fileID: 1146503140}
   m_Layer: 0
   m_Name: ObstacleSpawn (4)
-  m_TagString: Untagged
+  m_TagString: ObstacleSpawnPoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3939,7 +3939,7 @@ GameObject:
   - component: {fileID: 1169991978}
   m_Layer: 0
   m_Name: Traffic Light
-  m_TagString: Untagged
+  m_TagString: TrafficLightControlable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4215,7 +4215,7 @@ GameObject:
   - component: {fileID: 1243436552}
   m_Layer: 0
   m_Name: ObstacleSpawn (1)
-  m_TagString: Untagged
+  m_TagString: ObstacleSpawnPoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4623,7 +4623,7 @@ GameObject:
   - component: {fileID: 1539230842}
   m_Layer: 0
   m_Name: ObstacleSpawn (9)
-  m_TagString: Untagged
+  m_TagString: ObstacleSpawnPoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4671,7 +4671,7 @@ GameObject:
   - component: {fileID: 1545806701}
   m_Layer: 0
   m_Name: Traffic Light (6)
-  m_TagString: Untagged
+  m_TagString: TrafficLightControlable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4812,7 +4812,7 @@ GameObject:
   - component: {fileID: 1586243891}
   m_Layer: 0
   m_Name: ObstacleSpawn (3)
-  m_TagString: Untagged
+  m_TagString: ObstacleSpawnPoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5356,7 +5356,7 @@ GameObject:
   - component: {fileID: 1777195509}
   m_Layer: 0
   m_Name: ObstacleSpawn (6)
-  m_TagString: Untagged
+  m_TagString: ObstacleSpawnPoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5485,7 +5485,7 @@ GameObject:
   - component: {fileID: 1848273425}
   m_Layer: 0
   m_Name: ObstacleSpawn (8)
-  m_TagString: Untagged
+  m_TagString: ObstacleSpawnPoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5571,7 +5571,7 @@ GameObject:
   - component: {fileID: 1927004873}
   m_Layer: 0
   m_Name: ObstacleSpawn (2)
-  m_TagString: Untagged
+  m_TagString: ObstacleSpawnPoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5700,7 +5700,7 @@ GameObject:
   - component: {fileID: 2060060242}
   m_Layer: 0
   m_Name: ObstacleSpawn (14)
-  m_TagString: Untagged
+  m_TagString: ObstacleSpawnPoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5748,7 +5748,7 @@ GameObject:
   - component: {fileID: 2104336209}
   m_Layer: 0
   m_Name: Traffic Light (3)
-  m_TagString: Untagged
+  m_TagString: TrafficLightControlable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

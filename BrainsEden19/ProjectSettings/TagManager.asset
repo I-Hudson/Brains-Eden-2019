@@ -7,6 +7,8 @@ TagManager:
   - LoopTrigger
   - Car
   - CenterTrafficLight
+  - TrafficLightControlable
+  - ObstacleSpawnPoint
   layers:
   - Default
   - TransparentFX

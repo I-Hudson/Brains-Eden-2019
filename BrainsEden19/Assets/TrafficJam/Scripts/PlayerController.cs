@@ -52,19 +52,19 @@ public class PlayerController : MonoBehaviour
     // Use this for initialization
     public void UpdateTrafficLightList()
     {
-        TrafficLight[] listOfAllTrafficLights = GameObject.FindObjectsOfType<TrafficLight>();
-        foreach (TrafficLight tl in listOfAllTrafficLights)
+        GameObject[] listOfAllTrafficLights = GameObject.FindGameObjectsWithTag("TrafficLightControlable");
+        foreach (GameObject tl in listOfAllTrafficLights)
         {
-            if (tl.iPlayerIndex == iPlayerIndex)
+            if (tl.GetComponent<TrafficLight>().iPlayerIndex == iPlayerIndex)
             {
-                trafficLightsList.Add(tl.gameObject);
+                trafficLightsList.Add(tl);
             }
         }
 
-        ObstacleSpawn[] listOfAllObstacleSpawn = GameObject.FindObjectsOfType<ObstacleSpawn>();
-        foreach(ObstacleSpawn os in listOfAllObstacleSpawn)
+        GameObject[] listOfAllObstacleSpawn = GameObject.FindGameObjectsWithTag("ObstacleSpawnPoint");
+        foreach(GameObject os in listOfAllObstacleSpawn)
         {
-            ObstacleRoadList.Add(os);
+            ObstacleRoadList.Add(os.GetComponent<ObstacleSpawn>());
         }
     }
 
@@ -77,26 +77,21 @@ public class PlayerController : MonoBehaviour
     //Main switch checking each joystick input
     private void CheckPlayerInput()
     {
-        switch(iPlayerIndex)
+        if (Input.GetKeyDown("joystick " + (iPlayerIndex+1) + " button 4"))//Left Bumper
         {
-            case 0:
-                
-                if (Input.GetKeyDown(KeyCode.Joystick1Button4))//Left Bumper
-                {
-                    JoystickBumperPressed(0);
-                }
-                else if (Input.GetKeyDown(KeyCode.Joystick1Button5))//right Bumper
-                {
-                    JoystickBumperPressed(1);
-                }
+            JoystickBumperPressed(0);
+            Debug.Log("joystick " + (iPlayerIndex + 1) + " button 4");
+        }
+        else if (Input.GetKeyDown("joystick "+ (iPlayerIndex + 1) + " button 5"))//right Bumper
+        {
+            JoystickBumperPressed(1);
+            Debug.Log("joystick " + (iPlayerIndex + 1) + " button 5");
+        }
 
-                if (Input.GetKeyDown(KeyCode.Joystick1Button2))// X Button
-                {
-                    SwapInteractionMode();
-                }
-                break;
-            default:
-                break;
+        if (Input.GetKeyDown("joystick " + (iPlayerIndex + 1) + " button 2"))// X Button
+        {
+            SwapInteractionMode();
+            Debug.Log("joystick " + (iPlayerIndex + 1) + " button 2");
         }
     }
 
@@ -134,7 +129,7 @@ public class PlayerController : MonoBehaviour
                 iCurrentObstacleIndex++;
             }
 
-            if (iCurrentObstacleIndex < 0)
+            if (iCurrentObstacleIndex < (int)(Obstacles.END_OF_ENUM) - 1)
             {
                 iCurrentObstacleIndex = (int)(Obstacles.END_OF_ENUM) - 1;
             }
