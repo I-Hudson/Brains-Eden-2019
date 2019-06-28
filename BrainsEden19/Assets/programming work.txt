@@ -1,0 +1,17 @@
+Player controls
+Spawning cars the correct amount and the colour (could be weighted to certain players if needed)
+Car movement (speed, loop cars around the main roads)
+traffic system to move cars from the main road to side roads (collision triggers)
+
+Object spawning, oil patches, road blocks
+obstacle feedback, when a car hits an oil slick car spins out of control and crashes
+Collision between cars when hit
+
+
+Score system (when car leaves road on your square add score)
+
+UI main menu
+UI items like score for players, time left? / cars remaining?
+
+
+
