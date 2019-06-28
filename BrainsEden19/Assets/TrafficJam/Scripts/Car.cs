@@ -7,4 +7,6 @@ public class Car : ScriptableObject
 {
     public GameObject Model;
     public float Speed;
+    public Color Colour;
+    public string Tag;
 }

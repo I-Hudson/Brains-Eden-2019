@@ -6,7 +6,9 @@ public class CarUpdate : MonoBehaviour
 {
     public Transform[] SpawnLocations;
     public int spawnLocIndex;
-    public float speed;
+    public float InitalSpeed;
+    public float NormalSpeed;
+    private float speed_;
 
     // Start is called before the first frame update
     void Start()
@@ -17,7 +19,28 @@ public class CarUpdate : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position += transform.forward * speed * Time.deltaTime;
+        transform.position += transform.forward * speed_ * Time.deltaTime;
+
+        RaycastHit hit;
+        if(Physics.Raycast(transform.position, transform.position + (transform.forward * 1.1f), out hit))
+        {
+            if(tag == "CenterTrafficLight")
+            {
+                Debug.Log("");
+            }
+            if (hit.collider.gameObject != gameObject && tag == "Car" ||
+                hit.collider.gameObject != gameObject && tag == "CenterTrafficLight")
+            {
+                if (hit.distance < 2)
+                {
+                    speed_ = 0;
+                }
+            }
+            if (speed_ == 0)
+            {
+                speed_ = NormalSpeed;
+            }
+        }
     }
 
     private void OnTriggerEnter(Collider other)

@@ -13,5 +13,10 @@ Score system (when car leaves road on your square add score)
 UI main menu
 UI items like score for players, time left? / cars remaining?
 
+Ideas:
+
+Argry bird but 3d
+one move, world changes around you
+
 
 
