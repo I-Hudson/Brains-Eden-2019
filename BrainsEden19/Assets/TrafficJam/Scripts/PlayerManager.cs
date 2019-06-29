@@ -49,7 +49,7 @@ public class PlayerManager : MonoBehaviour
         if(CheckPlayersConnected() || overideNeededPlayers)
         {
             Time.timeScale = 1;
-            debugTextMesh.text = "";
+            //debugTextMesh.text = "";
         }
         else
         {

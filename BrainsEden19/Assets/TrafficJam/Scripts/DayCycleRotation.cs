@@ -17,21 +17,17 @@ public class DayCycleRotation : MonoBehaviour
     [SerializeField]
     private Transform NightLightCool;
 
+    GameManager gm;
+
+    private void Start()
+    {
+        gm = GameObject.FindObjectOfType<GameManager>();
+        rotationalSpeed = 180.0f / (gm.leveltimer);
+    }
     // Update is called once per frame
     void Update()
     {
-        dayLightCool.Rotate(rotationDirection,Time.deltaTime * rotationalSpeed);
-        dayLightWarm.Rotate(rotationDirection, Time.deltaTime * rotationalSpeed);
-
-        if(dayLightCool.rotation.x > 180 || dayLightCool.rotation.x < 0)
-        {
-            dayLightCool.GetComponent<Light>().enabled = false;
-            dayLightWarm.GetComponent<Light>().enabled = false;
-        }
-        else
-        {
-            dayLightCool.GetComponent<Light>().enabled = true;
-            dayLightWarm.GetComponent<Light>().enabled = true;
-        }
+            dayLightCool.Rotate(rotationDirection, Time.deltaTime * rotationalSpeed);
+            dayLightWarm.Rotate(rotationDirection, Time.deltaTime * rotationalSpeed);
     }
 }

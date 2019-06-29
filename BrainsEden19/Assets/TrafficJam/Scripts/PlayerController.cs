@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using XInputDotNetPure;
 
 public class PlayerController : MonoBehaviour
 {
@@ -55,6 +56,8 @@ public class PlayerController : MonoBehaviour
         END_OF_ENUM
     }
 
+    PlayerIndex playerIndex;
+
     // Use this for initialization
     public void UpdateTrafficLightList()
     {
@@ -103,57 +106,71 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetKeyDown("joystick " + (iPlayerIndex+1) + " button 4"))//Left Bumper
         {
+            GamePad.SetVibration((PlayerIndex)iPlayerIndex+1, 1,0);
             JoystickBumperPressed(0);
             Debug.Log("joystick " + (iPlayerIndex + 1) + " button 4");
         }
         else if (Input.GetKeyDown("joystick "+ (iPlayerIndex + 1) + " button 5"))//right Bumper
         {
+            GamePad.SetVibration((PlayerIndex)iPlayerIndex + 1, 0, 1);
             JoystickBumperPressed(1);
             Debug.Log("joystick " + (iPlayerIndex + 1) + " button 5");
         }
 
         if (Input.GetKeyDown("joystick " + (iPlayerIndex + 1) + " button 0"))// X Button
         {
+            GamePad.SetVibration((PlayerIndex)iPlayerIndex + 1, 1, 1);
             ColorButtonPressed(0);
             Debug.Log("A button Pressed");
         }
         else if (Input.GetKeyDown("joystick " + (iPlayerIndex + 1) + " button 1"))// X Button
         {
+            GamePad.SetVibration((PlayerIndex)iPlayerIndex + 1, 1, 1);
             ColorButtonPressed(1);
             Debug.Log("A button Pressed");
         }
         else if (Input.GetKeyDown("joystick " + (iPlayerIndex + 1) + " button 2"))// X Button
         {
+            GamePad.SetVibration((PlayerIndex)iPlayerIndex + 1, 1, 1);
             ColorButtonPressed(2);
             Debug.Log("A button Pressed");
         }
         else if (Input.GetKeyDown("joystick " + (iPlayerIndex + 1) + " button 3"))// X Button
         {
+            GamePad.SetVibration((PlayerIndex)iPlayerIndex + 1, 1, 1);
             ColorButtonPressed(3);
             Debug.Log("A button Pressed");
         }
 
         if (Input.GetAxis("DPadX" + (iPlayerIndex + 1)) >= 0.1)// X Button
         {
+            GamePad.SetVibration((PlayerIndex)iPlayerIndex + 1, 1, 1);
             Debug.Log("DPad Right");
             SwitchObstacleType(0);
         }
-        else if (Input.GetAxis("DPadX" + (iPlayerIndex + 1)) <= 0.1)// X Button
+        else if (Input.GetAxis("DPadX" + (iPlayerIndex + 1)) <= -0.1)// X Button
         {
+            GamePad.SetVibration((PlayerIndex)iPlayerIndex + 1, 1, 1);
             Debug.Log("DPad Left");
             SwitchObstacleType(1);
         }
         else if (Input.GetAxis("DPadY" + (iPlayerIndex + 1)) >= 0.1)// X Button
         {
+            GamePad.SetVibration((PlayerIndex)iPlayerIndex + 1, 1, 1);
             Debug.Log("DPad Up");
             SwitchObstacleType(2);
         }
-        else if (Input.GetAxis("DPadY" + (iPlayerIndex + 1)) <= 0.1)// X Button
+        else if (Input.GetAxis("DPadY" + (iPlayerIndex + 1)) <= -0.1)// X Button
         {
+            GamePad.SetVibration((PlayerIndex)iPlayerIndex + 1, 1, 1);
             Debug.Log("DPad Down");
             SwitchObstacleType(3);
         }
+    }
 
+    private void FixedUpdate()
+    {
+        GamePad.SetVibration((PlayerIndex)iPlayerIndex, 0, 0);
     }
 
     //called when either left or right joystick bumper pressed, 0 = left, 1 = right
