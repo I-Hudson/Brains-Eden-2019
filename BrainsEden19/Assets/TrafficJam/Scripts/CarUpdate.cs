@@ -8,7 +8,8 @@ public class CarUpdate : MonoBehaviour
     public int spawnLocIndex;
     public float InitalSpeed;
     public float NormalSpeed;
-    private float speed_;
+    public float speed_;
+    public float MinHitDistance;
 
     private bool forceForward = false;
 
@@ -30,17 +31,39 @@ public class CarUpdate : MonoBehaviour
             if (hits[i].collider.gameObject != gameObject && hits[i].collider.tag == "Car" ||
                 hits[i].collider.gameObject != gameObject && hits[i].collider.tag == "CenterTrafficLight")
             {
-                if (hits[i].distance < 2)
+                if (hits[i].distance < MinHitDistance)
                 {
-                    speed_ = 0;
+                    if (gameObject && hits[i].collider.tag == "Car")
+                    {
+                        speed_ = hits[i].collider.gameObject.GetComponent<CarUpdate>().speed_;
+                        if(speed_ > NormalSpeed)
+                        {
+                            speed_ = NormalSpeed;
+                        }
+                    }
+                    else
+                    {
+                        speed_ = 0;
+                    }
                     hitCar = true;
                     break;
                 }
-
             }
         }
 
         if (!hitCar && speed_ == 0)
+        {
+            speed_ = NormalSpeed;
+        }
+        else if(!hitCar)
+        {
+            speed_ = NormalSpeed;
+        }
+    }
+
+    private void LateUpdate()
+    {
+        if(forceForward && speed_ == 0)
         {
             speed_ = NormalSpeed;
         }

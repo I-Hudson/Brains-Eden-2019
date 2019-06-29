@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: Car
   m_EditorClassIdentifier: 
   Model: {fileID: 2782068901828834714, guid: 3eb86a26ae52487488dec5ac5496fb3b, type: 3}
-  Speed: 15
+  MaxSpeed: 15
+  ControlSpeed: 15
+  MinHitDistance: 2.5
   Colour: {r: 1, g: 0.92332065, b: 0, a: 1}
   Tag: Car

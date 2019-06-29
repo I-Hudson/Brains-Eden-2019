@@ -6,7 +6,9 @@ using UnityEngine;
 public class Car : ScriptableObject
 {
     public GameObject Model;
-    public float Speed;
+    public float MaxSpeed;
+    public float ControlSpeed;
+    public float MinHitDistance;
     public Color Colour;
     public string Tag;
 }

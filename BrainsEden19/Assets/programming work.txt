@@ -1,6 +1,6 @@
-Player controls
-Spawning cars the correct amount and the colour (could be weighted to certain players if needed)
-Car movement (speed, loop cars around the main roads)
+Player controls DONE
+Spawning cars the correct amount and the colour (could be weighted to certain players if needed) DONE
+Car movement (speed, loop cars around the main roads) DONE
 traffic system to move cars from the main road to side roads (collision triggers)
 
 Object spawning, oil patches, road blocks

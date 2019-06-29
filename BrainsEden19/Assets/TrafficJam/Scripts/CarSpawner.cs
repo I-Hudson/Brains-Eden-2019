@@ -25,6 +25,11 @@ public class CarSpawner : MonoBehaviour
     private bool spawnCars = true;
 
     [SerializeField]
+    private float SingleCarDelay;
+    [SerializeField]
+    private Vector2 MinMaxSpawnTime;
+
+    [SerializeField]
     private int maxCarCount;
     [SerializeField]
     private int minCarCount;
@@ -35,7 +40,7 @@ public class CarSpawner : MonoBehaviour
 
     [SerializeField]
     private Color[] initalColours;
-    private bool isFirstSpawn = true;
+    private bool isFirstSpawn = false;
 
     // Start is called before the first frame update
     void Start()
@@ -60,6 +65,7 @@ public class CarSpawner : MonoBehaviour
     IEnumerator SpawnCars()
     {
         List<int> spawnLocationsUsed = new List<int> { 0, 1, 2, 3 };
+        List<Color> spawnColourUsed = new List<Color>(Colours);
         int initalIndex = 0;
 
         while (spawnCars)
@@ -67,6 +73,10 @@ public class CarSpawner : MonoBehaviour
             if(spawnLocationsUsed.Count == 0)
             {
                 spawnLocationsUsed = new List<int> { 0, 1, 2, 3 };
+            }
+            if(spawnColourUsed.Count == 0)
+            {
+                spawnColourUsed = new List<Color>(Colours);
             }
 
             List<Color> line1Colours = new List<Color>();
@@ -84,24 +94,30 @@ public class CarSpawner : MonoBehaviour
             for (int i = 0; i < numOfCarsSpawned; i++)
             {
                 int randomCar = Random.Range(0, Cars.Length);
-                int randomColour = Random.Range(0, Colours.Length - 1);
 
-                if(isFirstSpawn && initalIndex < 4)
+                if (isFirstSpawn && initalIndex < 4)
                 {
                     SpawnCar(randomCar, randomSpawnLocation, initalColours[i]);
                 }
 
-                Color rColour = Colours[randomColour];
-                rColour = CheckColour(line1Colours, rColour);
+                int randomColour = Random.Range(0, spawnColourUsed.Count);//Random.Range(0, Colours.Length - 1);
+                Debug.Log(randomColour);
+                Color rColour = spawnColourUsed[randomColour];//Colours[randomColour];
+                spawnColourUsed.Remove(rColour);
+                //Debug.Log(rColour);
+                //rColour = CheckColour(line1Colours, rColour);
 
                 line1Colours.Add(rColour);
+
+                CarColourCheck(randomSpawnLocation, rColour);
+
                 SpawnCar(randomCar, randomSpawnLocation, rColour);
 
-                yield return new WaitForSeconds(0.25f);
+                yield return new WaitForSeconds(SingleCarDelay);
             }
             carCount += numOfCarsSpawned;
             initalIndex++;
-            yield return new WaitForSeconds(Random.Range(3.0f, 3.5f));
+            yield return new WaitForSeconds(Random.Range(MinMaxSpawnTime.x, MinMaxSpawnTime.y));
         }
     }
 
@@ -138,18 +154,28 @@ public class CarSpawner : MonoBehaviour
         return c;
     }
 
+    private Color CarColourCheck(int aSpawnLoc, Color aColour)
+    {
+        //check with a raycast the colour of the car in front. if it's the same colour change this 
+        //colour
+        return aColour;
+    }
+
     private void SpawnCar(int aRandomCar, int aSpawnLocIndex, Color aColor)
     {
         GameObject go = Instantiate(Cars[aRandomCar].Model, SpawnLocations[aSpawnLocIndex].position,
                     SpawnLocations[aSpawnLocIndex].rotation, transform);
+        go.name = Cars[aRandomCar].name;
+
         if (!go.GetComponent<CarUpdate>())
         {
             go.AddComponent<CarUpdate>();
         }
-        go.GetComponent<CarUpdate>().InitalSpeed = Cars[aRandomCar].Speed;
-        go.GetComponent<CarUpdate>().NormalSpeed = 10;
+        go.GetComponent<CarUpdate>().InitalSpeed = Cars[aRandomCar].MaxSpeed;
+        go.GetComponent<CarUpdate>().NormalSpeed = Cars[aRandomCar].ControlSpeed;
         go.GetComponent<CarUpdate>().spawnLocIndex = aSpawnLocIndex;
         go.GetComponent<CarUpdate>().SpawnLocations = SpawnLocations;
+        go.GetComponent<CarUpdate>().MinHitDistance = Cars[aRandomCar].MinHitDistance;
         go.tag = Cars[aRandomCar].Tag;
         go.GetComponentInChildren<MeshRenderer>().material.SetColor("_BaseColor", aColor);
 
