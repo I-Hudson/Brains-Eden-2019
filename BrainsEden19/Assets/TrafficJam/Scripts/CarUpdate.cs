@@ -45,32 +45,29 @@ public class CarUpdate : MonoBehaviour
         bool hitCar = false;
         for (int i = 0; i < hits.Length; i++)
         {
-            if (hits[i].collider.gameObject != gameObject && hits[i].collider.tag == "Car" ||
-                hits[i].collider.gameObject != gameObject && hits[i].collider.tag == "CenterTrafficLight")
+            if (hits[i].distance < MinHitDistance)
             {
-                if (hits[i].distance < MinHitDistance)
+                if (gameObject && hits[i].collider.tag == "Car")
                 {
-                    if (gameObject && hits[i].collider.tag == "Car")
+                    speed_ = hits[i].collider.gameObject.GetComponent<CarUpdate>().speed_;
+                    if (speed_ > NormalSpeed)
                     {
-                        speed_ = hits[i].collider.gameObject.GetComponent<CarUpdate>().speed_;
-                        if(speed_ > NormalSpeed)
-                        {
-                            speed_ = NormalSpeed;
-                        }
+                        speed_ = NormalSpeed;
                     }
-                    else
-                    {
-                        if (hits[i].collider.gameObject != gameObject && hits[i].collider.tag == "CenterTrafficLight")
-                        {
-                            if (!forceForward)
-                            {
-                                speed_ = 0;
-                            }
-                        }
-                    }
-                    hitCar = true;
-                    break;
                 }
+                else
+                {
+                    if (hits[i].collider.gameObject != gameObject && hits[i].collider.tag == "CenterTrafficLight" ||
+                        hits[i].collider.gameObject != gameObject && hits[i].collider.tag == "Obstacle_RoadWorks")
+                    {
+                        if (!forceForward)
+                        {
+                            speed_ = 0;
+                        }
+                    }
+                }
+                hitCar = true;
+                break;
             }
         }
 
@@ -144,6 +141,19 @@ public class CarUpdate : MonoBehaviour
         if (other.tag == "ForceForward")
         {
             forceForward = true;
+        }
+
+        if(other.tag == "Obstacle_RoadWorks")
+        {
+
+        }
+        if(other.tag == "Obstacle_SpeedBump")
+        {
+
+        }
+        if (other.tag == "Obstacle_WomanCrossing")
+        {
+
         }
     }
 

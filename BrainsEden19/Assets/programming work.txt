@@ -5,18 +5,13 @@ traffic system to move cars from the main road to side roads (collision triggers
 
 Object spawning, oil patches, road blocks
 obstacle feedback, when a car hits an oil slick car spins out of control and crashes
-Collision between cars when hit
+Collision between cars when hit DONE
 
 
 Score system (when car leaves road on your square add score) DONE
 
-UI main menu
+UI main menu 
 UI items like score for players, time left? / cars remaining?
-
-Ideas:
-
-Argry bird but 3d
-one move, world changes around you
 
 
 
