@@ -33,6 +33,9 @@ public class CarUpdate : MonoBehaviour
     [SerializeField]
     private bool forceForward = false;
 
+    [SerializeField]
+    private bool forceStop = false;
+
     private bool isLooping = false;
 
     private bool isSlow = false;
@@ -70,17 +73,10 @@ public class CarUpdate : MonoBehaviour
         {
             if (hits[i].distance <= MinHitDistance)
             {
-                
-
                 if (hits[i].collider.gameObject != gameObject && hits[i].collider.tag == "Car")
                 {
                     Debug.DrawRay(rayCastStartPos.position, transform.forward * hits[i].distance, Color.magenta, 5.0f);
                     speed_ = hits[i].collider.gameObject.GetComponent<CarUpdate>().speed_;
-
-                    if (CarType == CarType.Truck)
-                    {
-                        Debug.Log(hits[i].distance);
-                    }
 
                     if (speed_ > NormalSpeed)
                     {
@@ -103,12 +99,12 @@ public class CarUpdate : MonoBehaviour
                                 {
                                     speed_ = 0;
                                     hitCar = true;
+                                    break;
                                 }
                             }
                         }
                     }
                 }
-
             }
         }
 
@@ -190,6 +186,7 @@ public class CarUpdate : MonoBehaviour
             {
                 speed_ = 0;
             }
+            forceStop = true;
         }
 
         if (other.tag == "ForceForward")
@@ -211,6 +208,14 @@ public class CarUpdate : MonoBehaviour
         if (other.tag == "Obstacle_WomanCrossing")
         {
             StartCoroutine(WomanCrossing());
+        }
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.tag == "CenterTrafficLight")
+        {
+            forceStop = false;
         }
     }
 
