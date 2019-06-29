@@ -30,7 +30,19 @@ public class ScoreSystem : MonoBehaviour
         }
         else
         {
-            PlayerScore[aPlayer] += 1;
+            PlayerScore[aPlayer] += aScoreToAdd;
+        }
+    }
+
+    public void RemoveScore(CarColour aPlayer, int aScoreToRemove)
+    {
+        if (!PlayerScore.ContainsKey(aPlayer))
+        {
+            PlayerScore.Add(aPlayer, -aScoreToRemove);
+        }
+        else
+        {
+            PlayerScore[aPlayer] -= aScoreToRemove;
         }
     }
 }

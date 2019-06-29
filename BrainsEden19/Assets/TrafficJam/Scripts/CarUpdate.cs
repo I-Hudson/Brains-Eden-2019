@@ -137,11 +137,21 @@ public class CarUpdate : MonoBehaviour
         if (other.tag == "Car")
         {
             update = false;
+            ScoreSystem.Instance.RemoveScore(CarColour, 1);
+            StartCoroutine(CarCrashed());
         }
 
         if (other.tag == "ForceForward")
         {
             forceForward = true;
         }
+    }
+
+    IEnumerator CarCrashed()
+    {
+        yield return new WaitForSeconds(5.0f);
+
+        FindObjectOfType<CarSpawner>().RemoveCar();
+        Destroy(gameObject);
     }
 }
