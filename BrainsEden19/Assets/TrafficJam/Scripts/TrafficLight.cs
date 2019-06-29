@@ -11,6 +11,9 @@ public class TrafficLight : MonoBehaviour
 
     public bool bActive = false;
 
+    public PlayerManager playerManager;
+    private PlayerController myPlayer;
+
     [SerializeField]
     private MeshRenderer meshRenderer;
 
@@ -27,6 +30,9 @@ public class TrafficLight : MonoBehaviour
     private Material trafflightGreen;
     [SerializeField]
     private Material trafflightRed;
+
+    [SerializeField]
+    private ObstacleSpawn myRoadObstcle;
 
     public void HighLightArea(bool highlighted, int iPlayerIndex)
     {
@@ -58,6 +64,15 @@ public class TrafficLight : MonoBehaviour
         }
     }
 
+    private bool CheckRoadClear()
+    {
+        if(myRoadObstcle && myRoadObstcle.currentObstacle && myRoadObstcle.currentObstacle.tag == "Obstacle_RoadWorks")
+        {
+            return false;
+        }
+        return true;
+    }
+
     private void Start()
     {
         meshRenderer.material = trafflightRed;
@@ -79,9 +94,10 @@ public class TrafficLight : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "Car" && bActive)
+        if(other.tag == "Car" && bActive && CheckRoadClear() && !other.GetComponent<CarUpdate>().TurnedIntoZone)
         {
-            other.transform.rotation = Quaternion.LookRotation(-other.transform.right, other.transform.forward);
+            other.transform.eulerAngles += new Vector3(0, -90, 0);
+            other.GetComponent<CarUpdate>().TurnedIntoZone = true;
         }
     }
 }

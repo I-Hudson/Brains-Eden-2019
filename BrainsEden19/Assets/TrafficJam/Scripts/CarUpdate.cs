@@ -28,11 +28,7 @@ public class CarUpdate : MonoBehaviour
 
     private bool isSlow = false;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public bool TurnedIntoZone = false;
 
     // Update is called once per frame
     void Update()

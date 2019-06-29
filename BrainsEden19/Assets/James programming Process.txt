@@ -1,2 +1,6 @@
 Road Block Obstacle
-Volumetric Fog
+
+
+stop being able to turn if a road block is valid DONE
+Add Traffic Light Model/ functionality 
+Char Selection Sceen

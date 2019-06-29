@@ -33,8 +33,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private int iCurrentObstacleIndex = 0;
 
-    [SerializeField]
-    private List<ObstacleSpawn> ObstacleRoadList = new List<ObstacleSpawn>();
+    public List<ObstacleSpawn> ObstacleRoadList = new List<ObstacleSpawn>();
 
     public Obstacles currentObstacle = Obstacles.Speed_Bumps;
 

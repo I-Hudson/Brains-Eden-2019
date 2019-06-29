@@ -19,7 +19,7 @@ public class PlayerManager : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI debugTextMesh;
 
-    private List<PlayerController> players = new List<PlayerController>();
+    public List<PlayerController> players = new List<PlayerController>();
 
     [SerializeField]
     private List<ObstacleSpawn> ObstacleRoadList = new List<ObstacleSpawn>();

@@ -261,8 +261,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   iPlayerIndex: 3
-  iTimeTillRemoved: 5
+  iTimeTillRemoved: 20
   playerManager: {fileID: 0}
+  currentObstacle: {fileID: 0}
   highlightedArea: {fileID: 1688549732}
   clearMat: {fileID: 2100000, guid: b88a3941c37d7964d977acb9916c755f, type: 2}
   whiteMat: {fileID: 2100000, guid: 38b93c8556e03144da336e16457b0142, type: 2}
@@ -975,12 +976,14 @@ MonoBehaviour:
   iPlayerIndex: 1
   fMaxActiveTime: 3
   bActive: 0
+  playerManager: {fileID: 0}
   meshRenderer: {fileID: 575371641}
   highlightedArea: {fileID: 946104339}
   clearMat: {fileID: 2100000, guid: b88a3941c37d7964d977acb9916c755f, type: 2}
   whiteMat: {fileID: 2100000, guid: 38b93c8556e03144da336e16457b0142, type: 2}
   trafflightGreen: {fileID: 2100000, guid: aa488e258ee634f49ae4a82e5c647188, type: 2}
   trafflightRed: {fileID: 2100000, guid: 1a49c1c00c0b5a341870c94c6f6d87c5, type: 2}
+  myRoadObstcle: {fileID: 348764185}
 --- !u!65 &223834031
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1039,8 +1042,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   iPlayerIndex: 2
-  iTimeTillRemoved: 5
+  iTimeTillRemoved: 20
   playerManager: {fileID: 0}
+  currentObstacle: {fileID: 0}
   highlightedArea: {fileID: 761984006}
   clearMat: {fileID: 2100000, guid: b88a3941c37d7964d977acb9916c755f, type: 2}
   whiteMat: {fileID: 2100000, guid: 38b93c8556e03144da336e16457b0142, type: 2}
@@ -1187,12 +1191,14 @@ MonoBehaviour:
   iPlayerIndex: 2
   fMaxActiveTime: 3
   bActive: 0
+  playerManager: {fileID: 0}
   meshRenderer: {fileID: 821902749}
   highlightedArea: {fileID: 1120139041}
   clearMat: {fileID: 2100000, guid: b88a3941c37d7964d977acb9916c755f, type: 2}
   whiteMat: {fileID: 2100000, guid: 38b93c8556e03144da336e16457b0142, type: 2}
   trafflightGreen: {fileID: 2100000, guid: aa488e258ee634f49ae4a82e5c647188, type: 2}
   trafflightRed: {fileID: 2100000, guid: 1a49c1c00c0b5a341870c94c6f6d87c5, type: 2}
+  myRoadObstcle: {fileID: 275351183}
 --- !u!65 &307529218
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1444,12 +1450,14 @@ MonoBehaviour:
   iPlayerIndex: 0
   fMaxActiveTime: 3
   bActive: 0
+  playerManager: {fileID: 0}
   meshRenderer: {fileID: 294548701}
   highlightedArea: {fileID: 317780634}
   clearMat: {fileID: 2100000, guid: b88a3941c37d7964d977acb9916c755f, type: 2}
   whiteMat: {fileID: 2100000, guid: 38b93c8556e03144da336e16457b0142, type: 2}
   trafflightGreen: {fileID: 2100000, guid: aa488e258ee634f49ae4a82e5c647188, type: 2}
   trafflightRed: {fileID: 2100000, guid: 1a49c1c00c0b5a341870c94c6f6d87c5, type: 2}
+  myRoadObstcle: {fileID: 324232490}
 --- !u!65 &320059013
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1508,8 +1516,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   iPlayerIndex: 0
-  iTimeTillRemoved: 5
+  iTimeTillRemoved: 20
   playerManager: {fileID: 0}
+  currentObstacle: {fileID: 0}
   highlightedArea: {fileID: 360847832}
   clearMat: {fileID: 2100000, guid: b88a3941c37d7964d977acb9916c755f, type: 2}
   whiteMat: {fileID: 2100000, guid: 38b93c8556e03144da336e16457b0142, type: 2}
@@ -1565,8 +1574,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   iPlayerIndex: 1
-  iTimeTillRemoved: 5
+  iTimeTillRemoved: 20
   playerManager: {fileID: 0}
+  currentObstacle: {fileID: 0}
   highlightedArea: {fileID: 1611645455}
   clearMat: {fileID: 2100000, guid: b88a3941c37d7964d977acb9916c755f, type: 2}
   whiteMat: {fileID: 2100000, guid: 38b93c8556e03144da336e16457b0142, type: 2}
@@ -1840,12 +1850,14 @@ MonoBehaviour:
   iPlayerIndex: 1
   fMaxActiveTime: 3
   bActive: 0
+  playerManager: {fileID: 0}
   meshRenderer: {fileID: 1311259037}
   highlightedArea: {fileID: 1565312813}
   clearMat: {fileID: 2100000, guid: b88a3941c37d7964d977acb9916c755f, type: 2}
   whiteMat: {fileID: 2100000, guid: 38b93c8556e03144da336e16457b0142, type: 2}
   trafflightGreen: {fileID: 2100000, guid: aa488e258ee634f49ae4a82e5c647188, type: 2}
   trafflightRed: {fileID: 2100000, guid: 1a49c1c00c0b5a341870c94c6f6d87c5, type: 2}
+  myRoadObstcle: {fileID: 999479199}
 --- !u!65 &428154713
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1908,6 +1920,7 @@ MonoBehaviour:
     type: 3}
   overideNeededPlayers: 0
   debugTextMesh: {fileID: 750587332}
+  players: []
   ObstacleRoadList: []
 --- !u!1 &473484939
 GameObject:
@@ -3315,8 +3328,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   iPlayerIndex: 1
-  iTimeTillRemoved: 5
+  iTimeTillRemoved: 20
   playerManager: {fileID: 0}
+  currentObstacle: {fileID: 0}
   highlightedArea: {fileID: 1460111725}
   clearMat: {fileID: 2100000, guid: b88a3941c37d7964d977acb9916c755f, type: 2}
   whiteMat: {fileID: 2100000, guid: 38b93c8556e03144da336e16457b0142, type: 2}
@@ -3559,12 +3573,14 @@ MonoBehaviour:
   iPlayerIndex: 3
   fMaxActiveTime: 3
   bActive: 0
+  playerManager: {fileID: 0}
   meshRenderer: {fileID: 1533104745}
   highlightedArea: {fileID: 1046236317}
   clearMat: {fileID: 2100000, guid: b88a3941c37d7964d977acb9916c755f, type: 2}
   whiteMat: {fileID: 2100000, guid: 38b93c8556e03144da336e16457b0142, type: 2}
   trafflightGreen: {fileID: 2100000, guid: aa488e258ee634f49ae4a82e5c647188, type: 2}
   trafflightRed: {fileID: 2100000, guid: 1a49c1c00c0b5a341870c94c6f6d87c5, type: 2}
+  myRoadObstcle: {fileID: 1539230842}
 --- !u!65 &933657180
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3818,8 +3834,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   iPlayerIndex: 3
-  iTimeTillRemoved: 5
+  iTimeTillRemoved: 20
   playerManager: {fileID: 0}
+  currentObstacle: {fileID: 0}
   highlightedArea: {fileID: 916171769}
   clearMat: {fileID: 2100000, guid: b88a3941c37d7964d977acb9916c755f, type: 2}
   whiteMat: {fileID: 2100000, guid: 38b93c8556e03144da336e16457b0142, type: 2}
@@ -3869,8 +3886,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   iPlayerIndex: 1
-  iTimeTillRemoved: 5
+  iTimeTillRemoved: 20
   playerManager: {fileID: 0}
+  currentObstacle: {fileID: 0}
   highlightedArea: {fileID: 1628243840}
   clearMat: {fileID: 2100000, guid: b88a3941c37d7964d977acb9916c755f, type: 2}
   whiteMat: {fileID: 2100000, guid: 38b93c8556e03144da336e16457b0142, type: 2}
@@ -4289,8 +4307,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   iPlayerIndex: 0
-  iTimeTillRemoved: 5
+  iTimeTillRemoved: 20
   playerManager: {fileID: 0}
+  currentObstacle: {fileID: 0}
   highlightedArea: {fileID: 884028145}
   clearMat: {fileID: 2100000, guid: b88a3941c37d7964d977acb9916c755f, type: 2}
   whiteMat: {fileID: 2100000, guid: 38b93c8556e03144da336e16457b0142, type: 2}
@@ -4625,8 +4644,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   iPlayerIndex: 0
-  iTimeTillRemoved: 5
+  iTimeTillRemoved: 20
   playerManager: {fileID: 0}
+  currentObstacle: {fileID: 0}
   highlightedArea: {fileID: 552263833}
   clearMat: {fileID: 2100000, guid: b88a3941c37d7964d977acb9916c755f, type: 2}
   whiteMat: {fileID: 2100000, guid: 38b93c8556e03144da336e16457b0142, type: 2}
@@ -4680,12 +4700,14 @@ MonoBehaviour:
   iPlayerIndex: 0
   fMaxActiveTime: 3
   bActive: 0
+  playerManager: {fileID: 0}
   meshRenderer: {fileID: 630533691}
   highlightedArea: {fileID: 670566108}
   clearMat: {fileID: 2100000, guid: b88a3941c37d7964d977acb9916c755f, type: 2}
   whiteMat: {fileID: 2100000, guid: 38b93c8556e03144da336e16457b0142, type: 2}
   trafflightGreen: {fileID: 2100000, guid: aa488e258ee634f49ae4a82e5c647188, type: 2}
   trafflightRed: {fileID: 2100000, guid: 1a49c1c00c0b5a341870c94c6f6d87c5, type: 2}
+  myRoadObstcle: {fileID: 1146503140}
 --- !u!65 &1169991979
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4948,8 +4970,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   iPlayerIndex: 2
-  iTimeTillRemoved: 5
+  iTimeTillRemoved: 20
   playerManager: {fileID: 0}
+  currentObstacle: {fileID: 0}
   highlightedArea: {fileID: 81574557}
   clearMat: {fileID: 2100000, guid: b88a3941c37d7964d977acb9916c755f, type: 2}
   whiteMat: {fileID: 2100000, guid: 38b93c8556e03144da336e16457b0142, type: 2}
@@ -5443,8 +5466,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   iPlayerIndex: 3
-  iTimeTillRemoved: 5
+  iTimeTillRemoved: 20
   playerManager: {fileID: 0}
+  currentObstacle: {fileID: 0}
   highlightedArea: {fileID: 2008167107}
   clearMat: {fileID: 2100000, guid: b88a3941c37d7964d977acb9916c755f, type: 2}
   whiteMat: {fileID: 2100000, guid: 38b93c8556e03144da336e16457b0142, type: 2}
@@ -5498,12 +5522,14 @@ MonoBehaviour:
   iPlayerIndex: 2
   fMaxActiveTime: 3
   bActive: 0
+  playerManager: {fileID: 0}
   meshRenderer: {fileID: 313264851}
   highlightedArea: {fileID: 1644113638}
   clearMat: {fileID: 2100000, guid: b88a3941c37d7964d977acb9916c755f, type: 2}
   whiteMat: {fileID: 2100000, guid: 38b93c8556e03144da336e16457b0142, type: 2}
   trafflightGreen: {fileID: 2100000, guid: aa488e258ee634f49ae4a82e5c647188, type: 2}
   trafflightRed: {fileID: 2100000, guid: 1a49c1c00c0b5a341870c94c6f6d87c5, type: 2}
+  myRoadObstcle: {fileID: 1243436552}
 --- !u!65 &1545806702
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5658,8 +5684,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   iPlayerIndex: 2
-  iTimeTillRemoved: 5
+  iTimeTillRemoved: 20
   playerManager: {fileID: 0}
+  currentObstacle: {fileID: 0}
   highlightedArea: {fileID: 1785974358}
   clearMat: {fileID: 2100000, guid: b88a3941c37d7964d977acb9916c755f, type: 2}
   whiteMat: {fileID: 2100000, guid: 38b93c8556e03144da336e16457b0142, type: 2}
@@ -6285,8 +6312,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   iPlayerIndex: 0
-  iTimeTillRemoved: 5
+  iTimeTillRemoved: 20
   playerManager: {fileID: 0}
+  currentObstacle: {fileID: 0}
   highlightedArea: {fileID: 1115779597}
   clearMat: {fileID: 2100000, guid: b88a3941c37d7964d977acb9916c755f, type: 2}
   whiteMat: {fileID: 2100000, guid: 38b93c8556e03144da336e16457b0142, type: 2}
@@ -6432,8 +6460,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   iPlayerIndex: 3
-  iTimeTillRemoved: 5
+  iTimeTillRemoved: 20
   playerManager: {fileID: 0}
+  currentObstacle: {fileID: 0}
   highlightedArea: {fileID: 1795896}
   clearMat: {fileID: 2100000, guid: b88a3941c37d7964d977acb9916c755f, type: 2}
   whiteMat: {fileID: 2100000, guid: 38b93c8556e03144da336e16457b0142, type: 2}
@@ -6521,8 +6550,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   iPlayerIndex: 2
-  iTimeTillRemoved: 5
+  iTimeTillRemoved: 20
   playerManager: {fileID: 0}
+  currentObstacle: {fileID: 0}
   highlightedArea: {fileID: 1653815076}
   clearMat: {fileID: 2100000, guid: b88a3941c37d7964d977acb9916c755f, type: 2}
   whiteMat: {fileID: 2100000, guid: 38b93c8556e03144da336e16457b0142, type: 2}
@@ -6557,22 +6587,22 @@ PrefabInstance:
     - target: {fileID: 2974110504836028620, guid: 3ae676b8bdb9ccb4781fcade04133649,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: 0.0003188289
       objectReference: {fileID: 0}
     - target: {fileID: 2974110504836028620, guid: 3ae676b8bdb9ccb4781fcade04133649,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.0011709911
       objectReference: {fileID: 0}
     - target: {fileID: 2974110504836028620, guid: 3ae676b8bdb9ccb4781fcade04133649,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: 0.00088995503
       objectReference: {fileID: 0}
     - target: {fileID: 2974110504836028620, guid: 3ae676b8bdb9ccb4781fcade04133649,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.99999887
       objectReference: {fileID: 0}
     - target: {fileID: 2974110504836028620, guid: 3ae676b8bdb9ccb4781fcade04133649,
         type: 3}
@@ -6582,17 +6612,17 @@ PrefabInstance:
     - target: {fileID: 2974110504836028620, guid: 3ae676b8bdb9ccb4781fcade04133649,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: 0.036000002
       objectReference: {fileID: 0}
     - target: {fileID: 2974110504836028620, guid: 3ae676b8bdb9ccb4781fcade04133649,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 0.134
       objectReference: {fileID: 0}
     - target: {fileID: 2974110504836028620, guid: 3ae676b8bdb9ccb4781fcade04133649,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: 0.102000006
       objectReference: {fileID: 0}
     - target: {fileID: 2974110504836028620, guid: 3ae676b8bdb9ccb4781fcade04133649,
         type: 3}
@@ -6668,8 +6698,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   iPlayerIndex: 1
-  iTimeTillRemoved: 5
+  iTimeTillRemoved: 20
   playerManager: {fileID: 0}
+  currentObstacle: {fileID: 0}
   highlightedArea: {fileID: 1757658705}
   clearMat: {fileID: 2100000, guid: b88a3941c37d7964d977acb9916c755f, type: 2}
   whiteMat: {fileID: 2100000, guid: 38b93c8556e03144da336e16457b0142, type: 2}
@@ -6723,12 +6754,14 @@ MonoBehaviour:
   iPlayerIndex: 3
   fMaxActiveTime: 3
   bActive: 0
+  playerManager: {fileID: 0}
   meshRenderer: {fileID: 990411605}
   highlightedArea: {fileID: 1096249883}
   clearMat: {fileID: 2100000, guid: b88a3941c37d7964d977acb9916c755f, type: 2}
   whiteMat: {fileID: 2100000, guid: 38b93c8556e03144da336e16457b0142, type: 2}
   trafflightGreen: {fileID: 2100000, guid: aa488e258ee634f49ae4a82e5c647188, type: 2}
   trafflightRed: {fileID: 2100000, guid: 1a49c1c00c0b5a341870c94c6f6d87c5, type: 2}
+  myRoadObstcle: {fileID: 35505769}
 --- !u!65 &2104336210
 BoxCollider:
   m_ObjectHideFlags: 0

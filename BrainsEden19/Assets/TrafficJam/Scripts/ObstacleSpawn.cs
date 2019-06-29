@@ -9,8 +9,9 @@ public class ObstacleSpawn : MonoBehaviour
     private float iTimeTillRemoved = 5.0f;
 
     public PlayerManager playerManager;
+    private PlayerController myPlayer;
 
-    private GameObject currentObstacle;
+    public GameObject currentObstacle;
 
     [SerializeField]
     private GameObject highlightedArea;
@@ -23,9 +24,15 @@ public class ObstacleSpawn : MonoBehaviour
 
     public bool highlighted = false;
 
+
     private void Start()
     {
         playerManager = GameObject.FindObjectOfType<PlayerManager>();
+        for (int i = 0; i < playerManager.players.Count; ++i)
+        {
+            if(playerManager.players[i].iPlayerIndex == iPlayerIndex)
+            myPlayer = playerManager.players[i];
+        }
     }
    
 
