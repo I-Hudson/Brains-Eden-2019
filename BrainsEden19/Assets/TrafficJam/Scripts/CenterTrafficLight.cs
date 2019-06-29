@@ -14,6 +14,9 @@ public class CenterTrafficLight : MonoBehaviour
     [SerializeField]
     private Collider horizontalLane2_2;
 
+    [SerializeField]
+    private Collider center;
+
     Coroutine coro;
 
     // Start is called before the first frame update
@@ -38,6 +41,22 @@ public class CenterTrafficLight : MonoBehaviour
 
             horizontalLane2.enabled = true;
             horizontalLane2_2.enabled = true;
+
+            bool carsInCenter = false;
+            do
+            {
+                carsInCenter = false;
+                CarUpdate[] cars = FindObjectsOfType<CarUpdate>();
+
+                for (int i = 0; i < cars.Length; i++)
+                {
+                    if (center.bounds.Contains(cars[i].transform.position))
+                    {
+                        carsInCenter = true;
+                        yield return null;
+                    }
+                }
+            } while (carsInCenter);
 
             yield return new WaitForSeconds(3.5f);
 
