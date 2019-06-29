@@ -5059,11 +5059,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lighting_Visuals
       objectReference: {fileID: 0}
-    - target: {fileID: 6249671420447182854, guid: 21c75b3f7bba584429e799ebd0854093,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3395004015118369871, guid: 21c75b3f7bba584429e799ebd0854093,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5118,86 +5113,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8150242289089021239, guid: 21c75b3f7bba584429e799ebd0854093,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8150242289089021243, guid: 21c75b3f7bba584429e799ebd0854093,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.95303994
-      objectReference: {fileID: 0}
-    - target: {fileID: 8150242289089021243, guid: 21c75b3f7bba584429e799ebd0854093,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.04235628
-      objectReference: {fileID: 0}
-    - target: {fileID: 8150242289089021243, guid: 21c75b3f7bba584429e799ebd0854093,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0.15862939
-      objectReference: {fileID: 0}
-    - target: {fileID: 8150242289089021243, guid: 21c75b3f7bba584429e799ebd0854093,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.2544751
-      objectReference: {fileID: 0}
-    - target: {fileID: 8150242289089021243, guid: 21c75b3f7bba584429e799ebd0854093,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 18.9
-      objectReference: {fileID: 0}
-    - target: {fileID: 8150242289089021243, guid: 21c75b3f7bba584429e799ebd0854093,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 150.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8150242289089021242, guid: 21c75b3f7bba584429e799ebd0854093,
-        type: 3}
-      propertyPath: m_Intensity
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 8150242289089021242, guid: 21c75b3f7bba584429e799ebd0854093,
-        type: 3}
-      propertyPath: m_ColorTemperature
-      value: 6928
-      objectReference: {fileID: 0}
-    - target: {fileID: 8150242289089021242, guid: 21c75b3f7bba584429e799ebd0854093,
-        type: 3}
-      propertyPath: m_Shadows.m_Type
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8150242289089021241, guid: 21c75b3f7bba584429e799ebd0854093,
-        type: 3}
-      propertyPath: displayLightIntensity
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 8150242288723510909, guid: 21c75b3f7bba584429e799ebd0854093,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8150242288723510912, guid: 21c75b3f7bba584429e799ebd0854093,
-        type: 3}
-      propertyPath: m_Intensity
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 8150242288723510912, guid: 21c75b3f7bba584429e799ebd0854093,
-        type: 3}
-      propertyPath: m_ColorTemperature
-      value: 4563
-      objectReference: {fileID: 0}
-    - target: {fileID: 8150242288723510912, guid: 21c75b3f7bba584429e799ebd0854093,
-        type: 3}
-      propertyPath: m_Shadows.m_Type
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8150242288723510911, guid: 21c75b3f7bba584429e799ebd0854093,
-        type: 3}
-      propertyPath: displayLightIntensity
-      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 21c75b3f7bba584429e799ebd0854093, type: 3}

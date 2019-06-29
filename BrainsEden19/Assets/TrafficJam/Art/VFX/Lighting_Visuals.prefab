@@ -77,7 +77,7 @@ Light:
   serializedVersion: 9
   m_Type: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 7
+  m_Intensity: 6
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.802082
@@ -120,7 +120,7 @@ Light:
   m_LightShadowCasterMode: 2
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
-  m_ColorTemperature: 4474
+  m_ColorTemperature: 4563
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
@@ -167,7 +167,7 @@ MonoBehaviour:
   useVolumetric: 1
   featuresFoldout: 1
   showAdditionalSettings: 0
-  displayLightIntensity: 7
+  displayLightIntensity: 6
   displayAreaLightEmissiveMesh: 0
   areaLightCookie: {fileID: 0}
   areaLightShadowCone: 120
@@ -307,13 +307,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8150242289089021239}
-  m_LocalRotation: {x: 0.84181386, y: 0.15815797, z: -0.36865464, w: 0.36114988}
+  m_LocalRotation: {x: 0.95303994, y: 0.04235628, z: -0.15862939, w: 0.2544751}
   m_LocalPosition: {x: -4.7412496, y: 16.707466, z: 29.067257}
   m_LocalScale: {x: 3.1466002, y: 3.1466002, z: 3.1465998}
   m_Children: []
   m_Father: {fileID: 3395004015118369871}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 133.56, y: 47.3, z: 0}
+  m_LocalEulerAnglesHint: {x: 150.1, y: 18.9, z: 0}
 --- !u!108 &8150242289089021242
 Light:
   m_ObjectHideFlags: 0
@@ -325,7 +325,7 @@ Light:
   serializedVersion: 9
   m_Type: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 7
+  m_Intensity: 6
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.802082
@@ -368,7 +368,7 @@ Light:
   m_LightShadowCasterMode: 2
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
-  m_ColorTemperature: 7826
+  m_ColorTemperature: 6928
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
@@ -415,7 +415,7 @@ MonoBehaviour:
   useVolumetric: 1
   featuresFoldout: 1
   showAdditionalSettings: 0
-  displayLightIntensity: 7
+  displayLightIntensity: 6
   displayAreaLightEmissiveMesh: 0
   areaLightCookie: {fileID: 0}
   areaLightShadowCone: 120
