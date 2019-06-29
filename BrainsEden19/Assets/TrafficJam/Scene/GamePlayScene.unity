@@ -227,7 +227,7 @@ GameObject:
   - component: {fileID: 35505768}
   - component: {fileID: 35505769}
   m_Layer: 0
-  m_Name: ObstacleSpawn (10)
+  m_Name: ObstacleSpawn (12)
   m_TagString: ObstacleSpawnPoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -246,7 +246,7 @@ Transform:
   m_Children:
   - {fileID: 1688549731}
   m_Father: {fileID: 687948460}
-  m_RootOrder: 10
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &35505769
 MonoBehaviour:
@@ -1005,7 +1005,7 @@ GameObject:
   - component: {fileID: 275351182}
   - component: {fileID: 275351183}
   m_Layer: 0
-  m_Name: ObstacleSpawn
+  m_Name: ObstacleSpawn (3)
   m_TagString: ObstacleSpawnPoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1024,7 +1024,7 @@ Transform:
   m_Children:
   - {fileID: 761984005}
   m_Father: {fileID: 687948460}
-  m_RootOrder: 0
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &275351183
 MonoBehaviour:
@@ -1488,7 +1488,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 324232488}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -15, y: 0.5, z: 10}
+  m_LocalPosition: {x: -5, y: 0.5, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 360847831}
@@ -1531,7 +1531,7 @@ GameObject:
   - component: {fileID: 348764184}
   - component: {fileID: 348764185}
   m_Layer: 0
-  m_Name: ObstacleSpawn (13)
+  m_Name: ObstacleSpawn (8)
   m_TagString: ObstacleSpawnPoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1550,7 +1550,7 @@ Transform:
   m_Children:
   - {fileID: 1611645454}
   m_Father: {fileID: 687948460}
-  m_RootOrder: 13
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &348764185
 MonoBehaviour:
@@ -1908,6 +1908,7 @@ MonoBehaviour:
     type: 3}
   overideNeededPlayers: 0
   debugTextMesh: {fileID: 750587332}
+  ObstacleRoadList: []
 --- !u!1 &473484939
 GameObject:
   m_ObjectHideFlags: 0
@@ -2713,22 +2714,22 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 275351182}
   - {fileID: 1243436551}
   - {fileID: 1927004872}
   - {fileID: 1586243890}
+  - {fileID: 275351182}
   - {fileID: 1146503139}
   - {fileID: 1107513063}
   - {fileID: 1777195508}
   - {fileID: 324232489}
-  - {fileID: 1848273424}
-  - {fileID: 1539230841}
-  - {fileID: 35505768}
-  - {fileID: 999390485}
-  - {fileID: 999479198}
   - {fileID: 348764184}
   - {fileID: 2060060241}
   - {fileID: 906063224}
+  - {fileID: 999479198}
+  - {fileID: 35505768}
+  - {fileID: 999390485}
+  - {fileID: 1848273424}
+  - {fileID: 1539230841}
   m_Father: {fileID: 1215492362}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3280,7 +3281,7 @@ GameObject:
   - component: {fileID: 906063224}
   - component: {fileID: 906063225}
   m_Layer: 0
-  m_Name: ObstacleSpawn (15)
+  m_Name: ObstacleSpawn (10)
   m_TagString: ObstacleSpawnPoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3299,7 +3300,7 @@ Transform:
   m_Children:
   - {fileID: 1460111724}
   m_Father: {fileID: 687948460}
-  m_RootOrder: 15
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &906063225
 MonoBehaviour:
@@ -3783,7 +3784,7 @@ GameObject:
   - component: {fileID: 999390485}
   - component: {fileID: 999390486}
   m_Layer: 0
-  m_Name: ObstacleSpawn (11)
+  m_Name: ObstacleSpawn (13)
   m_TagString: ObstacleSpawnPoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3802,7 +3803,7 @@ Transform:
   m_Children:
   - {fileID: 916171768}
   m_Father: {fileID: 687948460}
-  m_RootOrder: 11
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &999390486
 MonoBehaviour:
@@ -3834,7 +3835,7 @@ GameObject:
   - component: {fileID: 999479198}
   - component: {fileID: 999479199}
   m_Layer: 0
-  m_Name: ObstacleSpawn (12)
+  m_Name: ObstacleSpawn (11)
   m_TagString: ObstacleSpawnPoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3853,7 +3854,7 @@ Transform:
   m_Children:
   - {fileID: 1628243839}
   m_Father: {fileID: 687948460}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &999479199
 MonoBehaviour:
@@ -4268,7 +4269,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1107513062}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10, y: 0.5, z: 15}
+  m_LocalPosition: {x: -15, y: 0.5, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 884028144}
@@ -4791,6 +4792,75 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1181359687}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &1209376850
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4659198337516789308, guid: 81cb42fce5a467a418020e1ee0510474,
+        type: 3}
+      propertyPath: m_Name
+      value: Prefab_ScoreSystem
+      objectReference: {fileID: 0}
+    - target: {fileID: 4659198337516789310, guid: 81cb42fce5a467a418020e1ee0510474,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4659198337516789310, guid: 81cb42fce5a467a418020e1ee0510474,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4659198337516789310, guid: 81cb42fce5a467a418020e1ee0510474,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4659198337516789310, guid: 81cb42fce5a467a418020e1ee0510474,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4659198337516789310, guid: 81cb42fce5a467a418020e1ee0510474,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4659198337516789310, guid: 81cb42fce5a467a418020e1ee0510474,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4659198337516789310, guid: 81cb42fce5a467a418020e1ee0510474,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4659198337516789310, guid: 81cb42fce5a467a418020e1ee0510474,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4659198337516789310, guid: 81cb42fce5a467a418020e1ee0510474,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4659198337516789310, guid: 81cb42fce5a467a418020e1ee0510474,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4659198337516789310, guid: 81cb42fce5a467a418020e1ee0510474,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 81cb42fce5a467a418020e1ee0510474, type: 3}
 --- !u!1 &1215492361
 GameObject:
   m_ObjectHideFlags: 0
@@ -4935,7 +5005,7 @@ GameObject:
   - component: {fileID: 1243436551}
   - component: {fileID: 1243436552}
   m_Layer: 0
-  m_Name: ObstacleSpawn (1)
+  m_Name: ObstacleSpawn (0)
   m_TagString: ObstacleSpawnPoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4949,12 +5019,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1243436550}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10, y: 0.5, z: -15}
+  m_LocalPosition: {x: -5, y: 0.5, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 81574556}
   m_Father: {fileID: 687948460}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1243436552
 MonoBehaviour:
@@ -5361,7 +5431,7 @@ GameObject:
   - component: {fileID: 1539230841}
   - component: {fileID: 1539230842}
   m_Layer: 0
-  m_Name: ObstacleSpawn (9)
+  m_Name: ObstacleSpawn (15)
   m_TagString: ObstacleSpawnPoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5380,7 +5450,7 @@ Transform:
   m_Children:
   - {fileID: 2008167106}
   m_Father: {fileID: 687948460}
-  m_RootOrder: 9
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1539230842
 MonoBehaviour:
@@ -5576,7 +5646,7 @@ GameObject:
   - component: {fileID: 1586243890}
   - component: {fileID: 1586243891}
   m_Layer: 0
-  m_Name: ObstacleSpawn (3)
+  m_Name: ObstacleSpawn (2)
   m_TagString: ObstacleSpawnPoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5595,7 +5665,7 @@ Transform:
   m_Children:
   - {fileID: 1785974357}
   m_Father: {fileID: 687948460}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1586243891
 MonoBehaviour:
@@ -6217,7 +6287,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1777195507}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5, y: 0.5, z: 10}
+  m_LocalPosition: {x: -10, y: 0.5, z: 15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1115779596}
@@ -6350,7 +6420,7 @@ GameObject:
   - component: {fileID: 1848273424}
   - component: {fileID: 1848273425}
   m_Layer: 0
-  m_Name: ObstacleSpawn (8)
+  m_Name: ObstacleSpawn (14)
   m_TagString: ObstacleSpawnPoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6369,7 +6439,7 @@ Transform:
   m_Children:
   - {fileID: 1795895}
   m_Father: {fileID: 687948460}
-  m_RootOrder: 8
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1848273425
 MonoBehaviour:
@@ -6439,7 +6509,7 @@ GameObject:
   - component: {fileID: 1927004872}
   - component: {fileID: 1927004873}
   m_Layer: 0
-  m_Name: ObstacleSpawn (2)
+  m_Name: ObstacleSpawn (1)
   m_TagString: ObstacleSpawnPoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6453,12 +6523,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1927004871}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5, y: 0.5, z: -9.94}
+  m_LocalPosition: {x: -10, y: 0.5, z: -15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1653815075}
   m_Father: {fileID: 687948460}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1927004873
 MonoBehaviour:
@@ -6586,7 +6656,7 @@ GameObject:
   - component: {fileID: 2060060241}
   - component: {fileID: 2060060242}
   m_Layer: 0
-  m_Name: ObstacleSpawn (14)
+  m_Name: ObstacleSpawn (9)
   m_TagString: ObstacleSpawnPoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6605,7 +6675,7 @@ Transform:
   m_Children:
   - {fileID: 1757658704}
   m_Father: {fileID: 687948460}
-  m_RootOrder: 14
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2060060242
 MonoBehaviour:

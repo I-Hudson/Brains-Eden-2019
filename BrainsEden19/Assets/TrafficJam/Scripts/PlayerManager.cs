@@ -57,7 +57,7 @@ public class PlayerManager : MonoBehaviour
             Time.timeScale = 0;
         }
 
-
+        UpdateObstacleHighlights();
     }
 
     //If 4 players connected, returns true
@@ -78,16 +78,18 @@ public class PlayerManager : MonoBehaviour
             int playerIndex = 0;
             for (int x = 0; x < players.Count; ++x)
             {
-                if (ObstacleRoadList[i] == players[x].currentObstacleSpawn || ObstacleRoadList[i].highlighted)
+                if (ObstacleRoadList[i].highlighted || players[x].currentObstacleSpawn == ObstacleRoadList[i])
                 {
+                    
                     activated = true;
                     playerIndex = x;
                 }
             }
-            if (!activated)
+            if(!activated)
             {
                 ObstacleRoadList[i].HighLightArea(false, playerIndex);
             }
+            
         }
     }
 }

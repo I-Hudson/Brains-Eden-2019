@@ -31,27 +31,27 @@ public class ObstacleSpawn : MonoBehaviour
 
     public void HighLightArea(bool highlighted, int iPlayerIndex)
     {
-        highlighted = highlighted;
         if (highlighted)
         {
+            Material newMat = new Material(Shader.Find("HDRP/Lit"));
             switch (iPlayerIndex)
             {
                 case 0:
-                    whiteMat.SetColor("_BaseColor", Color.green);
+                    newMat.SetColor("_BaseColor", Color.green);
                     break;
                 case 1:
-                    whiteMat.SetColor("_BaseColor", Color.red);
+                    newMat.SetColor("_BaseColor", Color.red);
                     break;
                 case 2:
-                    whiteMat.SetColor("_BaseColor", Color.blue);
+                    newMat.SetColor("_BaseColor", Color.blue);
                     break;
                 case 3:
-                    whiteMat.SetColor("_BaseColor", Color.yellow);
+                    newMat.SetColor("_BaseColor", Color.yellow);
                     break;
                 default:
                     break;
             }
-            highlightedArea.GetComponent<MeshRenderer>().material = whiteMat;
+            highlightedArea.GetComponent<MeshRenderer>().material = newMat;
         }
         else
         {

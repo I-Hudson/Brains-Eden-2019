@@ -143,7 +143,7 @@ public class PlayerController : MonoBehaviour
 
             if (iCurrentObstacleIndex < 0)
             {
-                iCurrentObstacleIndex = ObstacleRoadList.Count;
+                iCurrentObstacleIndex = ObstacleRoadList.Count - 1;
             }
             else if (iCurrentObstacleIndex > ObstacleRoadList.Count - 1)
             {
@@ -162,11 +162,13 @@ public class PlayerController : MonoBehaviour
             if (i == iCurrentObstacleIndex && interactionMode == InteractionMode.Mode_Obstacles)
             {
                 ObstacleRoadList[i].HighLightArea(true, iPlayerIndex);
+                ObstacleRoadList[i].highlighted = true;
                 currentObstacleSpawn = ObstacleRoadList[i];
+                //break;
             }
-            else
+            else if(i != iCurrentObstacleIndex || interactionMode != InteractionMode.Mode_Obstacles)
             {
-                currentObstacleSpawn = null;
+                ObstacleRoadList[i].highlighted = false;
             }
         }
         //unHighlight all traffic lights
