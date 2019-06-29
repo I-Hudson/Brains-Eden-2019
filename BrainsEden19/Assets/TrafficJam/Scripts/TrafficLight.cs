@@ -76,4 +76,12 @@ public class TrafficLight : MonoBehaviour
             meshRenderer.material = trafflightRed;
         }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.tag == "Car" && bActive)
+        {
+            other.transform.rotation = Quaternion.LookRotation(-other.transform.right, other.transform.forward);
+        }
+    }
 }

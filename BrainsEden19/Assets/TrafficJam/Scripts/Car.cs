@@ -11,4 +11,5 @@ public class Car : ScriptableObject
     public float MinHitDistance;
     public Color Colour;
     public string Tag;
+    public bool TurnedIntoZone;
 }
