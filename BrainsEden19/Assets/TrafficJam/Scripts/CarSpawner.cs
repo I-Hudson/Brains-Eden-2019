@@ -38,6 +38,7 @@ public class CarSpawner : MonoBehaviour
     private int maxCarCount;
     [SerializeField]
     private int minCarCount;
+    [SerializeField]
     private int carCount = 0;
 
     private List<GameObject> line1Cars = new List<GameObject>();
@@ -65,6 +66,12 @@ public class CarSpawner : MonoBehaviour
         {
             spawnCars = true;
         }
+
+        if (spawnCoro == null && spawnCars)
+        {
+            StopCoroutine(spawnCoro);
+            spawnCoro = StartCoroutine(SpawnCars());
+        }
     }
 
     public void RemoveCar()
@@ -75,7 +82,7 @@ public class CarSpawner : MonoBehaviour
     IEnumerator SpawnCars()
     {
         List<int> spawnLocationsUsed = new List<int> { 0, 1, 2, 3 };
-        List<Color> spawnColourUsed = new List<Color>(Colours);
+        List<int> spawnColourUsed = new List<int> { 0, 1, 2, 3};
         int initalIndex = 0;
 
         while (spawnCars)
@@ -86,7 +93,7 @@ public class CarSpawner : MonoBehaviour
             }
             if(spawnColourUsed.Count == 0)
             {
-                spawnColourUsed = new List<Color>(Colours);
+                spawnColourUsed = new List<int> { 0, 1, 2, 3 };
             }
 
             List<Color> line1Colours = new List<Color>();
@@ -111,15 +118,16 @@ public class CarSpawner : MonoBehaviour
                 }
 
                 int randomColour = Random.Range(0, spawnColourUsed.Count);//Random.Range(0, Colours.Length - 1);
-                Color rColour = spawnColourUsed[randomColour];//Colours[randomColour];
-                spawnColourUsed.Remove(rColour);
+                Color rColour = Colours[randomColour];//Colours[randomColour];
+               // rColour = CarColourCheck(randomSpawnLocation, rColour);
+                spawnColourUsed.Remove(randomColour);
                 //rColour = CheckColour(line1Colours, rColour);
 
                 line1Colours.Add(rColour);
 
-                CarColourCheck(randomSpawnLocation, rColour);
-
                 SpawnCar(randomCar, randomSpawnLocation, rColour);
+
+                Debug.Log(randomColour);
 
                 yield return new WaitForSeconds(SingleCarDelay);
             }
@@ -162,10 +170,52 @@ public class CarSpawner : MonoBehaviour
         return c;
     }
 
+    private Color CarColourToColour(CarColour aColour)
+    {
+        for (int i = 0; i < 4; i++)
+        {
+            if(aColour == CarColourKey[i])
+            {
+                return Colours[i];
+            }
+        }
+        return Color.magenta;
+    }
+
     private Color CarColourCheck(int aSpawnLoc, Color aColour)
     {
         //check with a raycast the colour of the car in front. if it's the same colour change this 
         //colour
+        RaycastHit[] hits = Physics.RaycastAll(SpawnLocations[aSpawnLoc].position, SpawnLocations[aSpawnLoc].forward);
+        for (int i = 0; i < hits.Length; i++)
+        {
+            if(hits[i].collider.tag == "Car")
+            {
+                Color prevCarColour = CarColourToColour(hits[i].collider.gameObject.GetComponent<CarUpdate>().CarColour);
+                Color carColour = aColour;
+                int colourTry = 0;
+                while(carColour == prevCarColour)
+                {
+                    if(colourTry < 3)
+                    {
+                        int randomColour = Random.Range(0, Colours.Length);//Random.Range(0, Colours.Length - 1);
+                        Color rColour = Colours[randomColour];//Colours[randomColour];
+                        colourTry += 1;
+                    }
+                    else
+                    {
+
+                        colourTry += 1;
+                        if (colourTry > 10)
+                        {
+                            int randomColour = Random.Range(0, Colours.Length);//Random.Range(0, Colours.Length - 1);
+                            carColour = Colours[randomColour];//Colours[randomColour];
+                            return carColour;
+                        }
+                    }
+                }
+            }
+        }
         return aColour;
     }
 

@@ -24,7 +24,7 @@ public class Looptrigger : MonoBehaviour
             {
                 GameObject go = waitingCars[0];
                 go.SetActive(true);
-                go.transform.position = Loop.position;
+                go.transform.position = new Vector3(Loop.position.x, go.transform.position.y, Loop.position.z);
                 go.transform.rotation = Loop.rotation;
 
                 waitingCars.Remove(go);

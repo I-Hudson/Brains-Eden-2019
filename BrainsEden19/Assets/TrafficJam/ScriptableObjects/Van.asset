@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 358d4c71c8d0e4547b0a34872b5766b2, type: 3}
+  m_Name: Van
+  m_EditorClassIdentifier: 
+  Model: {fileID: 3693994087588747336, guid: 5500322d9e8902746a9812406d2fed15, type: 3}
+  MaxSpeed: 10
+  ControlSpeed: 10
+  MinHitDistance: 10
+  Colour: {r: 0, g: 0, b: 0, a: 0}
+  CarType: 3
+  Tag: Car

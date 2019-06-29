@@ -39,7 +39,7 @@ public class CenterTrafficLight : MonoBehaviour
             horizontalLane2.enabled = true;
             horizontalLane2_2.enabled = true;
 
-            yield return new WaitForSeconds(2.5f);
+            yield return new WaitForSeconds(3.5f);
 
             horizontalLane1.enabled = switchHor;
             horizontalLane1_1.enabled = switchHor;

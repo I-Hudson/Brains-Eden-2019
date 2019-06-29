@@ -9,7 +9,7 @@ public enum CarColour
 
 public enum CarType
 {
-    Hot_Hatch, Muscle, Truck
+    Hot_Hatch, Muscle, Truck, Van
 }
 
 public class CarUpdate : MonoBehaviour
@@ -64,10 +64,14 @@ public class CarUpdate : MonoBehaviour
 
         RaycastHit[] hits = Physics.RaycastAll(rayCastStartPos.position, transform.forward);
         bool hitCar = false;
+        bool hitTrafficLights = false;
+
         for (int i = 0; i < hits.Length; i++)
         {
             if (hits[i].distance <= MinHitDistance)
             {
+                
+
                 if (hits[i].collider.gameObject != gameObject && hits[i].collider.tag == "Car")
                 {
                     Debug.DrawRay(rayCastStartPos.position, transform.forward * hits[i].distance, Color.magenta, 5.0f);

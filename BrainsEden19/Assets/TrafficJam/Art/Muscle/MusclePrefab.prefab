@@ -51,8 +51,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.4273217, y: 2.7470245, z: 8.875046}
-  m_Center: {x: -0.040908933, y: -0.2553339, z: 0.013436317}
+  m_Size: {x: 2.6422596, y: 2.7470245, z: 8.875046}
+  m_Center: {x: -0.08016229, y: -0.2553339, z: 0.013436317}
 --- !u!65 &8351057913253470025
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -64,8 +64,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.4273217, y: 2.7470245, z: 8.875046}
-  m_Center: {x: -0.040908933, y: -0.2553339, z: 0.013436317}
+  m_Size: {x: 2.6422596, y: 2.7470245, z: 8.875046}
+  m_Center: {x: -0.08016229, y: -0.2553339, z: 0.013436317}
 --- !u!54 &6577905075428162682
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -103,6 +103,7 @@ MonoBehaviour:
   isOnMainRoad: 1
   rayCastStartPos: {fileID: 0}
   CarColour: 0
+  CarType: 0
   forceForward: 0
   TurnedIntoZone: 0
 --- !u!95 &1704384823749660833

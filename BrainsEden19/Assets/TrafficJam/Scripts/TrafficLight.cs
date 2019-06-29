@@ -108,6 +108,7 @@ public class TrafficLight : MonoBehaviour
         {
             bActive = true;
             greenLight.enabled = true;
+            redLight.enabled = false;
             junctionArrow.sprite = LeftArrow;
         }
         else if(bActive)
