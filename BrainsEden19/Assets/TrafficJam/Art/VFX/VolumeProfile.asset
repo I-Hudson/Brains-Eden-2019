@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-9013678923022458915
+--- !u!114 &-9144421189987519690
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9,32 +9,32 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29b00527f85bb3346a4d2cb710971587, type: 3}
-  m_Name: VolumetricFog
+  m_Script: {fileID: 11500000, guid: eb673446a9a2dfa408924fe9a56322e0, type: 3}
+  m_Name: LinearFog
   m_EditorClassIdentifier: 
   active: 1
   m_AdvancedMode: 0
   colorMode:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 0
   color:
-    m_OverrideState: 0
-    m_Value: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    m_OverrideState: 1
+    m_Value: {r: 0.86743504, g: 0.9528302, b: 0.9503186, a: 1}
     hdr: 1
     showAlpha: 0
     showEyeDropper: 1
   density:
-    m_OverrideState: 0
-    m_Value: 1
+    m_OverrideState: 1
+    m_Value: 0.916
     min: 0
     max: 1
   maxFogDistance:
     m_OverrideState: 1
-    m_Value: 500
+    m_Value: 5000
     min: 0
   mipFogMaxMip:
-    m_OverrideState: 0
-    m_Value: 0.986
+    m_OverrideState: 1
+    m_Value: 0.5
     min: 0
     max: 1
   mipFogNear:
@@ -43,38 +43,22 @@ MonoBehaviour:
     min: 0
   mipFogFar:
     m_OverrideState: 1
+    m_Value: 1000
+    min: 0
+  fogStart:
+    m_OverrideState: 1
     m_Value: 0
     min: 0
-  albedo:
-    m_OverrideState: 1
-    m_Value: {r: 1, g: 1, b: 1, a: 1}
-    hdr: 0
-    showAlpha: 1
-    showEyeDropper: 1
-  meanFreePath:
-    m_OverrideState: 1
-    m_Value: 55
-    min: 1
-  baseHeight:
+  fogEnd:
     m_OverrideState: 1
     m_Value: 0
-  meanHeight:
-    m_OverrideState: 1
-    m_Value: 7
-    min: 1
-  anisotropy:
-    m_OverrideState: 1
-    m_Value: 0
-    min: -1
-    max: 1
-  globalLightProbeDimmer:
-    m_OverrideState: 1
-    m_Value: 1
     min: 0
-    max: 1
-  enableDistantFog:
+  fogHeightStart:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: -77.22
+  fogHeightEnd:
+    m_OverrideState: 1
+    m_Value: -0.4
 --- !u!114 &-7670555628644033447
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -173,13 +157,13 @@ MonoBehaviour:
   m_AdvancedMode: 0
   enable:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 1
   opacity:
     m_OverrideState: 1
     m_Value: 1
     min: 0
     max: 1
---- !u!114 &-3808844965217375040
+--- !u!114 &-3254957951743762656
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -188,46 +172,41 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24f077503be6ae942a1e1245dbd53ea9, type: 3}
-  m_Name: Bloom
+  m_Script: {fileID: 11500000, guid: 9008a067f4d626c4d8bc4bc48f04bb89, type: 3}
+  m_Name: AmbientOcclusion
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   m_AdvancedMode: 0
   intensity:
     m_OverrideState: 1
-    m_Value: 0.323
+    m_Value: 1.22
+    min: 0
+    max: 4
+  thicknessModifier:
+    m_OverrideState: 1
+    m_Value: 3.08
+    min: 1
+    max: 10
+  directLightingStrength:
+    m_OverrideState: 1
+    m_Value: 0.149
     min: 0
     max: 1
-  scatter:
-    m_OverrideState: 0
-    m_Value: 0.7
-    min: 0
+  noiseFilterTolerance:
+    m_OverrideState: 1
+    m_Value: 0
+    min: -8
+    max: 0
+  blurTolerance:
+    m_OverrideState: 1
+    m_Value: -4.6
+    min: -8
     max: 1
-  tint:
-    m_OverrideState: 0
-    m_Value: {r: 1, g: 1, b: 1, a: 1}
-    hdr: 0
-    showAlpha: 0
-    showEyeDropper: 1
-  dirtTexture:
-    m_OverrideState: 0
-    m_Value: {fileID: 0}
-  dirtIntensity:
-    m_OverrideState: 0
-    m_Value: 0
-    min: 0
-  highQualityFiltering:
-    m_OverrideState: 0
-    m_Value: 1
-  resolution:
-    m_OverrideState: 0
-    m_Value: 2
-  prefilter:
-    m_OverrideState: 0
-    m_Value: 0
-  anamorphic:
-    m_OverrideState: 0
-    m_Value: 1
+  upsampleTolerance:
+    m_OverrideState: 1
+    m_Value: -12
+    min: -12
+    max: -1
 --- !u!114 &-1190206718608557471
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -250,7 +229,7 @@ MonoBehaviour:
     m_Value: 1
   fogType:
     m_OverrideState: 1
-    m_Value: 3
+    m_Value: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -267,12 +246,13 @@ MonoBehaviour:
   - {fileID: -1190206718608557471}
   - {fileID: -7267902643059475807}
   - {fileID: -3967931911063757044}
-  - {fileID: -3808844965217375040}
   - {fileID: 1278623082007751118}
   - {fileID: 641572388950994363}
   - {fileID: 2049955747691431801}
   - {fileID: -7670555628644033447}
-  - {fileID: -9013678923022458915}
+  - {fileID: -9144421189987519690}
+  - {fileID: -3254957951743762656}
+  - {fileID: 4624433791069399417}
 --- !u!114 &641572388950994363
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -292,7 +272,7 @@ MonoBehaviour:
     m_Value: 0
   intensity:
     m_OverrideState: 1
-    m_Value: 0.132
+    m_Value: 0.206
     min: 0
     max: 1
   response:
@@ -322,12 +302,12 @@ MonoBehaviour:
     m_Value: {fileID: 0}
   intensity:
     m_OverrideState: 1
-    m_Value: 0.25
+    m_Value: 0.119
     min: 0
     max: 1
   maxSamples:
     m_OverrideState: 1
-    m_Value: 12
+    m_Value: 24
     min: 3
     max: 24
 --- !u!114 &2049955747691431801
@@ -364,8 +344,8 @@ MonoBehaviour:
           inWeight: 0
           outWeight: 0
         - serializedVersion: 3
-          time: 0.33043477
-          value: 0.27160496
+          time: 0.32764506
+          value: 0.24264705
           inSlope: 0.798611
           outSlope: 0.798611
           tangentMode: 0
@@ -373,8 +353,8 @@ MonoBehaviour:
           inWeight: 0
           outWeight: 0
         - serializedVersion: 3
-          time: 0.715942
-          value: 0.80864197
+          time: 0.7133106
+          value: 0.77205884
           inSlope: 1.1538416
           outSlope: 1.1538416
           tangentMode: 0
@@ -539,3 +519,40 @@ MonoBehaviour:
         m_PostInfinity: 2
         m_RotationOrder: 4
   m_SelectedCurve: 0
+--- !u!114 &4624433791069399417
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c1bfcd0f0fa7b8468f281d6bbbaf320, type: 3}
+  m_Name: LensDistortion
+  m_EditorClassIdentifier: 
+  active: 1
+  m_AdvancedMode: 0
+  intensity:
+    m_OverrideState: 1
+    m_Value: 0.23
+    min: -1
+    max: 1
+  xMultiplier:
+    m_OverrideState: 1
+    m_Value: 1
+    min: 0
+    max: 1
+  yMultiplier:
+    m_OverrideState: 1
+    m_Value: 1
+    min: 0
+    max: 1
+  center:
+    m_OverrideState: 1
+    m_Value: {x: 0.5, y: 0.5}
+  scale:
+    m_OverrideState: 1
+    m_Value: 0.96
+    min: 0.01
+    max: 5

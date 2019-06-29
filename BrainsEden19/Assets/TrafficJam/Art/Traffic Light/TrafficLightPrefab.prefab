@@ -105,7 +105,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2646253460369832663}
   m_LocalRotation: {x: 0.957491, y: -0, z: 0.28846344, w: 0}
-  m_LocalPosition: {x: 0.69, y: 3.93, z: 8.53}
+  m_LocalPosition: {x: 0.86, y: 3.93, z: 7.24}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7044708776623284401}
@@ -122,8 +122,8 @@ Light:
   serializedVersion: 9
   m_Type: 2
   m_Color: {r: 1, g: 0.1273585, b: 0.13573682, a: 1}
-  m_Intensity: 278.52115
-  m_Range: 13
+  m_Intensity: 80.871414
+  m_Range: 18
   m_SpotAngle: 46
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -163,12 +163,12 @@ Light:
   m_RenderingLayerMask: 1
   m_Lightmapping: 4
   m_LightShadowCasterMode: 2
-  m_AreaSize: {x: 1, y: 1}
+  m_AreaSize: {x: 4.92, y: 0.01}
   m_BounceIntensity: 1
   m_ColorTemperature: 1000
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
-  m_UseBoundingSphereOverride: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 18}
+  m_UseBoundingSphereOverride: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
 --- !u!114 &2646253460369832665
@@ -200,9 +200,9 @@ MonoBehaviour:
   affectDiffuse: 1
   affectSpecular: 1
   nonLightmappedOnly: 0
-  lightTypeExtent: 0
+  lightTypeExtent: 2
   m_SpotLightShape: 0
-  shapeWidth: 0.5
+  shapeWidth: 4.92
   shapeHeight: 0.5
   aspectRatio: 1
   shapeRadius: 0
@@ -212,7 +212,7 @@ MonoBehaviour:
   useVolumetric: 1
   featuresFoldout: 1
   showAdditionalSettings: 0
-  displayLightIntensity: 3500
+  displayLightIntensity: 5000
   displayAreaLightEmissiveMesh: 0
   areaLightCookie: {fileID: 0}
   areaLightShadowCone: 120
@@ -292,7 +292,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2241073403062067147
 Transform:
   m_ObjectHideFlags: 0
@@ -318,7 +318,7 @@ Light:
   serializedVersion: 9
   m_Type: 2
   m_Color: {r: 0.5391888, g: 0.9433962, b: 0.27144888, a: 1}
-  m_Intensity: 278.52115
+  m_Intensity: 44.394684
   m_Range: 13
   m_SpotAngle: 46
   m_InnerSpotAngle: 21.80208
@@ -359,12 +359,12 @@ Light:
   m_RenderingLayerMask: 1
   m_Lightmapping: 4
   m_LightShadowCasterMode: 2
-  m_AreaSize: {x: 1, y: 1}
+  m_AreaSize: {x: 7.17, y: 0.01}
   m_BounceIntensity: 1
   m_ColorTemperature: 1000
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
-  m_UseBoundingSphereOverride: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 13}
+  m_UseBoundingSphereOverride: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
 --- !u!114 &4276033142775561370
@@ -396,9 +396,9 @@ MonoBehaviour:
   affectDiffuse: 1
   affectSpecular: 1
   nonLightmappedOnly: 0
-  lightTypeExtent: 0
+  lightTypeExtent: 2
   m_SpotLightShape: 0
-  shapeWidth: 0.5
+  shapeWidth: 7.17
   shapeHeight: 0.5
   aspectRatio: 1
   shapeRadius: 0
@@ -408,7 +408,7 @@ MonoBehaviour:
   useVolumetric: 1
   featuresFoldout: 1
   showAdditionalSettings: 0
-  displayLightIntensity: 3500
+  displayLightIntensity: 4000
   displayAreaLightEmissiveMesh: 0
   areaLightCookie: {fileID: 0}
   areaLightShadowCone: 120
@@ -511,7 +511,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: -2873774253217156772, guid: 8730b7f12e1c82c46b2a2eca4a7a861e,
     type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.8627451}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -621,7 +621,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2034168653572617197
 Transform:
   m_ObjectHideFlags: 0
@@ -647,8 +647,8 @@ Light:
   serializedVersion: 9
   m_Type: 2
   m_Color: {r: 0.9433962, g: 0.7343595, b: 0.23584905, a: 1}
-  m_Intensity: 254.6479
-  m_Range: 19.3
+  m_Intensity: 77.63656
+  m_Range: 19.52
   m_SpotAngle: 46
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -688,12 +688,12 @@ Light:
   m_RenderingLayerMask: 1
   m_Lightmapping: 4
   m_LightShadowCasterMode: 2
-  m_AreaSize: {x: 1, y: 1}
+  m_AreaSize: {x: 4.1, y: 0.01}
   m_BounceIntensity: 1
   m_ColorTemperature: 1000
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
-  m_UseBoundingSphereOverride: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 19.52}
+  m_UseBoundingSphereOverride: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
 --- !u!114 &5249567089340155609
@@ -725,9 +725,9 @@ MonoBehaviour:
   affectDiffuse: 1
   affectSpecular: 1
   nonLightmappedOnly: 0
-  lightTypeExtent: 0
+  lightTypeExtent: 2
   m_SpotLightShape: 0
-  shapeWidth: 0.5
+  shapeWidth: 4.1
   shapeHeight: 0.5
   aspectRatio: 1
   shapeRadius: 0
@@ -737,7 +737,7 @@ MonoBehaviour:
   useVolumetric: 1
   featuresFoldout: 1
   showAdditionalSettings: 0
-  displayLightIntensity: 3200
+  displayLightIntensity: 4000
   displayAreaLightEmissiveMesh: 0
   areaLightCookie: {fileID: 0}
   areaLightShadowCone: 120
