@@ -50,12 +50,16 @@ public class CenterTrafficLight : MonoBehaviour
 
                 for (int i = 0; i < cars.Length; i++)
                 {
-                    if (center.bounds.Contains(cars[i].transform.position))
+                    if (cars[i] != null)
                     {
-                        carsInCenter = true;
-                        yield return null;
+                        if (center.bounds.Contains(cars[i].transform.position))
+                        {
+                            carsInCenter = true;
+                            yield return null;
+                        }
                     }
                 }
+                yield return null;
             } while (carsInCenter);
 
             yield return new WaitForSeconds(3.5f);

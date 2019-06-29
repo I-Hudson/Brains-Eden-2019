@@ -117,17 +117,14 @@ public class CarSpawner : MonoBehaviour
                     SpawnCar(randomCar, randomSpawnLocation, initalColours[i]);
                 }
 
-                int randomColour = Random.Range(0, spawnColourUsed.Count);//Random.Range(0, Colours.Length - 1);
-                Color rColour = Colours[randomColour];//Colours[randomColour];
-               // rColour = CarColourCheck(randomSpawnLocation, rColour);
-                spawnColourUsed.Remove(randomColour);
-                //rColour = CheckColour(line1Colours, rColour);
-
-                line1Colours.Add(rColour);
-
-                SpawnCar(randomCar, randomSpawnLocation, rColour);
-
+                int randomColour = Random.Range(0, spawnColourUsed.Count);
+                randomColour = spawnColourUsed[randomColour];
                 Debug.Log(randomColour);
+                spawnColourUsed.Remove(randomColour);
+
+                Color rColour = Colours[randomColour];
+                line1Colours.Add(rColour);
+                SpawnCar(randomCar, randomSpawnLocation, rColour);
 
                 yield return new WaitForSeconds(SingleCarDelay);
             }
