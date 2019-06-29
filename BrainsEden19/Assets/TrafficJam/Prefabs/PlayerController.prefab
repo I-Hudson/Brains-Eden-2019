@@ -48,4 +48,9 @@ MonoBehaviour:
   trafficLightsList: []
   iCurrentTrafficLightIndex: 0
   iCurrentObstacleIndex: 0
+  ObstacleRoadList: []
   currentObstacle: 0
+  obstaclePrefabs:
+  - {fileID: 9183985564174583701, guid: fdb031e0d46fe8c438316cefb0789e60, type: 3}
+  - {fileID: 1258498436417570256, guid: 7118a12debf985a42aea59a5bca6d659, type: 3}
+  - {fileID: 1772044036642663334, guid: 544d1c1858375114ebad7f47438a49c4, type: 3}

@@ -15,30 +15,42 @@ public class ObstacleSpawn : MonoBehaviour
     [SerializeField]
     private GameObject highlightedArea;
 
+    [SerializeField]
+    private Material clearMat;
+
+    [SerializeField]
+    private Material whiteMat;
+
+    [SerializeField]
+    private bool highlighted = false;
+
     private void Start()
     {
         playerManager = GameObject.FindObjectOfType<PlayerManager>();
     }
 
+   
+
     public void HighLightArea(bool highlighted)
     {
-        if(highlighted)
+        highlighted = highlighted;
+        if (highlighted)
         {
-            highlightedArea.GetComponent<MeshRenderer>().material.color = new Color(0.0f, 0.0f, 1.0f,0.4f);
+            highlightedArea.GetComponent<MeshRenderer>().material = whiteMat;
         }
         else
         {
-            highlightedArea.GetComponent<MeshRenderer>().material.color = Color.clear;
+            highlightedArea.GetComponent<MeshRenderer>().material = clearMat;
         }
     }
 
-    public IEnumerator SpawnObstacle(PlayerController.Obstacles obstacle)
+    public IEnumerator SpawnObstacle(GameObject obstacle)
     {
         if(currentObstacle)
         {
             RemoveObstacle();
         }
-        currentObstacle = Instantiate(playerManager.obstaclePrefabs[(int)obstacle], transform.position, transform.rotation);
+        currentObstacle = Instantiate(obstacle, transform.position, transform.rotation);
 
         yield return new WaitForSeconds(iTimeTillRemoved);
 

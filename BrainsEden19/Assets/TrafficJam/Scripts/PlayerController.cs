@@ -38,7 +38,11 @@ public class PlayerController : MonoBehaviour
 
     public Obstacles currentObstacle = Obstacles.Speed_Bumps;
 
-    
+    [SerializeField]
+    private GameObject[] obstaclePrefabs;
+
+    [SerializeField]
+    private int iObstaclePrefabIndex = 0;
 
     public enum Obstacles
     {
@@ -64,7 +68,10 @@ public class PlayerController : MonoBehaviour
         GameObject[] listOfAllObstacleSpawn = GameObject.FindGameObjectsWithTag("ObstacleSpawnPoint");
         foreach(GameObject os in listOfAllObstacleSpawn)
         {
-            ObstacleRoadList.Add(os.GetComponent<ObstacleSpawn>());
+            if (os.GetComponent<ObstacleSpawn>().iPlayerIndex == iPlayerIndex)
+            {
+                ObstacleRoadList.Add(os.GetComponent<ObstacleSpawn>());
+            }
         }
     }
 
@@ -92,6 +99,12 @@ public class PlayerController : MonoBehaviour
         {
             SwapInteractionMode();
             Debug.Log("joystick " + (iPlayerIndex + 1) + " button 2");
+        }
+        else if (Input.GetKeyDown("joystick " + (iPlayerIndex + 1) + " button 0"))// X Button
+        {
+            InteractionButtonPressed();
+            Debug.Log("joystick " + (iPlayerIndex + 1) + " button 0");
+
         }
     }
 
@@ -129,11 +142,11 @@ public class PlayerController : MonoBehaviour
                 iCurrentObstacleIndex++;
             }
 
-            if (iCurrentObstacleIndex < (int)(Obstacles.END_OF_ENUM) - 1)
+            if (iCurrentObstacleIndex < 0)
             {
-                iCurrentObstacleIndex = (int)(Obstacles.END_OF_ENUM) - 1;
+                iCurrentObstacleIndex = ObstacleRoadList.Count;
             }
-            else if (iCurrentObstacleIndex >= (int)(Obstacles.END_OF_ENUM))
+            else if (iCurrentObstacleIndex > ObstacleRoadList.Count - 1)
             {
                 iCurrentObstacleIndex = 0;
             }
@@ -145,23 +158,28 @@ public class PlayerController : MonoBehaviour
     private void ClearDeactiveatedHighlightedAreas()
     {
         //unHighlight all obstacles
-        for (int i = 0; i < (int)(Obstacles.END_OF_ENUM) - 1; ++i)
+        for (int i = 0; i < ObstacleRoadList.Count; ++i)
         {
-            ObstacleRoadList[i].HighLightArea(false);
+            if (i != iCurrentObstacleIndex || interactionMode != InteractionMode.Mode_Obstacles)
+            {
+                ObstacleRoadList[i].HighLightArea(false);
+            }
+            else
+            {
+                ObstacleRoadList[i].HighLightArea(true);
+            }
         }
         //unHighlight all traffic lights
         for (int i = 0; i < trafficLightsList.Count; ++i)
         {
-            trafficLightsList[i].GetComponent<TrafficLight>().HighLightArea(false);
-        }
-
-        if (interactionMode == InteractionMode.Mode_TrafficLight)
-        {
-            trafficLightsList[iCurrentTrafficLightIndex].GetComponent<TrafficLight>().HighLightArea(true);
-        }
-        else
-        {
-            ObstacleRoadList[iCurrentObstacleIndex].GetComponent<ObstacleSpawn>().HighLightArea(true);
+            if (i != iCurrentTrafficLightIndex || interactionMode != InteractionMode.Mode_TrafficLight)
+            {
+                trafficLightsList[i].GetComponent<TrafficLight>().HighLightArea(false);
+            }
+            else
+            {
+                trafficLightsList[i].GetComponent<TrafficLight>().HighLightArea(true);
+            }
         }
     }
 
@@ -186,7 +204,9 @@ public class PlayerController : MonoBehaviour
     //Changes wether we are swicthing traffic lights or placing obstacles
     private void SwapInteractionMode()
     {
-        if(interactionMode == InteractionMode.Mode_TrafficLight)
+        ClearDeactiveatedHighlightedAreas();
+
+        if (interactionMode == InteractionMode.Mode_TrafficLight)
         {
             interactionMode = InteractionMode.Mode_Obstacles;
         }
@@ -212,7 +232,7 @@ public class PlayerController : MonoBehaviour
             ObstacleSpawn selectedRoad = ObstacleRoadList[iCurrentObstacleIndex];
             if (selectedRoad)
             {
-                selectedRoad.SpawnObstacle(currentObstacle);
+                selectedRoad.SpawnObstacle(obstaclePrefabs[(int)currentObstacle]);
             }
         }
     }

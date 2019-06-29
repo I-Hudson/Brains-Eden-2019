@@ -17,21 +17,32 @@ public class TrafficLight : MonoBehaviour
     [SerializeField]
     private GameObject highlightedArea;
 
+    [SerializeField]
+    private Material clearMat;
+
+    [SerializeField]
+    private Material whiteMat;
+
+    [SerializeField]
+    private Material trafflightGreen;
+    [SerializeField]
+    private Material trafflightRed;
+
     public void HighLightArea(bool highlighted)
     {
         if (highlighted)
         {
-            highlightedArea.GetComponent<MeshRenderer>().material.color = new Color(0.0f, 0.0f, 1.0f, 0.4f);
+            highlightedArea.GetComponent<MeshRenderer>().material = whiteMat;
         }
         else
         {
-            highlightedArea.GetComponent<MeshRenderer>().material.color = Color.clear;
+            highlightedArea.GetComponent<MeshRenderer>().material = clearMat;
         }
     }
 
     private void Start()
     {
-        meshRenderer.material.color = Color.red;
+        meshRenderer.material = trafflightRed;
     }
 
     public IEnumerator SetActive()
@@ -39,12 +50,12 @@ public class TrafficLight : MonoBehaviour
         if (!bActive)
         {
             bActive = true;
-            meshRenderer.material.color = Color.green;
+            meshRenderer.material = trafflightGreen;
 
             yield return new WaitForSeconds(fMaxActiveTime);
 
             bActive = false;
-            meshRenderer.material.color = Color.red;
+            meshRenderer.material = trafflightRed;
         }
     }
 }

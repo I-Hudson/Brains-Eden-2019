@@ -19,7 +19,7 @@ public class PlayerManager : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI debugTextMesh;
 
-    public GameObject[] obstaclePrefabs;
+   
 
     private void Start()
     {

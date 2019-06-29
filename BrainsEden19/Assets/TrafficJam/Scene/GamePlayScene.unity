@@ -187,6 +187,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1553116093180586142, guid: 3ae676b8bdb9ccb4781fcade04133649,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b88a3941c37d7964d977acb9916c755f, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ae676b8bdb9ccb4781fcade04133649, type: 3}
 --- !u!4 &1795895 stripped
@@ -249,6 +254,9 @@ MonoBehaviour:
   iTimeTillRemoved: 5
   playerManager: {fileID: 0}
   highlightedArea: {fileID: 1688549732}
+  clearMat: {fileID: 2100000, guid: b88a3941c37d7964d977acb9916c755f, type: 2}
+  whiteMat: {fileID: 2100000, guid: 38b93c8556e03144da336e16457b0142, type: 2}
+  highlighted: 0
 --- !u!1 &43112842
 GameObject:
   m_ObjectHideFlags: 0
@@ -475,6 +483,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1553116093180586142, guid: 3ae676b8bdb9ccb4781fcade04133649,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b88a3941c37d7964d977acb9916c755f, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ae676b8bdb9ccb4781fcade04133649, type: 3}
 --- !u!4 &81574556 stripped
@@ -725,6 +738,10 @@ MonoBehaviour:
   bActive: 0
   meshRenderer: {fileID: 575371641}
   highlightedArea: {fileID: 946104339}
+  clearMat: {fileID: 2100000, guid: b88a3941c37d7964d977acb9916c755f, type: 2}
+  whiteMat: {fileID: 2100000, guid: 38b93c8556e03144da336e16457b0142, type: 2}
+  trafflightGreen: {fileID: 2100000, guid: aa488e258ee634f49ae4a82e5c647188, type: 2}
+  trafflightRed: {fileID: 2100000, guid: 1a49c1c00c0b5a341870c94c6f6d87c5, type: 2}
 --- !u!1 &275351181
 GameObject:
   m_ObjectHideFlags: 0
@@ -773,6 +790,9 @@ MonoBehaviour:
   iTimeTillRemoved: 5
   playerManager: {fileID: 0}
   highlightedArea: {fileID: 761984006}
+  clearMat: {fileID: 2100000, guid: b88a3941c37d7964d977acb9916c755f, type: 2}
+  whiteMat: {fileID: 2100000, guid: 38b93c8556e03144da336e16457b0142, type: 2}
+  highlighted: 0
 --- !u!1 &294548698
 GameObject:
   m_ObjectHideFlags: 0
@@ -916,6 +936,10 @@ MonoBehaviour:
   bActive: 0
   meshRenderer: {fileID: 821902749}
   highlightedArea: {fileID: 1120139041}
+  clearMat: {fileID: 2100000, guid: b88a3941c37d7964d977acb9916c755f, type: 2}
+  whiteMat: {fileID: 2100000, guid: 38b93c8556e03144da336e16457b0142, type: 2}
+  trafflightGreen: {fileID: 2100000, guid: aa488e258ee634f49ae4a82e5c647188, type: 2}
+  trafflightRed: {fileID: 2100000, guid: 1a49c1c00c0b5a341870c94c6f6d87c5, type: 2}
 --- !u!1 &313264848
 GameObject:
   m_ObjectHideFlags: 0
@@ -1086,6 +1110,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1553116093180586142, guid: 3ae676b8bdb9ccb4781fcade04133649,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b88a3941c37d7964d977acb9916c755f, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ae676b8bdb9ccb4781fcade04133649, type: 3}
 --- !u!4 &317780633 stripped
@@ -1150,6 +1179,10 @@ MonoBehaviour:
   bActive: 0
   meshRenderer: {fileID: 294548701}
   highlightedArea: {fileID: 317780634}
+  clearMat: {fileID: 2100000, guid: b88a3941c37d7964d977acb9916c755f, type: 2}
+  whiteMat: {fileID: 2100000, guid: 38b93c8556e03144da336e16457b0142, type: 2}
+  trafflightGreen: {fileID: 2100000, guid: aa488e258ee634f49ae4a82e5c647188, type: 2}
+  trafflightRed: {fileID: 2100000, guid: 1a49c1c00c0b5a341870c94c6f6d87c5, type: 2}
 --- !u!1 &324232488
 GameObject:
   m_ObjectHideFlags: 0
@@ -1198,6 +1231,9 @@ MonoBehaviour:
   iTimeTillRemoved: 5
   playerManager: {fileID: 0}
   highlightedArea: {fileID: 360847832}
+  clearMat: {fileID: 2100000, guid: b88a3941c37d7964d977acb9916c755f, type: 2}
+  whiteMat: {fileID: 2100000, guid: 38b93c8556e03144da336e16457b0142, type: 2}
+  highlighted: 0
 --- !u!1 &348764183
 GameObject:
   m_ObjectHideFlags: 0
@@ -1246,6 +1282,9 @@ MonoBehaviour:
   iTimeTillRemoved: 5
   playerManager: {fileID: 0}
   highlightedArea: {fileID: 1611645455}
+  clearMat: {fileID: 2100000, guid: b88a3941c37d7964d977acb9916c755f, type: 2}
+  whiteMat: {fileID: 2100000, guid: 38b93c8556e03144da336e16457b0142, type: 2}
+  highlighted: 0
 --- !u!1001 &360847830
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1313,6 +1352,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1553116093180586142, guid: 3ae676b8bdb9ccb4781fcade04133649,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b88a3941c37d7964d977acb9916c755f, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ae676b8bdb9ccb4781fcade04133649, type: 3}
 --- !u!4 &360847831 stripped
@@ -1501,6 +1545,10 @@ MonoBehaviour:
   bActive: 0
   meshRenderer: {fileID: 1311259037}
   highlightedArea: {fileID: 1565312813}
+  clearMat: {fileID: 2100000, guid: b88a3941c37d7964d977acb9916c755f, type: 2}
+  whiteMat: {fileID: 2100000, guid: 38b93c8556e03144da336e16457b0142, type: 2}
+  trafflightGreen: {fileID: 2100000, guid: aa488e258ee634f49ae4a82e5c647188, type: 2}
+  trafflightRed: {fileID: 2100000, guid: 1a49c1c00c0b5a341870c94c6f6d87c5, type: 2}
 --- !u!1 &445345617
 GameObject:
   m_ObjectHideFlags: 0
@@ -1906,6 +1954,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1553116093180586142, guid: 3ae676b8bdb9ccb4781fcade04133649,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b88a3941c37d7964d977acb9916c755f, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ae676b8bdb9ccb4781fcade04133649, type: 3}
 --- !u!4 &552263832 stripped
@@ -2183,6 +2236,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1553116093180586142, guid: 3ae676b8bdb9ccb4781fcade04133649,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b88a3941c37d7964d977acb9916c755f, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ae676b8bdb9ccb4781fcade04133649, type: 3}
 --- !u!4 &670566107 stripped
@@ -2467,6 +2525,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1553116093180586142, guid: 3ae676b8bdb9ccb4781fcade04133649,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b88a3941c37d7964d977acb9916c755f, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ae676b8bdb9ccb4781fcade04133649, type: 3}
 --- !u!4 &761984005 stripped
@@ -2641,6 +2704,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1553116093180586142, guid: 3ae676b8bdb9ccb4781fcade04133649,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b88a3941c37d7964d977acb9916c755f, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ae676b8bdb9ccb4781fcade04133649, type: 3}
 --- !u!4 &884028144 stripped
@@ -2703,6 +2771,9 @@ MonoBehaviour:
   iTimeTillRemoved: 5
   playerManager: {fileID: 0}
   highlightedArea: {fileID: 1460111725}
+  clearMat: {fileID: 2100000, guid: b88a3941c37d7964d977acb9916c755f, type: 2}
+  whiteMat: {fileID: 2100000, guid: 38b93c8556e03144da336e16457b0142, type: 2}
+  highlighted: 0
 --- !u!1 &909376727
 GameObject:
   m_ObjectHideFlags: 0
@@ -2863,6 +2934,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1553116093180586142, guid: 3ae676b8bdb9ccb4781fcade04133649,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b88a3941c37d7964d977acb9916c755f, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ae676b8bdb9ccb4781fcade04133649, type: 3}
 --- !u!4 &916171768 stripped
@@ -2927,6 +3003,10 @@ MonoBehaviour:
   bActive: 0
   meshRenderer: {fileID: 1533104745}
   highlightedArea: {fileID: 1046236317}
+  clearMat: {fileID: 2100000, guid: b88a3941c37d7964d977acb9916c755f, type: 2}
+  whiteMat: {fileID: 2100000, guid: 38b93c8556e03144da336e16457b0142, type: 2}
+  trafflightGreen: {fileID: 2100000, guid: aa488e258ee634f49ae4a82e5c647188, type: 2}
+  trafflightRed: {fileID: 2100000, guid: 1a49c1c00c0b5a341870c94c6f6d87c5, type: 2}
 --- !u!1001 &946104337
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3004,6 +3084,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1553116093180586142, guid: 3ae676b8bdb9ccb4781fcade04133649,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b88a3941c37d7964d977acb9916c755f, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ae676b8bdb9ccb4781fcade04133649, type: 3}
 --- !u!4 &946104338 stripped
@@ -3159,6 +3244,9 @@ MonoBehaviour:
   iTimeTillRemoved: 5
   playerManager: {fileID: 0}
   highlightedArea: {fileID: 916171769}
+  clearMat: {fileID: 2100000, guid: b88a3941c37d7964d977acb9916c755f, type: 2}
+  whiteMat: {fileID: 2100000, guid: 38b93c8556e03144da336e16457b0142, type: 2}
+  highlighted: 0
 --- !u!1 &999479197
 GameObject:
   m_ObjectHideFlags: 0
@@ -3207,6 +3295,9 @@ MonoBehaviour:
   iTimeTillRemoved: 5
   playerManager: {fileID: 0}
   highlightedArea: {fileID: 1628243840}
+  clearMat: {fileID: 2100000, guid: b88a3941c37d7964d977acb9916c755f, type: 2}
+  whiteMat: {fileID: 2100000, guid: 38b93c8556e03144da336e16457b0142, type: 2}
+  highlighted: 0
 --- !u!1 &1023956130
 GameObject:
   m_ObjectHideFlags: 0
@@ -3461,6 +3552,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1553116093180586142, guid: 3ae676b8bdb9ccb4781fcade04133649,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b88a3941c37d7964d977acb9916c755f, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ae676b8bdb9ccb4781fcade04133649, type: 3}
 --- !u!4 &1046236316 stripped
@@ -3552,6 +3648,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1553116093180586142, guid: 3ae676b8bdb9ccb4781fcade04133649,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b88a3941c37d7964d977acb9916c755f, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ae676b8bdb9ccb4781fcade04133649, type: 3}
 --- !u!4 &1096249882 stripped
@@ -3614,6 +3715,9 @@ MonoBehaviour:
   iTimeTillRemoved: 5
   playerManager: {fileID: 0}
   highlightedArea: {fileID: 884028145}
+  clearMat: {fileID: 2100000, guid: b88a3941c37d7964d977acb9916c755f, type: 2}
+  whiteMat: {fileID: 2100000, guid: 38b93c8556e03144da336e16457b0142, type: 2}
+  highlighted: 0
 --- !u!1001 &1115779595
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3681,6 +3785,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1553116093180586142, guid: 3ae676b8bdb9ccb4781fcade04133649,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b88a3941c37d7964d977acb9916c755f, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ae676b8bdb9ccb4781fcade04133649, type: 3}
 --- !u!4 &1115779596 stripped
@@ -3865,6 +3974,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1553116093180586142, guid: 3ae676b8bdb9ccb4781fcade04133649,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b88a3941c37d7964d977acb9916c755f, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ae676b8bdb9ccb4781fcade04133649, type: 3}
 --- !u!4 &1120139040 stripped
@@ -3927,6 +4041,9 @@ MonoBehaviour:
   iTimeTillRemoved: 5
   playerManager: {fileID: 0}
   highlightedArea: {fileID: 552263833}
+  clearMat: {fileID: 2100000, guid: b88a3941c37d7964d977acb9916c755f, type: 2}
+  whiteMat: {fileID: 2100000, guid: 38b93c8556e03144da336e16457b0142, type: 2}
+  highlighted: 0
 --- !u!1 &1169991976
 GameObject:
   m_ObjectHideFlags: 0
@@ -3977,6 +4094,10 @@ MonoBehaviour:
   bActive: 0
   meshRenderer: {fileID: 630533691}
   highlightedArea: {fileID: 670566108}
+  clearMat: {fileID: 2100000, guid: b88a3941c37d7964d977acb9916c755f, type: 2}
+  whiteMat: {fileID: 2100000, guid: 38b93c8556e03144da336e16457b0142, type: 2}
+  trafflightGreen: {fileID: 2100000, guid: aa488e258ee634f49ae4a82e5c647188, type: 2}
+  trafflightRed: {fileID: 2100000, guid: 1a49c1c00c0b5a341870c94c6f6d87c5, type: 2}
 --- !u!1 &1181359687
 GameObject:
   m_ObjectHideFlags: 0
@@ -4251,6 +4372,9 @@ MonoBehaviour:
   iTimeTillRemoved: 5
   playerManager: {fileID: 0}
   highlightedArea: {fileID: 81574557}
+  clearMat: {fileID: 2100000, guid: b88a3941c37d7964d977acb9916c755f, type: 2}
+  whiteMat: {fileID: 2100000, guid: 38b93c8556e03144da336e16457b0142, type: 2}
+  highlighted: 0
 --- !u!1 &1311259034
 GameObject:
   m_ObjectHideFlags: 0
@@ -4504,6 +4628,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1553116093180586142, guid: 3ae676b8bdb9ccb4781fcade04133649,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b88a3941c37d7964d977acb9916c755f, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ae676b8bdb9ccb4781fcade04133649, type: 3}
 --- !u!4 &1460111724 stripped
@@ -4659,6 +4788,9 @@ MonoBehaviour:
   iTimeTillRemoved: 5
   playerManager: {fileID: 0}
   highlightedArea: {fileID: 2008167107}
+  clearMat: {fileID: 2100000, guid: b88a3941c37d7964d977acb9916c755f, type: 2}
+  whiteMat: {fileID: 2100000, guid: 38b93c8556e03144da336e16457b0142, type: 2}
+  highlighted: 0
 --- !u!1 &1545806699
 GameObject:
   m_ObjectHideFlags: 0
@@ -4709,6 +4841,10 @@ MonoBehaviour:
   bActive: 0
   meshRenderer: {fileID: 313264851}
   highlightedArea: {fileID: 1644113638}
+  clearMat: {fileID: 2100000, guid: b88a3941c37d7964d977acb9916c755f, type: 2}
+  whiteMat: {fileID: 2100000, guid: 38b93c8556e03144da336e16457b0142, type: 2}
+  trafflightGreen: {fileID: 2100000, guid: aa488e258ee634f49ae4a82e5c647188, type: 2}
+  trafflightRed: {fileID: 2100000, guid: 1a49c1c00c0b5a341870c94c6f6d87c5, type: 2}
 --- !u!1001 &1565312811
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4786,6 +4922,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1553116093180586142, guid: 3ae676b8bdb9ccb4781fcade04133649,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b88a3941c37d7964d977acb9916c755f, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ae676b8bdb9ccb4781fcade04133649, type: 3}
 --- !u!4 &1565312812 stripped
@@ -4848,6 +4989,9 @@ MonoBehaviour:
   iTimeTillRemoved: 5
   playerManager: {fileID: 0}
   highlightedArea: {fileID: 1785974358}
+  clearMat: {fileID: 2100000, guid: b88a3941c37d7964d977acb9916c755f, type: 2}
+  whiteMat: {fileID: 2100000, guid: 38b93c8556e03144da336e16457b0142, type: 2}
+  highlighted: 0
 --- !u!1001 &1611645453
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4915,6 +5059,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1553116093180586142, guid: 3ae676b8bdb9ccb4781fcade04133649,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b88a3941c37d7964d977acb9916c755f, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ae676b8bdb9ccb4781fcade04133649, type: 3}
 --- !u!4 &1611645454 stripped
@@ -4996,6 +5145,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1553116093180586142, guid: 3ae676b8bdb9ccb4781fcade04133649,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b88a3941c37d7964d977acb9916c755f, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ae676b8bdb9ccb4781fcade04133649, type: 3}
 --- !u!4 &1628243839 stripped
@@ -5087,6 +5241,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1553116093180586142, guid: 3ae676b8bdb9ccb4781fcade04133649,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b88a3941c37d7964d977acb9916c755f, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ae676b8bdb9ccb4781fcade04133649, type: 3}
 --- !u!4 &1644113637 stripped
@@ -5168,6 +5327,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1553116093180586142, guid: 3ae676b8bdb9ccb4781fcade04133649,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b88a3941c37d7964d977acb9916c755f, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ae676b8bdb9ccb4781fcade04133649, type: 3}
 --- !u!4 &1653815075 stripped
@@ -5249,6 +5413,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1553116093180586142, guid: 3ae676b8bdb9ccb4781fcade04133649,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b88a3941c37d7964d977acb9916c755f, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ae676b8bdb9ccb4781fcade04133649, type: 3}
 --- !u!4 &1688549731 stripped
@@ -5330,6 +5499,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1553116093180586142, guid: 3ae676b8bdb9ccb4781fcade04133649,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b88a3941c37d7964d977acb9916c755f, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ae676b8bdb9ccb4781fcade04133649, type: 3}
 --- !u!4 &1757658704 stripped
@@ -5392,6 +5566,9 @@ MonoBehaviour:
   iTimeTillRemoved: 5
   playerManager: {fileID: 0}
   highlightedArea: {fileID: 1115779597}
+  clearMat: {fileID: 2100000, guid: b88a3941c37d7964d977acb9916c755f, type: 2}
+  whiteMat: {fileID: 2100000, guid: 38b93c8556e03144da336e16457b0142, type: 2}
+  highlighted: 0
 --- !u!1001 &1785974356
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5459,6 +5636,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1553116093180586142, guid: 3ae676b8bdb9ccb4781fcade04133649,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b88a3941c37d7964d977acb9916c755f, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ae676b8bdb9ccb4781fcade04133649, type: 3}
 --- !u!4 &1785974357 stripped
@@ -5521,6 +5703,9 @@ MonoBehaviour:
   iTimeTillRemoved: 5
   playerManager: {fileID: 0}
   highlightedArea: {fileID: 1795896}
+  clearMat: {fileID: 2100000, guid: b88a3941c37d7964d977acb9916c755f, type: 2}
+  whiteMat: {fileID: 2100000, guid: 38b93c8556e03144da336e16457b0142, type: 2}
+  highlighted: 0
 --- !u!1 &1896265654
 GameObject:
   m_ObjectHideFlags: 0
@@ -5607,6 +5792,9 @@ MonoBehaviour:
   iTimeTillRemoved: 5
   playerManager: {fileID: 0}
   highlightedArea: {fileID: 1653815076}
+  clearMat: {fileID: 2100000, guid: b88a3941c37d7964d977acb9916c755f, type: 2}
+  whiteMat: {fileID: 2100000, guid: 38b93c8556e03144da336e16457b0142, type: 2}
+  highlighted: 0
 --- !u!1001 &2008167105
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5674,6 +5862,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1553116093180586142, guid: 3ae676b8bdb9ccb4781fcade04133649,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b88a3941c37d7964d977acb9916c755f, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ae676b8bdb9ccb4781fcade04133649, type: 3}
 --- !u!4 &2008167106 stripped
@@ -5736,6 +5929,9 @@ MonoBehaviour:
   iTimeTillRemoved: 5
   playerManager: {fileID: 0}
   highlightedArea: {fileID: 1757658705}
+  clearMat: {fileID: 2100000, guid: b88a3941c37d7964d977acb9916c755f, type: 2}
+  whiteMat: {fileID: 2100000, guid: 38b93c8556e03144da336e16457b0142, type: 2}
+  highlighted: 0
 --- !u!1 &2104336207
 GameObject:
   m_ObjectHideFlags: 0
@@ -5786,3 +5982,7 @@ MonoBehaviour:
   bActive: 0
   meshRenderer: {fileID: 990411605}
   highlightedArea: {fileID: 1096249883}
+  clearMat: {fileID: 2100000, guid: b88a3941c37d7964d977acb9916c755f, type: 2}
+  whiteMat: {fileID: 2100000, guid: 38b93c8556e03144da336e16457b0142, type: 2}
+  trafflightGreen: {fileID: 2100000, guid: aa488e258ee634f49ae4a82e5c647188, type: 2}
+  trafflightRed: {fileID: 2100000, guid: 1a49c1c00c0b5a341870c94c6f6d87c5, type: 2}
