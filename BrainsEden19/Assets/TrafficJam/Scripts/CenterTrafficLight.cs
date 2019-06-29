@@ -59,7 +59,6 @@ public class CenterTrafficLight : MonoBehaviour
                         }
                     }
                 }
-                yield return null;
             } while (carsInCenter);
 
             yield return new WaitForSeconds(3.5f);
