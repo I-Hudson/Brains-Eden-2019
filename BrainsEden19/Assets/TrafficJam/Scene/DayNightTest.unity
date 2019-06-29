@@ -422,16 +422,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Version: 1
-  shadowResolution: 2048
+  shadowResolution: 4096
   shadowDimmer: 1
   volumetricShadowDimmer: 1
   shadowFadeDistance: 10000
   contactShadows: 1
-  viewBiasMin: 0.2
+  viewBiasMin: 0.29
   viewBiasMax: 10
-  viewBiasScale: 1
-  normalBiasMin: 0.5
-  normalBiasMax: 4
+  viewBiasScale: 1.91
+  normalBiasMin: 0.59
+  normalBiasMax: 0.59
   normalBiasScale: 1
   sampleBiasScale: 0
   edgeLeakFixup: 1
@@ -493,7 +493,7 @@ MonoBehaviour:
   shapeHeight: 0.5
   aspectRatio: 1
   shapeRadius: 0
-  maxSmoothness: 1
+  maxSmoothness: 0.787
   applyRangeAttenuation: 1
   useOldInspector: 0
   useVolumetric: 1
@@ -570,7 +570,7 @@ Light:
   m_LightShadowCasterMode: 2
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
-  m_ColorTemperature: 6291
+  m_ColorTemperature: 5984
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
