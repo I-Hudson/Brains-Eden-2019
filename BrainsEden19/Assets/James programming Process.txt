@@ -4,3 +4,4 @@ Road Block Obstacle
 stop being able to turn if a road block is valid DONE
 Add Traffic Light Model/ functionality 
 Char Selection Sceen
+only rotate warm sun light

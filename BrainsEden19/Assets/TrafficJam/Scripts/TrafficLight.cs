@@ -15,9 +15,6 @@ public class TrafficLight : MonoBehaviour
     private PlayerController myPlayer;
 
     [SerializeField]
-    private MeshRenderer meshRenderer;
-
-    [SerializeField]
     private GameObject highlightedArea;
 
     [SerializeField]
@@ -34,6 +31,19 @@ public class TrafficLight : MonoBehaviour
     [SerializeField]
     private ObstacleSpawn myRoadObstcle;
 
+    [SerializeField]
+    private Light greenLight;
+    [SerializeField]
+    private Light amberLight;
+    [SerializeField]
+    private Light redLight;
+
+    private void Start()
+    {
+        greenLight.enabled = false;
+        amberLight.enabled = false;
+        redLight.enabled = true;
+    }
     public void HighLightArea(bool highlighted, int iPlayerIndex)
     {
         if (highlighted)
@@ -73,22 +83,34 @@ public class TrafficLight : MonoBehaviour
         return true;
     }
 
-    private void Start()
-    {
-        meshRenderer.material = trafflightRed;
-    }
 
     public IEnumerator SetActive()
     {
         if (!bActive)
         {
             bActive = true;
-            meshRenderer.material = trafflightGreen;
+
+            amberLight.enabled = false;
+            yield return new WaitForSeconds(0.5f);
+            amberLight.enabled = true;
+            yield return new WaitForSeconds(0.5f);
+            amberLight.enabled = false;
+            yield return new WaitForSeconds(0.5f);
+            amberLight.enabled = true;
+            yield return new WaitForSeconds(0.5f);
+            amberLight.enabled = false;
+            yield return new WaitForSeconds(0.5f);
+            amberLight.enabled = true;
+            yield return new WaitForSeconds(0.5f);
+            amberLight.enabled = false;
+
+            greenLight.enabled = true;
 
             yield return new WaitForSeconds(fMaxActiveTime);
 
             bActive = false;
-            meshRenderer.material = trafflightRed;
+            greenLight.enabled = false;
+            redLight.enabled = true;
         }
     }
 
