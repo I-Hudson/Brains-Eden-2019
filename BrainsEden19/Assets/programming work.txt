@@ -8,7 +8,7 @@ obstacle feedback, when a car hits an oil slick car spins out of control and cra
 Collision between cars when hit
 
 
-Score system (when car leaves road on your square add score)
+Score system (when car leaves road on your square add score) DONE
 
 UI main menu
 UI items like score for players, time left? / cars remaining?

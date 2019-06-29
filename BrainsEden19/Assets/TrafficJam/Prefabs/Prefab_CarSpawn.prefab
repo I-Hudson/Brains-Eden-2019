@@ -59,9 +59,10 @@ MonoBehaviour:
   - {r: 1, g: 0, b: 0, a: 1}
   - {r: 1, g: 0.9964248, b: 0, a: 1}
   - {r: 0, g: 0.7901604, b: 1, a: 1}
+  CarColourKey: 01000000000000000300000002000000
   spawnCars: 1
   SingleCarDelay: 0
-  MinMaxSpawnTime: {x: 0.5, y: 1}
+  MinMaxSpawnTime: {x: 2.5, y: 3.5}
   maxCarCount: 16
   minCarCount: 8
   initalColours:
