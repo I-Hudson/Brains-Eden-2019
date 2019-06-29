@@ -318,6 +318,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationDirection: {x: 0, y: 0, z: 1}
   rotationalSpeed: 1
+  dayLightCool: {fileID: 0}
+  dayLightWarm: {fileID: 0}
+  NightLightCool: {fileID: 0}
 --- !u!1 &719784654
 GameObject:
   m_ObjectHideFlags: 0
