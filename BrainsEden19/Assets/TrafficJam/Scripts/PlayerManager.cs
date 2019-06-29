@@ -19,7 +19,10 @@ public class PlayerManager : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI debugTextMesh;
 
-   
+    private List<PlayerController> players = new List<PlayerController>();
+
+    [SerializeField]
+    private List<ObstacleSpawn> ObstacleRoadList = new List<ObstacleSpawn>();
 
     private void Start()
     {
@@ -27,8 +30,16 @@ public class PlayerManager : MonoBehaviour
         {
             GameObject newPlayer = Instantiate(playerPrefab);
             PlayerController newPlayerController = newPlayer.GetComponent<PlayerController>();
-            newPlayer.GetComponent<PlayerController>().iPlayerIndex = i;
-            newPlayer.GetComponent<PlayerController>().UpdateTrafficLightList();
+            newPlayerController.iPlayerIndex = i;
+            newPlayerController.UpdateTrafficLightList();
+
+            players.Add(newPlayerController);
+        }
+
+        GameObject[] listOfAllObstacleSpawn = GameObject.FindGameObjectsWithTag("ObstacleSpawnPoint");
+        foreach (GameObject os in listOfAllObstacleSpawn)
+        {
+            ObstacleRoadList.Add(os.GetComponent<ObstacleSpawn>());
         }
     }
 
@@ -45,6 +56,8 @@ public class PlayerManager : MonoBehaviour
             debugTextMesh.text = "4 Players Need to be Connected";
             Time.timeScale = 0;
         }
+
+
     }
 
     //If 4 players connected, returns true
@@ -55,5 +68,26 @@ public class PlayerManager : MonoBehaviour
             return true;
         }
         return false;
+    }
+
+    private void UpdateObstacleHighlights()
+    {
+        for (int i = 0; i < ObstacleRoadList.Count; ++i)
+        {
+            bool activated = false;
+            int playerIndex = 0;
+            for (int x = 0; x < players.Count; ++x)
+            {
+                if (ObstacleRoadList[i] == players[x].currentObstacleSpawn || ObstacleRoadList[i].highlighted)
+                {
+                    activated = true;
+                    playerIndex = x;
+                }
+            }
+            if (!activated)
+            {
+                ObstacleRoadList[i].HighLightArea(false, playerIndex);
+            }
+        }
     }
 }

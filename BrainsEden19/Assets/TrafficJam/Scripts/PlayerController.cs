@@ -44,6 +44,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private int iObstaclePrefabIndex = 0;
 
+    public ObstacleSpawn currentObstacleSpawn;
+
     public enum Obstacles
     {
         Speed_Bumps,
@@ -68,10 +70,7 @@ public class PlayerController : MonoBehaviour
         GameObject[] listOfAllObstacleSpawn = GameObject.FindGameObjectsWithTag("ObstacleSpawnPoint");
         foreach(GameObject os in listOfAllObstacleSpawn)
         {
-            if (os.GetComponent<ObstacleSpawn>().iPlayerIndex == iPlayerIndex)
-            {
-                ObstacleRoadList.Add(os.GetComponent<ObstacleSpawn>());
-            }
+            ObstacleRoadList.Add(os.GetComponent<ObstacleSpawn>());
         }
     }
 
@@ -160,13 +159,14 @@ public class PlayerController : MonoBehaviour
         //unHighlight all obstacles
         for (int i = 0; i < ObstacleRoadList.Count; ++i)
         {
-            if (i != iCurrentObstacleIndex || interactionMode != InteractionMode.Mode_Obstacles)
+            if (i == iCurrentObstacleIndex && interactionMode == InteractionMode.Mode_Obstacles)
             {
-                ObstacleRoadList[i].HighLightArea(false);
+                ObstacleRoadList[i].HighLightArea(true, iPlayerIndex);
+                currentObstacleSpawn = ObstacleRoadList[i];
             }
             else
             {
-                ObstacleRoadList[i].HighLightArea(true);
+                currentObstacleSpawn = null;
             }
         }
         //unHighlight all traffic lights
@@ -174,11 +174,11 @@ public class PlayerController : MonoBehaviour
         {
             if (i != iCurrentTrafficLightIndex || interactionMode != InteractionMode.Mode_TrafficLight)
             {
-                trafficLightsList[i].GetComponent<TrafficLight>().HighLightArea(false);
+                trafficLightsList[i].GetComponent<TrafficLight>().HighLightArea(false,iPlayerIndex);
             }
             else
             {
-                trafficLightsList[i].GetComponent<TrafficLight>().HighLightArea(true);
+                trafficLightsList[i].GetComponent<TrafficLight>().HighLightArea(true, iPlayerIndex);
             }
         }
     }
@@ -232,7 +232,7 @@ public class PlayerController : MonoBehaviour
             ObstacleSpawn selectedRoad = ObstacleRoadList[iCurrentObstacleIndex];
             if (selectedRoad)
             {
-                selectedRoad.SpawnObstacle(obstaclePrefabs[(int)currentObstacle]);
+                selectedRoad.StartCoroutine(selectedRoad.SpawnObstacle(obstaclePrefabs[(int)currentObstacle]));
             }
         }
     }

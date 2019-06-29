@@ -21,21 +21,36 @@ public class ObstacleSpawn : MonoBehaviour
     [SerializeField]
     private Material whiteMat;
 
-    [SerializeField]
-    private bool highlighted = false;
+    public bool highlighted = false;
 
     private void Start()
     {
         playerManager = GameObject.FindObjectOfType<PlayerManager>();
     }
-
    
 
-    public void HighLightArea(bool highlighted)
+    public void HighLightArea(bool highlighted, int iPlayerIndex)
     {
         highlighted = highlighted;
         if (highlighted)
         {
+            switch (iPlayerIndex)
+            {
+                case 0:
+                    whiteMat.SetColor("_BaseColor", Color.green);
+                    break;
+                case 1:
+                    whiteMat.SetColor("_BaseColor", Color.red);
+                    break;
+                case 2:
+                    whiteMat.SetColor("_BaseColor", Color.blue);
+                    break;
+                case 3:
+                    whiteMat.SetColor("_BaseColor", Color.yellow);
+                    break;
+                default:
+                    break;
+            }
             highlightedArea.GetComponent<MeshRenderer>().material = whiteMat;
         }
         else

@@ -12,6 +12,7 @@ public class CarUpdate : MonoBehaviour
     public float MinHitDistance;
 
     private bool forceForward = false;
+    private bool directionChanged = false;
 
     // Start is called before the first frame update
     void Start()
@@ -83,7 +84,7 @@ public class CarUpdate : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "LoopTrigger")
+        if (other.tag == "LoopTrigger")
         {
             if (spawnLocIndex == 0)
             {
@@ -104,6 +105,14 @@ public class CarUpdate : MonoBehaviour
 
             transform.position = SpawnLocations[spawnLocIndex].position;
             transform.rotation = SpawnLocations[spawnLocIndex].rotation;
+        }
+        else if (other.tag == "TrafficLightControlable" && !directionChanged)
+        {
+            if (other.GetComponent<TrafficLight>() && other.GetComponent<TrafficLight>().bActive)
+            {
+                transform.rotation = Quaternion.LookRotation(-transform.right, transform.forward);
+                directionChanged = true;
+            }
         }
     }
 }

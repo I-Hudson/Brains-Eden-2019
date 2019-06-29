@@ -28,10 +28,28 @@ public class TrafficLight : MonoBehaviour
     [SerializeField]
     private Material trafflightRed;
 
-    public void HighLightArea(bool highlighted)
+    public void HighLightArea(bool highlighted, int iPlayerIndex)
     {
         if (highlighted)
         {
+            switch(iPlayerIndex)
+            {
+                case 0:
+                    whiteMat.color = new Color(0,1,0,1);
+                    break;
+                case 1:
+                    whiteMat.color = new Color(0, 1, 0, 1);
+                    break;
+                case 2:
+                    whiteMat.color = new Color(0, 1, 0, 1);
+                    break;
+                case 3:
+                    whiteMat.color = new Color(0, 1, 0, 1);
+                    break;
+                default:
+                    break;
+            }
+            
             highlightedArea.GetComponent<MeshRenderer>().material = whiteMat;
         }
         else

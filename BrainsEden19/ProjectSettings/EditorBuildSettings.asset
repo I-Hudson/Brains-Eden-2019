@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/TrafficJam/Scene/GamePlayScene.unity
+    guid: 2b2dc6551b562574697c63b1baf97b37
   m_configObjects: {}
