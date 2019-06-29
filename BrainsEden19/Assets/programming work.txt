@@ -13,4 +13,6 @@ UI main menu
 UI items like score for players, time left? / cars remaining?
 
 
-
+Level timer.
+Score on UI
+Redo looping of cars

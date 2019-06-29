@@ -169,7 +169,7 @@ public class CarUpdate : MonoBehaviour
                     spawnLocIndex = 2;
                 }
 
-                LoopVehicle();
+                //LoopVehicle();
             }
         }
 
