@@ -15,6 +15,7 @@ public class CarUpdate : MonoBehaviour
     public float NormalSpeed;
     public float speed_;
     public float MinHitDistance;
+    public bool isOnMainRoad = true;
 
     public CarColour CarColour;
 
@@ -24,6 +25,8 @@ public class CarUpdate : MonoBehaviour
     private bool forceForward = false;
 
     private bool isLooping = false;
+
+    private bool isSlow = false;
 
     // Start is called before the first frame update
     void Start()
@@ -45,24 +48,29 @@ public class CarUpdate : MonoBehaviour
         bool hitCar = false;
         for (int i = 0; i < hits.Length; i++)
         {
-            if (hits[i].distance < MinHitDistance)
+            if (hits[i].distance <= MinHitDistance)
             {
-                if (gameObject && hits[i].collider.tag == "Car")
+                if (hits[i].collider.gameObject != gameObject && hits[i].collider.tag == "Car")
                 {
                     speed_ = hits[i].collider.gameObject.GetComponent<CarUpdate>().speed_;
                     if (speed_ > NormalSpeed)
                     {
-                        speed_ = NormalSpeed;
+                        if (isOnMainRoad)
+                        {
+                            speed_ = NormalSpeed;
+                        }
                     }
                 }
                 else
                 {
-                    if (hits[i].collider.gameObject != gameObject && hits[i].collider.tag == "CenterTrafficLight" ||
-                        hits[i].collider.gameObject != gameObject && hits[i].collider.tag == "Obstacle_RoadWorks")
+                    if (hits[i].collider.gameObject != gameObject)
                     {
-                        if (!forceForward)
+                        if (hits[i].collider.tag == "CenterTrafficLight")
                         {
-                            speed_ = 0;
+                            if (!forceForward)
+                            {
+                                speed_ = 0;
+                            }
                         }
                     }
                 }
@@ -147,14 +155,33 @@ public class CarUpdate : MonoBehaviour
         {
 
         }
-        if(other.tag == "Obstacle_SpeedBump")
+        if (other.tag == "Obstacle_SpeedBump")
         {
+            isOnMainRoad = false;
 
+            //slow down car speed by some amount for some time
+            StartCoroutine(SlowDown());
         }
         if (other.tag == "Obstacle_WomanCrossing")
         {
-
+            StartCoroutine(WomanCrossing());
         }
+    }
+
+    IEnumerator WomanCrossing()
+    {
+        speed_ = 0;
+
+        yield return new WaitForSeconds(2.0f);
+    }
+
+    IEnumerator SlowDown()
+    {
+        speed_ = 4;
+        Debug.Log("Start Slow Down");
+        yield return new WaitForSecondsRealtime(3.5f);
+        Debug.Log("Stop Slow Down");
+        speed_ = NormalSpeed;
     }
 
     IEnumerator CarCrashed()

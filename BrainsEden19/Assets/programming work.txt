@@ -7,7 +7,6 @@ Object spawning, oil patches, road blocks
 obstacle feedback, when a car hits an oil slick car spins out of control and crashes
 Collision between cars when hit DONE
 
-
 Score system (when car leaves road on your square add score) DONE
 
 UI main menu 

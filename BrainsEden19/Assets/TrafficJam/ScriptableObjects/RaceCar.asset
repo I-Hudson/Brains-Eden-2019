@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 358d4c71c8d0e4547b0a34872b5766b2, type: 3}
   m_Name: RaceCar
   m_EditorClassIdentifier: 
-  Model: {fileID: 2782068901828834714, guid: 3eb86a26ae52487488dec5ac5496fb3b, type: 3}
+  Model: {fileID: 2230937252806642810, guid: 054fd5ccccdd1a14082e30e4876beacb, type: 3}
   MaxSpeed: 20
   ControlSpeed: 20
-  MinHitDistance: 2.5
+  MinHitDistance: 7
   Colour: {r: 1, g: 0, b: 0, a: 0}
   Tag: Car
+  TurnedIntoZone: 0
