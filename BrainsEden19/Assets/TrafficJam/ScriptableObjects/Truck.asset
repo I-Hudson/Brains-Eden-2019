@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Truck
   m_EditorClassIdentifier: 
   Model: {fileID: 2335163051360185092, guid: ae83e56a5004abe439e493c852ff3e9a, type: 3}
-  MaxSpeed: 12
-  ControlSpeed: 12
-  MinHitDistance: 10
+  MaxSpeed: 15
+  ControlSpeed: 15
+  MinHitDistance: 15
   Colour: {r: 0, g: 0, b: 0, a: 0}
+  CarType: 2
   Tag: Car
-  TurnedIntoZone: 0

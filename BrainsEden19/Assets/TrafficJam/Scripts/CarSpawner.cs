@@ -111,10 +111,8 @@ public class CarSpawner : MonoBehaviour
                 }
 
                 int randomColour = Random.Range(0, spawnColourUsed.Count);//Random.Range(0, Colours.Length - 1);
-                Debug.Log(randomColour);
                 Color rColour = spawnColourUsed[randomColour];//Colours[randomColour];
                 spawnColourUsed.Remove(rColour);
-                //Debug.Log(rColour);
                 //rColour = CheckColour(line1Colours, rColour);
 
                 line1Colours.Add(rColour);
@@ -188,6 +186,8 @@ public class CarSpawner : MonoBehaviour
         go.GetComponent<CarUpdate>().spawnLocIndex = aSpawnLocIndex;
         go.GetComponent<CarUpdate>().SpawnLocations = SpawnLocations;
         go.GetComponent<CarUpdate>().MinHitDistance = Cars[aRandomCar].MinHitDistance;
+        go.GetComponent<CarUpdate>().CarType = Cars[aRandomCar].CarType;
+
 
         for (int i = 0; i < CarColourKey.Length; i++)
         {

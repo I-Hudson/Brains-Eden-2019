@@ -529,6 +529,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Prefab_CarSpawn
       objectReference: {fileID: 0}
+    - target: {fileID: 3357803284013308122, guid: ab5b3795c2a11d2438b440edde5fcd2e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3357803284013308120, guid: ab5b3795c2a11d2438b440edde5fcd2e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -612,12 +617,12 @@ PrefabInstance:
     - target: {fileID: 3357803284013308123, guid: ab5b3795c2a11d2438b440edde5fcd2e,
         type: 3}
       propertyPath: MinSpawDistance
-      value: 2.5
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3357803284013308123, guid: ab5b3795c2a11d2438b440edde5fcd2e,
         type: 3}
       propertyPath: maxCarCount
-      value: 32
+      value: 16
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab5b3795c2a11d2438b440edde5fcd2e, type: 3}
@@ -632,6 +637,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Prefab_ScoreSystem
+      objectReference: {fileID: 0}
+    - target: {fileID: 4659198337516789308, guid: 81cb42fce5a467a418020e1ee0510474,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4659198337516789310, guid: 81cb42fce5a467a418020e1ee0510474,
         type: 3}
@@ -697,10 +707,35 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5110297982405037960, guid: a0e0a197f94477c489af956a04e42968,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5110297982620385832, guid: a0e0a197f94477c489af956a04e42968,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5110297982713787840, guid: a0e0a197f94477c489af956a04e42968,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5110297983229040451, guid: a0e0a197f94477c489af956a04e42968,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -100
+      objectReference: {fileID: 0}
     - target: {fileID: 5110297983531989604, guid: a0e0a197f94477c489af956a04e42968,
         type: 3}
       propertyPath: m_Name
       value: Preab_SpawnLocations
+      objectReference: {fileID: 0}
+    - target: {fileID: 5110297983531989604, guid: a0e0a197f94477c489af956a04e42968,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5110297983531989611, guid: a0e0a197f94477c489af956a04e42968,
         type: 3}
@@ -757,26 +792,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5110297982713787840, guid: a0e0a197f94477c489af956a04e42968,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 5110297983229040451, guid: a0e0a197f94477c489af956a04e42968,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -100
-      objectReference: {fileID: 0}
-    - target: {fileID: 5110297982620385832, guid: a0e0a197f94477c489af956a04e42968,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 5110297982405037960, guid: a0e0a197f94477c489af956a04e42968,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -100
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a0e0a197f94477c489af956a04e42968, type: 3}
 --- !u!1001 &6253920590084756017
@@ -790,6 +805,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Prefab_Looptriggers
+      objectReference: {fileID: 0}
+    - target: {fileID: 6253920589942285012, guid: 1c4cd1ccc2ba0934da5bfaa97c351a67,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6253920589942285014, guid: 1c4cd1ccc2ba0934da5bfaa97c351a67,
         type: 3}
@@ -879,6 +899,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Prefab_CenterTrafficLight
+      objectReference: {fileID: 0}
+    - target: {fileID: 7275963860354217683, guid: 24864cb0688f6f443a1223cae765fade,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7275963860354217682, guid: 24864cb0688f6f443a1223cae765fade,
         type: 3}

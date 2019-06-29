@@ -7,6 +7,11 @@ public enum CarColour
     Red, Green, Blue, Yellow
 }
 
+public enum CarType
+{
+    Hot_Hatch, Muscle, Truck
+}
+
 public class CarUpdate : MonoBehaviour
 {
     public Transform[] SpawnLocations;
@@ -17,7 +22,11 @@ public class CarUpdate : MonoBehaviour
     public float MinHitDistance;
     public bool isOnMainRoad = true;
 
+    [SerializeField]
+    private Transform rayCastStartPos;
+
     public CarColour CarColour;
+    public CarType CarType;
 
     private bool update = true;
 
@@ -30,6 +39,19 @@ public class CarUpdate : MonoBehaviour
 
     public bool TurnedIntoZone = false;
 
+    private void Start()
+    {
+        int childCount = transform.childCount;
+        for (int i = 0; i < childCount; i++)
+        {
+            if(transform.GetChild(i).name == "rayCastStartPos")
+            {
+                rayCastStartPos = transform.GetChild(i);
+                break;
+            }
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -40,7 +62,7 @@ public class CarUpdate : MonoBehaviour
 
         transform.position += transform.forward * speed_ * Time.deltaTime;
 
-        RaycastHit[] hits = Physics.RaycastAll(transform.position, transform.forward);
+        RaycastHit[] hits = Physics.RaycastAll(rayCastStartPos.position, transform.forward);
         bool hitCar = false;
         for (int i = 0; i < hits.Length; i++)
         {
@@ -48,7 +70,14 @@ public class CarUpdate : MonoBehaviour
             {
                 if (hits[i].collider.gameObject != gameObject && hits[i].collider.tag == "Car")
                 {
+                    Debug.DrawRay(rayCastStartPos.position, transform.forward * hits[i].distance, Color.magenta, 5.0f);
                     speed_ = hits[i].collider.gameObject.GetComponent<CarUpdate>().speed_;
+
+                    if (CarType == CarType.Truck)
+                    {
+                        Debug.Log(hits[i].distance);
+                    }
+
                     if (speed_ > NormalSpeed)
                     {
                         if (isOnMainRoad)
@@ -56,6 +85,7 @@ public class CarUpdate : MonoBehaviour
                             speed_ = NormalSpeed;
                         }
                     }
+                    hitCar = true;
                 }
                 else
                 {
@@ -63,15 +93,18 @@ public class CarUpdate : MonoBehaviour
                     {
                         if (hits[i].collider.tag == "CenterTrafficLight")
                         {
-                            if (!forceForward)
+                            if (hits[i].distance <= 1.0f)
                             {
-                                speed_ = 0;
+                                if (!forceForward)
+                                {
+                                    speed_ = 0;
+                                    hitCar = true;
+                                }
                             }
                         }
                     }
                 }
-                hitCar = true;
-                break;
+
             }
         }
 
@@ -106,6 +139,12 @@ public class CarUpdate : MonoBehaviour
         }
     }
 
+    private void LoopVehicle()
+    {
+        transform.position = new Vector3(SpawnLocations[spawnLocIndex].position.x, transform.position.y, SpawnLocations[spawnLocIndex].position.z);
+        transform.rotation = SpawnLocations[spawnLocIndex].rotation;
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if(other.tag == "LoopTrigger")
@@ -130,8 +169,7 @@ public class CarUpdate : MonoBehaviour
                     spawnLocIndex = 2;
                 }
 
-                transform.position = SpawnLocations[spawnLocIndex].position;
-                transform.rotation = SpawnLocations[spawnLocIndex].rotation;
+                LoopVehicle();
             }
         }
 
@@ -140,6 +178,14 @@ public class CarUpdate : MonoBehaviour
             update = false;
             ScoreSystem.Instance.RemoveScore(CarColour, 1);
             StartCoroutine(CarCrashed());
+        }
+
+        if(other.tag == "CenterTrafficLight")
+        {
+            if (!forceForward)
+            {
+                speed_ = 0;
+            }
         }
 
         if (other.tag == "ForceForward")
