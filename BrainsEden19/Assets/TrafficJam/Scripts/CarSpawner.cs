@@ -173,7 +173,9 @@ public class CarSpawner : MonoBehaviour
 
     private void SpawnCar(int aRandomCar, int aSpawnLocIndex, Color aColor)
     {
-        GameObject go = Instantiate(Cars[aRandomCar].Model, SpawnLocations[aSpawnLocIndex].position,
+        GameObject go = Instantiate(Cars[aRandomCar].Model, new Vector3(SpawnLocations[aSpawnLocIndex].position.x,
+                                                                        Cars[aRandomCar].Model.transform.position.y, 
+                                                                        SpawnLocations[aSpawnLocIndex].position.z),
                     SpawnLocations[aSpawnLocIndex].rotation, transform);
         go.name = Cars[aRandomCar].name;
 
@@ -196,7 +198,7 @@ public class CarSpawner : MonoBehaviour
             }
         }
         go.tag = Cars[aRandomCar].Tag;
-        go.GetComponentInChildren<MeshRenderer>().material.SetColor("_BaseColor", aColor);
+        go.transform.GetChild(0).GetComponent<MeshRenderer>().material.SetColor("Color_891AA065", aColor);
 
         if (aSpawnLocIndex == 0 || aSpawnLocIndex == 1)
         {
