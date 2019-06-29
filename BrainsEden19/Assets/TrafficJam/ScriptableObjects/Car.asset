@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 358d4c71c8d0e4547b0a34872b5766b2, type: 3}
   m_Name: Car
   m_EditorClassIdentifier: 
-  Model: {fileID: 2782068901828834714, guid: 3eb86a26ae52487488dec5ac5496fb3b, type: 3}
+  Model: {fileID: 8850661061018227464, guid: a8333f45175318d449161f4e0d632cf5, type: 3}
   MaxSpeed: 15
   ControlSpeed: 15
   MinHitDistance: 2.5

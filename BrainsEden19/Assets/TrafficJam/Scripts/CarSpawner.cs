@@ -20,6 +20,8 @@ public class CarSpawner : MonoBehaviour
 
     [SerializeField]
     Color[] Colours;
+    [SerializeField]
+    CarColour[] CarColourKey;
 
     [SerializeField]
     private bool spawnCars = true;
@@ -28,6 +30,9 @@ public class CarSpawner : MonoBehaviour
     private float SingleCarDelay;
     [SerializeField]
     private Vector2 MinMaxSpawnTime;
+
+    [SerializeField]
+    private float MinSpawDistance;
 
     [SerializeField]
     private int maxCarCount;
@@ -60,6 +65,11 @@ public class CarSpawner : MonoBehaviour
         {
             spawnCars = true;
         }
+    }
+
+    public void RemoveCar()
+    {
+        carCount -= 1;
     }
 
     IEnumerator SpawnCars()
@@ -127,7 +137,7 @@ public class CarSpawner : MonoBehaviour
 
         for (int i = 0; i < allCars.Length; i++)
         {
-            if(Vector3.Distance(allCars[i].transform.position, aSpawnLoc) < 3.0f)
+            if(Vector3.Distance(allCars[i].transform.position, aSpawnLoc) < MinSpawDistance)
             {
                 return false;
             }
@@ -176,6 +186,15 @@ public class CarSpawner : MonoBehaviour
         go.GetComponent<CarUpdate>().spawnLocIndex = aSpawnLocIndex;
         go.GetComponent<CarUpdate>().SpawnLocations = SpawnLocations;
         go.GetComponent<CarUpdate>().MinHitDistance = Cars[aRandomCar].MinHitDistance;
+
+        for (int i = 0; i < CarColourKey.Length; i++)
+        {
+            if(Colours[i] == aColor)
+            {
+                go.GetComponent<CarUpdate>().CarColour = CarColourKey[i];
+                break;
+            }
+        }
         go.tag = Cars[aRandomCar].Tag;
         go.GetComponentInChildren<MeshRenderer>().material.SetColor("_BaseColor", aColor);
 

@@ -30,13 +30,24 @@ public class CenterTrafficLight : MonoBehaviour
 
     IEnumerator Switch()
     {
+        bool switchHor = true;
         while (true)
         {
-            horizontalLane1.enabled = !horizontalLane1.enabled;
-            horizontalLane1_1.enabled = !horizontalLane1_1.enabled;
+            horizontalLane1.enabled = true;
+            horizontalLane1_1.enabled = true;
 
-            horizontalLane2.enabled = !horizontalLane2.enabled;
-            horizontalLane2_2.enabled = !horizontalLane2_2.enabled;
+            horizontalLane2.enabled = true;
+            horizontalLane2_2.enabled = true;
+
+            yield return new WaitForSeconds(1.5f);
+
+            horizontalLane1.enabled = switchHor;
+            horizontalLane1_1.enabled = switchHor;
+
+            horizontalLane2.enabled = !switchHor;
+            horizontalLane2_2.enabled = !switchHor;
+
+            switchHor = !switchHor;
 
             yield return new WaitForSeconds(5.0f);
         }
