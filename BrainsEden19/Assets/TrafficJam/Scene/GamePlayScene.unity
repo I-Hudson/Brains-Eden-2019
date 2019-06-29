@@ -2540,7 +2540,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 403490177, guid: b45a2bc55505f604b8f532547239b43b, type: 3}
       propertyPath: iPlayerIndex
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2974110506361754430, guid: b45a2bc55505f604b8f532547239b43b,
         type: 3}
@@ -3349,6 +3349,10 @@ PrefabInstance:
       propertyPath: myRoadObstcle
       value: 
       objectReference: {fileID: 1146503140}
+    - target: {fileID: 403490177, guid: b45a2bc55505f604b8f532547239b43b, type: 3}
+      propertyPath: iPlayerIndex
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b45a2bc55505f604b8f532547239b43b, type: 3}
 --- !u!4 &403490172 stripped
@@ -4522,7 +4526,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 403490177, guid: b45a2bc55505f604b8f532547239b43b, type: 3}
       propertyPath: iPlayerIndex
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2974110506361754430, guid: b45a2bc55505f604b8f532547239b43b,
         type: 3}
@@ -6303,7 +6307,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 403490177, guid: b45a2bc55505f604b8f532547239b43b, type: 3}
       propertyPath: iPlayerIndex
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2974110506361754430, guid: b45a2bc55505f604b8f532547239b43b,
         type: 3}
@@ -8411,7 +8415,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 403490177, guid: b45a2bc55505f604b8f532547239b43b, type: 3}
       propertyPath: iPlayerIndex
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2974110506361754430, guid: b45a2bc55505f604b8f532547239b43b,
         type: 3}
@@ -8775,7 +8779,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 403490177, guid: b45a2bc55505f604b8f532547239b43b, type: 3}
       propertyPath: iPlayerIndex
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2974110506361754430, guid: b45a2bc55505f604b8f532547239b43b,
         type: 3}
@@ -11277,7 +11281,7 @@ PrefabInstance:
     - target: {fileID: 4400773458609011729, guid: b45a2bc55505f604b8f532547239b43b,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2646253460369832663, guid: b45a2bc55505f604b8f532547239b43b,
         type: 3}
@@ -11286,7 +11290,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 403490177, guid: b45a2bc55505f604b8f532547239b43b, type: 3}
       propertyPath: iPlayerIndex
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2974110506361754430, guid: b45a2bc55505f604b8f532547239b43b,
         type: 3}
@@ -12555,6 +12559,10 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 403490177, guid: b45a2bc55505f604b8f532547239b43b, type: 3}
+      propertyPath: iPlayerIndex
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2974110506361754430, guid: b45a2bc55505f604b8f532547239b43b,
         type: 3}

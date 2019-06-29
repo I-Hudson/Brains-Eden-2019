@@ -212,16 +212,16 @@ public class PlayerController : MonoBehaviour
         switch (axybButtonIndex)
         {
             case 0:
-                selectedRoad = ObstacleSpawnGreenList[Random.Range(0, ObstacleSpawnGreenList.Count)];
+                selectedRoad = ObstacleSpawnBlueList[Random.Range(0, ObstacleSpawnGreenList.Count)];
                 break;
             case 1:
-                selectedRoad = ObstacleSpawnRedList[Random.Range(0, ObstacleSpawnRedList.Count)];
+                selectedRoad = ObstacleSpawnYellowList[Random.Range(0, ObstacleSpawnRedList.Count)];
                 break;
             case 2:
-                selectedRoad = ObstacleSpawnBlueList[Random.Range(0, ObstacleSpawnBlueList.Count)];
+                selectedRoad = ObstacleSpawnGreenList[Random.Range(0, ObstacleSpawnBlueList.Count)];
                 break;
             case 3:
-                selectedRoad = ObstacleSpawnYellowList[Random.Range(0, ObstacleSpawnYellowList.Count)];
+                selectedRoad = ObstacleSpawnRedList[Random.Range(0, ObstacleSpawnYellowList.Count)];
                 break;
             default:
                 selectedRoad = ObstacleSpawnGreenList[Random.Range(0, ObstacleSpawnGreenList.Count)];

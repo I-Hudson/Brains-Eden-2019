@@ -56,7 +56,7 @@ public class TrafficLight : MonoBehaviour
         redLight.enabled = true;
 
         junctionArrow.sprite = StreightArrow;
-        selectionArrow.SetActive(false);
+        //selectionArrow.SetActive(false);
     }
 
     public void HighLightArea(bool highlighted, int iPlayerIndex)
@@ -83,11 +83,11 @@ public class TrafficLight : MonoBehaviour
             }
             highlightedArea.GetComponent<MeshRenderer>().material = newMat;
 
-            selectionArrow.SetActive(true);
+            //selectionArrow.SetActive(true);
         }
         else
         {
-            selectionArrow.SetActive(false);
+            //selectionArrow.SetActive(false);
             highlightedArea.GetComponent<MeshRenderer>().material = clearMat;
         }
     }
