@@ -38,38 +38,56 @@ public class TrafficLight : MonoBehaviour
     [SerializeField]
     private Light redLight;
 
+    [SerializeField]
+    private SpriteRenderer junctionArrow;
+
+    [SerializeField]
+    private Sprite StreightArrow;
+    [SerializeField]
+    private Sprite LeftArrow;
+
+    [SerializeField]
+    private GameObject selectionArrow;
+
     private void Start()
     {
         greenLight.enabled = false;
         amberLight.enabled = false;
         redLight.enabled = true;
+
+        junctionArrow.sprite = StreightArrow;
+        selectionArrow.SetActive(false);
     }
+
     public void HighLightArea(bool highlighted, int iPlayerIndex)
     {
         if (highlighted)
         {
-            switch(iPlayerIndex)
+            Material newMat = new Material(Shader.Find("HDRP/Lit"));
+            switch (iPlayerIndex)
             {
                 case 0:
-                    whiteMat.color = new Color(0,1,0,1);
+                    newMat.SetColor("_BaseColor", Color.green);
                     break;
                 case 1:
-                    whiteMat.color = new Color(0, 1, 0, 1);
+                    newMat.SetColor("_BaseColor", Color.red);
                     break;
                 case 2:
-                    whiteMat.color = new Color(0, 1, 0, 1);
+                    newMat.SetColor("_BaseColor", Color.blue);
                     break;
                 case 3:
-                    whiteMat.color = new Color(0, 1, 0, 1);
+                    newMat.SetColor("_BaseColor", Color.yellow);
                     break;
                 default:
                     break;
             }
-            
-            highlightedArea.GetComponent<MeshRenderer>().material = whiteMat;
+            highlightedArea.GetComponent<MeshRenderer>().material = newMat;
+
+            selectionArrow.SetActive(true);
         }
         else
         {
+            selectionArrow.SetActive(false);
             highlightedArea.GetComponent<MeshRenderer>().material = clearMat;
         }
     }
@@ -84,31 +102,18 @@ public class TrafficLight : MonoBehaviour
     }
 
 
-    public IEnumerator SetActive()
+    public void SetActive()
     {
         if (!bActive)
         {
             bActive = true;
-
-            amberLight.enabled = false;
-            yield return new WaitForSeconds(0.5f);
-            amberLight.enabled = true;
-            yield return new WaitForSeconds(0.5f);
-            amberLight.enabled = false;
-            yield return new WaitForSeconds(0.5f);
-            amberLight.enabled = true;
-            yield return new WaitForSeconds(0.5f);
-            amberLight.enabled = false;
-            yield return new WaitForSeconds(0.5f);
-            amberLight.enabled = true;
-            yield return new WaitForSeconds(0.5f);
-            amberLight.enabled = false;
-
             greenLight.enabled = true;
-
-            yield return new WaitForSeconds(fMaxActiveTime);
-
+            junctionArrow.sprite = LeftArrow;
+        }
+        else if(bActive)
+        {
             bActive = false;
+            junctionArrow.sprite = StreightArrow;
             greenLight.enabled = false;
             redLight.enabled = true;
         }

@@ -7,3 +7,13 @@ Char Selection Sceen
 only rotate warm sun light DONE 
 Time Counter/ sun dial
 jam splat/speed up
+
+Billboard arrow with ring to show new direction selection
+arrow on the road for junctions
+wider main road
+
+
+
+
+DPad to select obstacle type
+X Y B A To place that obstacle at random in the related button color

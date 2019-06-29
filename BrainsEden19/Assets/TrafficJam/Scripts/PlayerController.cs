@@ -33,15 +33,15 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private int iCurrentObstacleIndex = 0;
 
-    public List<ObstacleSpawn> ObstacleRoadList = new List<ObstacleSpawn>();
+    public List<ObstacleSpawn> ObstacleSpawnGreenList = new List<ObstacleSpawn>();
+    public List<ObstacleSpawn> ObstacleSpawnRedList = new List<ObstacleSpawn>();
+    public List<ObstacleSpawn> ObstacleSpawnBlueList = new List<ObstacleSpawn>();
+    public List<ObstacleSpawn> ObstacleSpawnYellowList = new List<ObstacleSpawn>();
 
     public Obstacles currentObstacle = Obstacles.Speed_Bumps;
 
     [SerializeField]
     private GameObject[] obstaclePrefabs;
-
-    [SerializeField]
-    private int iObstaclePrefabIndex = 0;
 
     public ObstacleSpawn currentObstacleSpawn;
 
@@ -50,6 +50,7 @@ public class PlayerController : MonoBehaviour
         Speed_Bumps,
         RoadWorks,
         Old_Woman,
+        Jam_Spill,
 
         END_OF_ENUM
     }
@@ -69,7 +70,25 @@ public class PlayerController : MonoBehaviour
         GameObject[] listOfAllObstacleSpawn = GameObject.FindGameObjectsWithTag("ObstacleSpawnPoint");
         foreach(GameObject os in listOfAllObstacleSpawn)
         {
-            ObstacleRoadList.Add(os.GetComponent<ObstacleSpawn>());
+           
+            switch(os.GetComponent<ObstacleSpawn>().iPlayerIndex)
+            {
+                case 0:
+                    ObstacleSpawnGreenList.Add(os.GetComponent<ObstacleSpawn>());
+                    break;
+                case 1:
+                    ObstacleSpawnRedList.Add(os.GetComponent<ObstacleSpawn>());
+                    break;
+                case 2:
+                    ObstacleSpawnBlueList.Add(os.GetComponent<ObstacleSpawn>());
+                    break;
+                case 3:
+                    ObstacleSpawnYellowList.Add(os.GetComponent<ObstacleSpawn>());
+                    break;
+                default:
+                    break;
+            }
+            
         }
     }
 
@@ -93,100 +112,64 @@ public class PlayerController : MonoBehaviour
             Debug.Log("joystick " + (iPlayerIndex + 1) + " button 5");
         }
 
-        if (Input.GetKeyDown("joystick " + (iPlayerIndex + 1) + " button 2"))// X Button
+        if (Input.GetKeyDown("joystick " + (iPlayerIndex + 1) + " button 0"))// X Button
         {
-            SwapInteractionMode();
-            Debug.Log("joystick " + (iPlayerIndex + 1) + " button 2");
+            ColorButtonPressed(0);
+            Debug.Log("A button Pressed");
         }
-        else if (Input.GetKeyDown("joystick " + (iPlayerIndex + 1) + " button 0"))// X Button
+        else if (Input.GetKeyDown("joystick " + (iPlayerIndex + 1) + " button 1"))// X Button
         {
-            InteractionButtonPressed();
-            Debug.Log("joystick " + (iPlayerIndex + 1) + " button 0");
+            ColorButtonPressed(1);
+            Debug.Log("A button Pressed");
+        }
+        else if (Input.GetKeyDown("joystick " + (iPlayerIndex + 1) + " button 2"))// X Button
+        {
+            ColorButtonPressed(2);
+            Debug.Log("A button Pressed");
+        }
+        else if (Input.GetKeyDown("joystick " + (iPlayerIndex + 1) + " button 3"))// X Button
+        {
+            ColorButtonPressed(3);
+            Debug.Log("A button Pressed");
+        }
 
+        if (Input.GetAxis("DPadX" + (iPlayerIndex + 1)) >= 0.1)// X Button
+        {
+            Debug.Log("DPad Right");
+            SwitchObstacleType(0);
         }
+        else if (Input.GetAxis("DPadX" + (iPlayerIndex + 1)) <= 0.1)// X Button
+        {
+            Debug.Log("DPad Left");
+            SwitchObstacleType(1);
+        }
+        else if (Input.GetAxis("DPadY" + (iPlayerIndex + 1)) >= 0.1)// X Button
+        {
+            Debug.Log("DPad Up");
+            SwitchObstacleType(2);
+        }
+        else if (Input.GetAxis("DPadY" + (iPlayerIndex + 1)) <= 0.1)// X Button
+        {
+            Debug.Log("DPad Down");
+            SwitchObstacleType(3);
+        }
+
     }
 
     //called when either left or right joystick bumper pressed, 0 = left, 1 = right
     private void JoystickBumperPressed(int a_iBumperIndex)
     {
-        if (interactionMode == InteractionMode.Mode_TrafficLight)
+        TrafficLight trafficLight = trafficLightsList[a_iBumperIndex].GetComponent<TrafficLight>();
+        if (trafficLight)
         {
-            if (a_iBumperIndex == 0)//LB Pressed
-            {
-                iCurrentTrafficLightIndex--;
-            }
-            else if (a_iBumperIndex == 1)//RB Pressed
-            {
-                iCurrentTrafficLightIndex++;
-            }
-
-            if (iCurrentTrafficLightIndex < 0)
-            {
-                iCurrentTrafficLightIndex = trafficLightsList.Count - 1;
-            }
-            else if (iCurrentTrafficLightIndex >= trafficLightsList.Count)
-            {
-                iCurrentTrafficLightIndex = 0;
-            }
-        }
-        else if (interactionMode == InteractionMode.Mode_Obstacles)
-        {
-            if (a_iBumperIndex == 0)//LB Pressed
-            {
-                iCurrentObstacleIndex--;
-            }
-            else if (a_iBumperIndex == 1)//RB Pressed
-            {
-                iCurrentObstacleIndex++;
-            }
-
-            if (iCurrentObstacleIndex < 0)
-            {
-                iCurrentObstacleIndex = ObstacleRoadList.Count - 1;
-            }
-            else if (iCurrentObstacleIndex > ObstacleRoadList.Count - 1)
-            {
-                iCurrentObstacleIndex = 0;
-            }
-        }
-
-        ClearDeactiveatedHighlightedAreas();
-    }
-
-    private void ClearDeactiveatedHighlightedAreas()
-    {
-        //unHighlight all obstacles
-        for (int i = 0; i < ObstacleRoadList.Count; ++i)
-        {
-            if (i == iCurrentObstacleIndex && interactionMode == InteractionMode.Mode_Obstacles)
-            {
-                ObstacleRoadList[i].HighLightArea(true, iPlayerIndex);
-                ObstacleRoadList[i].highlighted = true;
-                currentObstacleSpawn = ObstacleRoadList[i];
-                //break;
-            }
-            else if(i != iCurrentObstacleIndex || interactionMode != InteractionMode.Mode_Obstacles)
-            {
-                ObstacleRoadList[i].highlighted = false;
-            }
-        }
-        //unHighlight all traffic lights
-        for (int i = 0; i < trafficLightsList.Count; ++i)
-        {
-            if (i != iCurrentTrafficLightIndex || interactionMode != InteractionMode.Mode_TrafficLight)
-            {
-                trafficLightsList[i].GetComponent<TrafficLight>().HighLightArea(false,iPlayerIndex);
-            }
-            else
-            {
-                trafficLightsList[i].GetComponent<TrafficLight>().HighLightArea(true, iPlayerIndex);
-            }
+            trafficLight.SetActive();
+            //GamePad.SetVibration(0, testA, testB);
         }
     }
 
-    private void SwitchObstacleType()
+    private void SwitchObstacleType(int obstacleIndex)
     {
-        switch(iCurrentObstacleIndex)
+        switch(obstacleIndex)
         {
             case 0:
                 currentObstacle = Obstacles.Speed_Bumps;
@@ -197,44 +180,40 @@ public class PlayerController : MonoBehaviour
             case 3:
                 currentObstacle = Obstacles.Old_Woman;
                 break;
+            case 4:
+                currentObstacle = Obstacles.Jam_Spill;
+                break;
             default:
                 break;
         }
     }
 
-    //Changes wether we are swicthing traffic lights or placing obstacles
-    private void SwapInteractionMode()
-    {
-        ClearDeactiveatedHighlightedAreas();
-
-        if (interactionMode == InteractionMode.Mode_TrafficLight)
-        {
-            interactionMode = InteractionMode.Mode_Obstacles;
-        }
-        else
-        {
-            interactionMode = InteractionMode.Mode_TrafficLight;
-        }
-    }
-
     //called when the player pressed the A button
-    private void InteractionButtonPressed()
+    private void ColorButtonPressed(int axybButtonIndex)
     {
-        if (interactionMode == InteractionMode.Mode_TrafficLight)
+        ObstacleSpawn selectedRoad;
+        switch (axybButtonIndex)
         {
-            TrafficLight trafficLight = trafficLightsList[iCurrentTrafficLightIndex].GetComponent<TrafficLight>();
-            if (trafficLight)
-            {
-                trafficLight.StartCoroutine(trafficLight.SetActive());
-            }
+            case 0:
+                selectedRoad = ObstacleSpawnGreenList[Random.Range(0, ObstacleSpawnGreenList.Count)];
+                break;
+            case 1:
+                selectedRoad = ObstacleSpawnRedList[Random.Range(0, ObstacleSpawnRedList.Count)];
+                break;
+            case 2:
+                selectedRoad = ObstacleSpawnBlueList[Random.Range(0, ObstacleSpawnBlueList.Count)];
+                break;
+            case 3:
+                selectedRoad = ObstacleSpawnYellowList[Random.Range(0, ObstacleSpawnYellowList.Count)];
+                break;
+            default:
+                selectedRoad = ObstacleSpawnGreenList[Random.Range(0, ObstacleSpawnGreenList.Count)];
+                break;
         }
-        else if(interactionMode == InteractionMode.Mode_Obstacles)
+        
+        if (selectedRoad)
         {
-            ObstacleSpawn selectedRoad = ObstacleRoadList[iCurrentObstacleIndex];
-            if (selectedRoad)
-            {
-                selectedRoad.StartCoroutine(selectedRoad.SpawnObstacle(obstaclePrefabs[(int)currentObstacle]));
-            }
+            selectedRoad.StartCoroutine(selectedRoad.SpawnObstacle(obstaclePrefabs[(int)currentObstacle]));
         }
     }
 }
