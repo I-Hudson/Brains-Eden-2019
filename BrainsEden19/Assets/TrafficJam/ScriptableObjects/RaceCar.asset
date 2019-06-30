@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: RaceCar
   m_EditorClassIdentifier: 
   Model: {fileID: 2230937252806642810, guid: 054fd5ccccdd1a14082e30e4876beacb, type: 3}
-  MaxSpeed: 75
-  ControlSpeed: 75
+  MaxSpeed: 65
+  ControlSpeed: 65
   MinHitDistance: 7
-  Colour: {r: 1, g: 0, b: 0, a: 0}
+  Colour: 0
   CarType: 1
   Tag: Car
