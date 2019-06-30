@@ -70,6 +70,21 @@ public class PlayerController : MonoBehaviour
             }
         }
 
+        GameObject tl0 = trafficLightsList[0];
+        GameObject tl1 = trafficLightsList[1];
+        if(tl0.name == "TrafficLightPrefabLB")
+        {
+            trafficLightsList[0] = tl0;
+            trafficLightsList[1] = tl1;
+        }
+        else
+        {
+            trafficLightsList[0] = tl1;
+            trafficLightsList[1] = tl0;
+        }
+        
+
+
         GameObject[] listOfAllObstacleSpawn = GameObject.FindGameObjectsWithTag("ObstacleSpawnPoint");
         foreach(GameObject os in listOfAllObstacleSpawn)
         {

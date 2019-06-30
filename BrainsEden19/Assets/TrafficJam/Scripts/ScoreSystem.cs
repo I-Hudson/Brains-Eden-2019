@@ -64,4 +64,9 @@ public class ScoreSystem : MonoBehaviour
             crashI = 0;
         }
     }
+
+    public int GetScore(CarColour color)
+    {
+        return PlayerScore[color];
+    }
 }
