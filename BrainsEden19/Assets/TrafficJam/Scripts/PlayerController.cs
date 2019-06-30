@@ -58,6 +58,14 @@ public class PlayerController : MonoBehaviour
 
     PlayerIndex playerIndex;
 
+    private ObstaclePreviewSpawn objps;
+
+    private void Start()
+    {
+        objps = GameObject.FindObjectOfType<ObstaclePreviewSpawn>();
+        SwitchObstacleType(0);
+    }
+
     // Use this for initialization
     public void UpdateTrafficLightList()
     {
@@ -156,31 +164,6 @@ public class PlayerController : MonoBehaviour
             ColorButtonPressed(3);
             Debug.Log("A button Pressed");
         }
-
-        if (Input.GetAxis("DPadX" + (iPlayerIndex + 1)) >= 0.1)// X Button
-        {
-           //GamePad.SetVibration((PlayerIndex)iPlayerIndex + 1, 1, 1);
-            Debug.Log("DPad Right");
-            SwitchObstacleType(0);
-        }
-        else if (Input.GetAxis("DPadX" + (iPlayerIndex + 1)) <= -0.1)// X Button
-        {
-            //GamePad.SetVibration((PlayerIndex)iPlayerIndex + 1, 1, 1);
-            Debug.Log("DPad Left");
-            SwitchObstacleType(1);
-        }
-        else if (Input.GetAxis("DPadY" + (iPlayerIndex + 1)) >= 0.1)// X Button
-        {
-            GamePad.SetVibration((PlayerIndex)iPlayerIndex + 1, 1, 1);
-            Debug.Log("DPad Up");
-            SwitchObstacleType(2);
-        }
-        else if (Input.GetAxis("DPadY" + (iPlayerIndex + 1)) <= -0.1)// X Button
-        {
-            GamePad.SetVibration((PlayerIndex)iPlayerIndex + 1, 1, 1);
-            Debug.Log("DPad Down");
-            SwitchObstacleType(3);
-        }
     }
 
     private void FixedUpdate()
@@ -207,10 +190,10 @@ public class PlayerController : MonoBehaviour
                 currentObstacle = Obstacles.Speed_Bumps;
                 break;
             case 2:
-                currentObstacle = Obstacles.RoadWorks;
+                currentObstacle = Obstacles.Speed_Bumps;
                 break;
             case 3:
-                currentObstacle = Obstacles.Old_Woman;
+                currentObstacle = Obstacles.Jam_Spill;
                 break;
             case 4:
                 currentObstacle = Obstacles.Jam_Spill;
@@ -218,11 +201,14 @@ public class PlayerController : MonoBehaviour
             default:
                 break;
         }
+
+        objps.SpawnObstacle(obstaclePrefabs[(int)currentObstacle], iPlayerIndex);
     }
 
     //called when the player pressed the A button
     private void ColorButtonPressed(int axybButtonIndex)
     {
+        
         ObstacleSpawn selectedRoad;
         switch (axybButtonIndex)
         {
@@ -247,5 +233,6 @@ public class PlayerController : MonoBehaviour
         {
             selectedRoad.StartCoroutine(selectedRoad.SpawnObstacle(obstaclePrefabs[(int)currentObstacle], iPlayerIndex));
         }
+        SwitchObstacleType(Random.Range(0, 4));
     }
 }

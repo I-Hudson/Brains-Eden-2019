@@ -6,6 +6,8 @@ public class Obstacle : MonoBehaviour
     [SerializeField]
     private SpriteRenderer ArrowSpriteRenderer;
 
+    public int obstacleType = 0;
+
     public void SetColor(int playerIndex)
     {
         switch(playerIndex)
