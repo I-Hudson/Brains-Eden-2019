@@ -23,6 +23,11 @@ public class CarSpawner : MonoBehaviour
     [SerializeField]
     CarColour[] CarColourKey;
 
+    public int GreenCars;
+    public int YellowCars;
+    public int RedCars;
+    public int BlueCars;
+
     [SerializeField]
     private bool spawnCars = true;
 
@@ -62,7 +67,7 @@ public class CarSpawner : MonoBehaviour
         {
             spawnCars = false;
         }
-        else if(carCount < (maxCarCount - 4))
+        else if(carCount <= (maxCarCount - 4))
         {
             if(spawnCoro != null && !spawnCars)
             {
@@ -78,9 +83,28 @@ public class CarSpawner : MonoBehaviour
         }
     }
 
-    public void RemoveCar()
+    public void RemoveCar(CarUpdate a_update = null)
     {
         carCount -= 1;
+
+        if (a_update != null)
+        {
+            switch (a_update.CarColour)
+            {
+                case CarColour.Blue:
+                    BlueCars -= 1;
+                    break;
+                case CarColour.Green:
+                    GreenCars -= 1;
+                    break;
+                case CarColour.Yellow:
+                    YellowCars -= 1;
+                    break;
+                case CarColour.Red:
+                    RedCars -= 1;
+                    break;
+            }
+        }
     }
 
     private CarColour IntToCarColour(int aInt)
@@ -270,6 +294,22 @@ public class CarSpawner : MonoBehaviour
         go.transform.GetChild(0).GetComponent<MeshRenderer>().material.SetColor("Color_F912405B", Colours[(int)Cars[aRandomCar].Colour]);
         go.transform.GetChild(0).GetComponent<MeshRenderer>().material.SetColor("Color_431FB305", Colours[(int)Cars[aRandomCar].Colour]);
         go.transform.GetChild(0).GetComponent<MeshRenderer>().material.SetColor("Color_7C7BF4A4", Colours[(int)Cars[aRandomCar].Colour]);
+
+        switch(Cars[aRandomCar].Colour)
+        {
+            case CarColour.Blue:
+                BlueCars += 1;
+                break;
+            case CarColour.Green:
+                GreenCars += 1;
+                break;
+            case CarColour.Yellow:
+                YellowCars += 1;
+                break;
+            case CarColour.Red:
+                RedCars += 1;
+                break;
+        }
 
         if (aSpawnLocIndex == 0 || aSpawnLocIndex == 1)
         {

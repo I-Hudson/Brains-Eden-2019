@@ -48,7 +48,7 @@ public class CenterTrafficLight : MonoBehaviour
             while(carsInCenter)
             { 
                 carsInCenter = false;
-                CarUpdate[] cars = FindObjectsOfType<CarUpdate>();
+                GameObject[] cars = GameObject.FindGameObjectsWithTag("Car");
 
                 for (int i = 0; i < cars.Length; i++)
                 {
@@ -62,7 +62,7 @@ public class CenterTrafficLight : MonoBehaviour
                 yield return null;
             }
 
-            yield return new WaitForSeconds(3.0f);
+            yield return new WaitForSeconds(1.5f);
 
             horizontalLane1.enabled = switchHor;
             horizontalLane1_1.enabled = switchHor;
