@@ -35,13 +35,14 @@ public class ObstacleSpawn : MonoBehaviour
         }
     }
    
-    public IEnumerator SpawnObstacle(GameObject obstacle)
+    public IEnumerator SpawnObstacle(GameObject obstacle, int playerIndex)
     {
         if(currentObstacle)
         {
             RemoveObstacle();
         }
         currentObstacle = Instantiate(obstacle, transform.position, transform.rotation);
+        currentObstacle.GetComponent<Obstacle>().SetColor(playerIndex);
 
         yield return new WaitForSeconds(iTimeTillRemoved);
 

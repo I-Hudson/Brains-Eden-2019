@@ -2495,7 +2495,7 @@ PrefabInstance:
     - target: {fileID: 2474060516944595881, guid: b45a2bc55505f604b8f532547239b43b,
         type: 3}
       propertyPath: m_Name
-      value: TrafficLightPrefab (3)
+      value: TrafficLightPrefab
       objectReference: {fileID: 0}
     - target: {fileID: 2474060516944595881, guid: b45a2bc55505f604b8f532547239b43b,
         type: 3}
@@ -2591,6 +2591,56 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1752876054064007801, guid: b45a2bc55505f604b8f532547239b43b,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1752876054064007801, guid: b45a2bc55505f604b8f532547239b43b,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.00000044703484
+      objectReference: {fileID: 0}
+    - target: {fileID: 1752876054064007801, guid: b45a2bc55505f604b8f532547239b43b,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7071071
+      objectReference: {fileID: 0}
+    - target: {fileID: 1752876054064007801, guid: b45a2bc55505f604b8f532547239b43b,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.00000017881393
+      objectReference: {fileID: 0}
+    - target: {fileID: 1752876054064007801, guid: b45a2bc55505f604b8f532547239b43b,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.70710653
+      objectReference: {fileID: 0}
+    - target: {fileID: 1752876054064007801, guid: b45a2bc55505f604b8f532547239b43b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.00000022351742
+      objectReference: {fileID: 0}
+    - target: {fileID: 1752876054064007801, guid: b45a2bc55505f604b8f532547239b43b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.3500006
+      objectReference: {fileID: 0}
+    - target: {fileID: 1752876054064007801, guid: b45a2bc55505f604b8f532547239b43b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -270
+      objectReference: {fileID: 0}
+    - target: {fileID: 1752876054064007801, guid: b45a2bc55505f604b8f532547239b43b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8635351649291515859, guid: b45a2bc55505f604b8f532547239b43b,
+        type: 3}
+      propertyPath: m_Text
+      value: LB
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b45a2bc55505f604b8f532547239b43b, type: 3}
 --- !u!4 &251995379 stripped
@@ -2648,7 +2698,7 @@ MonoBehaviour:
   greenLight: {fileID: 251995380}
   amberLight: {fileID: 251995381}
   redLight: {fileID: 251995382}
-  junctionArrow: {fileID: 0}
+  junctionArrow: {fileID: 1177079150}
   StreightArrow: {fileID: 0}
   LeftArrow: {fileID: 0}
   selectionArrow: {fileID: 0}
@@ -2976,6 +3026,12 @@ MonoBehaviour:
   clearMat: {fileID: 2100000, guid: b88a3941c37d7964d977acb9916c755f, type: 2}
   whiteMat: {fileID: 2100000, guid: 38b93c8556e03144da336e16457b0142, type: 2}
   highlighted: 0
+--- !u!212 &354560469 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 1174245003, guid: b45a2bc55505f604b8f532547239b43b,
+    type: 3}
+  m_PrefabInstance: {fileID: 723867243}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &369523218
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3396,6 +3452,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8635351649291515859, guid: b45a2bc55505f604b8f532547239b43b,
+        type: 3}
+      propertyPath: m_Text
+      value: LB
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b45a2bc55505f604b8f532547239b43b, type: 3}
@@ -4481,7 +4542,7 @@ PrefabInstance:
     - target: {fileID: 2474060516944595881, guid: b45a2bc55505f604b8f532547239b43b,
         type: 3}
       propertyPath: m_Name
-      value: TrafficLightPrefab (8)
+      value: TrafficLightPrefab (1)
       objectReference: {fileID: 0}
     - target: {fileID: 2474060516944595881, guid: b45a2bc55505f604b8f532547239b43b,
         type: 3}
@@ -4577,6 +4638,16 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1752876054064007801, guid: b45a2bc55505f604b8f532547239b43b,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8635351649291515859, guid: b45a2bc55505f604b8f532547239b43b,
+        type: 3}
+      propertyPath: m_Text
+      value: RB
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b45a2bc55505f604b8f532547239b43b, type: 3}
 --- !u!4 &493186814 stripped
@@ -4634,7 +4705,7 @@ MonoBehaviour:
   greenLight: {fileID: 493186815}
   amberLight: {fileID: 493186816}
   redLight: {fileID: 493186817}
-  junctionArrow: {fileID: 0}
+  junctionArrow: {fileID: 676096836}
   StreightArrow: {fileID: 0}
   LeftArrow: {fileID: 0}
   selectionArrow: {fileID: 0}
@@ -5429,6 +5500,12 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!212 &602658281 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 1174245003, guid: b45a2bc55505f604b8f532547239b43b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1762674181}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &617081846
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5780,6 +5857,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5110297983229040451, guid: a0e0a197f94477c489af956a04e42968,
     type: 3}
   m_PrefabInstance: {fileID: 643602294}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &676096836 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 1174245003, guid: b45a2bc55505f604b8f532547239b43b,
+    type: 3}
+  m_PrefabInstance: {fileID: 493186813}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &682565320
 PrefabInstance:
@@ -6390,7 +6473,7 @@ PrefabInstance:
     - target: {fileID: 2474060516944595881, guid: b45a2bc55505f604b8f532547239b43b,
         type: 3}
       propertyPath: m_Name
-      value: TrafficLightPrefab (1)
+      value: TrafficLightPrefab
       objectReference: {fileID: 0}
     - target: {fileID: 2474060516944595881, guid: b45a2bc55505f604b8f532547239b43b,
         type: 3}
@@ -6490,6 +6573,56 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1752876054064007801, guid: b45a2bc55505f604b8f532547239b43b,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1752876054064007801, guid: b45a2bc55505f604b8f532547239b43b,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.00000044703552
+      objectReference: {fileID: 0}
+    - target: {fileID: 1752876054064007801, guid: b45a2bc55505f604b8f532547239b43b,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7071096
+      objectReference: {fileID: 0}
+    - target: {fileID: 1752876054064007801, guid: b45a2bc55505f604b8f532547239b43b,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.00000017881237
+      objectReference: {fileID: 0}
+    - target: {fileID: 1752876054064007801, guid: b45a2bc55505f604b8f532547239b43b,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.707104
+      objectReference: {fileID: 0}
+    - target: {fileID: 1752876054064007801, guid: b45a2bc55505f604b8f532547239b43b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.00000022351742
+      objectReference: {fileID: 0}
+    - target: {fileID: 1752876054064007801, guid: b45a2bc55505f604b8f532547239b43b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.3500006
+      objectReference: {fileID: 0}
+    - target: {fileID: 1752876054064007801, guid: b45a2bc55505f604b8f532547239b43b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -270
+      objectReference: {fileID: 0}
+    - target: {fileID: 1752876054064007801, guid: b45a2bc55505f604b8f532547239b43b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8635351649291515859, guid: b45a2bc55505f604b8f532547239b43b,
+        type: 3}
+      propertyPath: m_Text
+      value: LB
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b45a2bc55505f604b8f532547239b43b, type: 3}
 --- !u!4 &723867244 stripped
@@ -6547,7 +6680,7 @@ MonoBehaviour:
   greenLight: {fileID: 723867245}
   amberLight: {fileID: 723867246}
   redLight: {fileID: 723867247}
-  junctionArrow: {fileID: 0}
+  junctionArrow: {fileID: 354560469}
   StreightArrow: {fileID: 0}
   LeftArrow: {fileID: 0}
   selectionArrow: {fileID: 0}
@@ -8498,7 +8631,7 @@ PrefabInstance:
     - target: {fileID: 2474060516944595881, guid: b45a2bc55505f604b8f532547239b43b,
         type: 3}
       propertyPath: m_Name
-      value: TrafficLightPrefab (2)
+      value: TrafficLightPrefab (1)
       objectReference: {fileID: 0}
     - target: {fileID: 2474060516944595881, guid: b45a2bc55505f604b8f532547239b43b,
         type: 3}
@@ -8598,6 +8731,16 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1752876054064007801, guid: b45a2bc55505f604b8f532547239b43b,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8635351649291515859, guid: b45a2bc55505f604b8f532547239b43b,
+        type: 3}
+      propertyPath: m_Text
+      value: LB
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b45a2bc55505f604b8f532547239b43b, type: 3}
 --- !u!4 &1089988576 stripped
@@ -8655,7 +8798,7 @@ MonoBehaviour:
   greenLight: {fileID: 1089988577}
   amberLight: {fileID: 1089988578}
   redLight: {fileID: 1089988579}
-  junctionArrow: {fileID: 0}
+  junctionArrow: {fileID: 1205726122}
   StreightArrow: {fileID: 0}
   LeftArrow: {fileID: 0}
   selectionArrow: {fileID: 0}
@@ -8866,7 +9009,7 @@ PrefabInstance:
     - target: {fileID: 2474060516944595881, guid: b45a2bc55505f604b8f532547239b43b,
         type: 3}
       propertyPath: m_Name
-      value: TrafficLightPrefab (6)
+      value: TrafficLightPrefab (1)
       objectReference: {fileID: 0}
     - target: {fileID: 2474060516944595881, guid: b45a2bc55505f604b8f532547239b43b,
         type: 3}
@@ -8962,6 +9105,16 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1752876054064007801, guid: b45a2bc55505f604b8f532547239b43b,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8635351649291515859, guid: b45a2bc55505f604b8f532547239b43b,
+        type: 3}
+      propertyPath: m_Text
+      value: RB
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b45a2bc55505f604b8f532547239b43b, type: 3}
 --- !u!4 &1161805477 stripped
@@ -9019,7 +9172,7 @@ MonoBehaviour:
   greenLight: {fileID: 1161805478}
   amberLight: {fileID: 1161805479}
   redLight: {fileID: 1161805480}
-  junctionArrow: {fileID: 0}
+  junctionArrow: {fileID: 1399183078}
   StreightArrow: {fileID: 0}
   LeftArrow: {fileID: 0}
   selectionArrow: {fileID: 0}
@@ -9154,6 +9307,12 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!212 &1177079150 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 1174245003, guid: b45a2bc55505f604b8f532547239b43b,
+    type: 3}
+  m_PrefabInstance: {fileID: 251995378}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1181359687
 GameObject:
   m_ObjectHideFlags: 0
@@ -9459,6 +9618,12 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!212 &1205726122 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 1174245003, guid: b45a2bc55505f604b8f532547239b43b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1089988575}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1209376850
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9892,6 +10057,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 21c75b3f7bba584429e799ebd0854093, type: 3}
+--- !u!212 &1399183078 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 1174245003, guid: b45a2bc55505f604b8f532547239b43b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1161805476}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1405282511
 GameObject:
   m_ObjectHideFlags: 0
@@ -10470,6 +10641,12 @@ MonoBehaviour:
   clearMat: {fileID: 2100000, guid: b88a3941c37d7964d977acb9916c755f, type: 2}
   whiteMat: {fileID: 2100000, guid: 38b93c8556e03144da336e16457b0142, type: 2}
   highlighted: 0
+--- !u!212 &1564317048 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 1174245003, guid: b45a2bc55505f604b8f532547239b43b,
+    type: 3}
+  m_PrefabInstance: {fileID: 2006362441}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1568442477
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11396,7 +11573,7 @@ PrefabInstance:
     - target: {fileID: 2474060516944595881, guid: b45a2bc55505f604b8f532547239b43b,
         type: 3}
       propertyPath: m_Name
-      value: TrafficLightPrefab (9)
+      value: TrafficLightPrefab (1)
       objectReference: {fileID: 0}
     - target: {fileID: 2474060516944595881, guid: b45a2bc55505f604b8f532547239b43b,
         type: 3}
@@ -11507,6 +11684,51 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1752876054064007801, guid: b45a2bc55505f604b8f532547239b43b,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1752876054064007801, guid: b45a2bc55505f604b8f532547239b43b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.3499985
+      objectReference: {fileID: 0}
+    - target: {fileID: 1752876054064007801, guid: b45a2bc55505f604b8f532547239b43b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1752876054064007801, guid: b45a2bc55505f604b8f532547239b43b,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.00000044703484
+      objectReference: {fileID: 0}
+    - target: {fileID: 1752876054064007801, guid: b45a2bc55505f604b8f532547239b43b,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071067
+      objectReference: {fileID: 0}
+    - target: {fileID: 1752876054064007801, guid: b45a2bc55505f604b8f532547239b43b,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.00000017881419
+      objectReference: {fileID: 0}
+    - target: {fileID: 1752876054064007801, guid: b45a2bc55505f604b8f532547239b43b,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.70710695
+      objectReference: {fileID: 0}
+    - target: {fileID: 1752876054064007801, guid: b45a2bc55505f604b8f532547239b43b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90.00001
+      objectReference: {fileID: 0}
+    - target: {fileID: 8635351649291515859, guid: b45a2bc55505f604b8f532547239b43b,
+        type: 3}
+      propertyPath: m_Text
+      value: RB
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b45a2bc55505f604b8f532547239b43b, type: 3}
 --- !u!4 &1762674182 stripped
@@ -11564,9 +11786,11 @@ MonoBehaviour:
   greenLight: {fileID: 1762674183}
   amberLight: {fileID: 1762674184}
   redLight: {fileID: 1762674185}
-  junctionArrow: {fileID: 0}
-  StreightArrow: {fileID: 0}
-  LeftArrow: {fileID: 0}
+  junctionArrow: {fileID: 602658281}
+  StreightArrow: {fileID: -2873774253217156772, guid: 8730b7f12e1c82c46b2a2eca4a7a861e,
+    type: 3}
+  LeftArrow: {fileID: -1789157484137702516, guid: 8730b7f12e1c82c46b2a2eca4a7a861e,
+    type: 3}
   selectionArrow: {fileID: 0}
 --- !u!1 &1771041504
 GameObject:
@@ -12683,7 +12907,7 @@ PrefabInstance:
     - target: {fileID: 2474060516944595881, guid: b45a2bc55505f604b8f532547239b43b,
         type: 3}
       propertyPath: m_Name
-      value: TrafficLightPrefab (5)
+      value: TrafficLightPrefab (1)
       objectReference: {fileID: 0}
     - target: {fileID: 2474060516944595881, guid: b45a2bc55505f604b8f532547239b43b,
         type: 3}
@@ -12779,6 +13003,56 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1752876054064007801, guid: b45a2bc55505f604b8f532547239b43b,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1752876054064007801, guid: b45a2bc55505f604b8f532547239b43b,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.00000044703523
+      objectReference: {fileID: 0}
+    - target: {fileID: 1752876054064007801, guid: b45a2bc55505f604b8f532547239b43b,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.70710725
+      objectReference: {fileID: 0}
+    - target: {fileID: 1752876054064007801, guid: b45a2bc55505f604b8f532547239b43b,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.00000017881413
+      objectReference: {fileID: 0}
+    - target: {fileID: 1752876054064007801, guid: b45a2bc55505f604b8f532547239b43b,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.70710635
+      objectReference: {fileID: 0}
+    - target: {fileID: 1752876054064007801, guid: b45a2bc55505f604b8f532547239b43b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.00000010058284
+      objectReference: {fileID: 0}
+    - target: {fileID: 1752876054064007801, guid: b45a2bc55505f604b8f532547239b43b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.3500004
+      objectReference: {fileID: 0}
+    - target: {fileID: 1752876054064007801, guid: b45a2bc55505f604b8f532547239b43b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90.00001
+      objectReference: {fileID: 0}
+    - target: {fileID: 1752876054064007801, guid: b45a2bc55505f604b8f532547239b43b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8635351649291515859, guid: b45a2bc55505f604b8f532547239b43b,
+        type: 3}
+      propertyPath: m_Text
+      value: RB
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b45a2bc55505f604b8f532547239b43b, type: 3}
 --- !u!4 &2006362442 stripped
@@ -12836,7 +13110,7 @@ MonoBehaviour:
   greenLight: {fileID: 2006362443}
   amberLight: {fileID: 2006362444}
   redLight: {fileID: 2006362445}
-  junctionArrow: {fileID: 0}
+  junctionArrow: {fileID: 1564317048}
   StreightArrow: {fileID: 0}
   LeftArrow: {fileID: 0}
   selectionArrow: {fileID: 0}
