@@ -175,8 +175,13 @@ public class CarUpdate : MonoBehaviour
 
         if (other.tag == "Car")
         {
-            update = false;
-            StartCoroutine(CarCrashed());
+            if (update)
+            {
+                update = false;
+                ScoreSystem.Instance.Crash(transform.position);
+                FindObjectOfType<CarSpawner>().RemoveCar(this);
+                Destroy(gameObject, 5.0f);
+            }
         }
 
         if(other.tag == "CenterTrafficLight")
@@ -256,12 +261,8 @@ public class CarUpdate : MonoBehaviour
 
     IEnumerator CarCrashed()
     {
-        ScoreSystem.Instance.Crash(transform.position);
-        yield return new WaitForSeconds(5.0f);
 
-        FindObjectOfType<CarSpawner>().RemoveCar();
-        Destroy(gameObject);
-
+        yield return null;
         //List<GameObject> sectionTriggerBoxs = new List<GameObject>();
         //sectionTriggerBoxs.Add(GameObject.FindGameObjectWithTag("YellowSectionBox"));
         //sectionTriggerBoxs.Add(GameObject.FindGameObjectWithTag("BlueSectionBox"));

@@ -16,13 +16,13 @@ public class ScoreTrigger : MonoBehaviour
     {
         if(other.tag == "Car" && PlayeColour == other.GetComponent<CarUpdate>().CarColour && other.isTrigger)
         {
-            carSpawner.RemoveCar();
+            carSpawner.RemoveCar(other.GetComponent<CarUpdate>());
             ScoreSystem.Instance.IncermentScore(PlayeColour, 2);
             Destroy(other.gameObject, 3.0f);
         }
         else if(other.tag == "Car" && PlayeColour != other.GetComponent<CarUpdate>().CarColour && other.isTrigger)
         {
-            carSpawner.RemoveCar();
+            carSpawner.RemoveCar(other.GetComponent<CarUpdate>());
             ScoreSystem.Instance.RemoveScore(PlayeColour, 1);
             Destroy(other.gameObject, 3.0f);
         }
