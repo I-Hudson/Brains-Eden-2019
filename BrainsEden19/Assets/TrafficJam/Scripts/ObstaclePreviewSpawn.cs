@@ -23,7 +23,11 @@ public class ObstaclePreviewSpawn : MonoBehaviour
         {
             Destroy(currentObstacle[playerIndex]);
         }
-        currentObstacle[playerIndex] = Instantiate(obstacle, ObstaclePreviewPos[playerIndex].position, transform.rotation);
+
+        if (spawnCoros[playerIndex] == null)
+        {
+            spawnCoros[playerIndex] = StartCoroutine(Timer(obstacle, playerIndex));
+        }
     }
 
     IEnumerator Timer(GameObject obstacle, int playerIndex)
@@ -40,9 +44,3 @@ public class ObstaclePreviewSpawn : MonoBehaviour
         spawnCoros[playerIndex] = null;
     }
 }
-
-
-        if (spawnCoros[playerIndex] == null)
-        {
-            spawnCoros[playerIndex] = StartCoroutine(Timer(obstacle, playerIndex));
-        }
