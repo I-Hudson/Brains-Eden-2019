@@ -36,12 +36,17 @@ public class GameManager : MonoBehaviour
     {
         if(leveltimer <= 0 && !resetting)
         {
-            debugTextUI.text = "Press A to Restart!";
+            debugTextUI.text = "Press A to Restart! \n Press B to Quit";
+
             for (int i = 0; i < 4; i++)
             {
                 if (Input.GetKeyDown("joystick " + (i + 1) + " button 0"))
                 {
                     StartCoroutine(ResetLevel());
+                }
+                if (Input.GetKeyDown("joystick " + (i + 1) + " button 1"))
+                {
+                    SceneManager.LoadScene("MainMenu");
                 }
             }
         }
