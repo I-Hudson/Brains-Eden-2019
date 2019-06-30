@@ -235,10 +235,28 @@ public class CarUpdate : MonoBehaviour
         speed_ = NormalSpeed;
     }
 
+    private CarColour SectionToCarColour(string aSectionString)
+    {
+        switch(aSectionString)
+        {
+            case "YellowSectionBox":
+                return CarColour.Yellow;
+
+            case "BlueSectionBox":
+                return CarColour.Blue;
+
+            case "GreenSectionBox":
+                return CarColour.Green;
+
+            case "RedSectionBox":
+                return CarColour.Red;
+        }
+
+        return CarColour.Blue;
+    }
+
     IEnumerator CarCrashed()
     {
-        yield return new WaitForSeconds(5.0f);
-
         List<GameObject> sectionTriggerBoxs = new List<GameObject>();
         sectionTriggerBoxs.Add(GameObject.FindGameObjectWithTag("YellowSectionBox"));
         sectionTriggerBoxs.Add(GameObject.FindGameObjectWithTag("BlueSectionBox"));
@@ -247,8 +265,14 @@ public class CarUpdate : MonoBehaviour
 
         for (int i = 0; i < sectionTriggerBoxs.Count; i++)
         {
-
+            if (sectionTriggerBoxs[i].GetComponent<Collider>().bounds.Contains(transform.position))
+            {
+                ScoreSystem.Instance.RemoveScore(SectionToCarColour(sectionTriggerBoxs[i].tag), 1);
+                break;
+            }
         }
+
+        yield return new WaitForSeconds(5.0f);
 
         FindObjectOfType<CarSpawner>().RemoveCar();
         Destroy(gameObject);

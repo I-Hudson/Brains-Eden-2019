@@ -47,6 +47,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 383b8d1cb083f4143a245bd3680fe508, type: 2}
   - {fileID: 11400000, guid: 86cdc465228f9324da278dbac13d2d17, type: 2}
   - {fileID: 11400000, guid: 22d6e01600995144bab487ac6538fd85, type: 2}
+  - {fileID: 11400000, guid: b1845b6c3a606044f807d05625a8a91a, type: 2}
   numOfCarsSpawned: 1
   SpawnLocations:
   - {fileID: 0}
@@ -55,16 +56,18 @@ MonoBehaviour:
   - {fileID: 0}
   spawnLocIndex: 2
   Colours:
-  - {r: 0.5652356, g: 1, b: 0, a: 1}
-  - {r: 1, g: 0, b: 0, a: 1}
-  - {r: 1, g: 0.9964248, b: 0, a: 1}
-  - {r: 0, g: 0.7901604, b: 1, a: 1}
+  - {r: 0.78823537, g: 0.28627452, b: 0.25490198, a: 1}
+  - {r: 0.30980393, g: 0.57254905, b: 0.20784315, a: 1}
+  - {r: 0.37647063, g: 0.48235297, b: 0.5411765, a: 1}
+  - {r: 0.8313726, g: 0.5568628, b: 0.19215688, a: 1}
   CarColourKey: 01000000000000000300000002000000
   spawnCars: 1
   SingleCarDelay: 0
-  MinMaxSpawnTime: {x: 2.5, y: 3.5}
-  maxCarCount: 16
+  MinMaxSpawnTime: {x: 1, y: 2}
+  MinSpawDistance: 0
+  maxCarCount: 32
   minCarCount: 8
+  carCount: 0
   initalColours:
   - {r: 1, g: 0.989954, b: 0, a: 1}
   - {r: 0, g: 0.73688674, b: 1, a: 1}

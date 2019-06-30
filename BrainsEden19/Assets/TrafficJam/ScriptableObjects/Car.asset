@@ -15,7 +15,7 @@ MonoBehaviour:
   Model: {fileID: 2335163051360185092, guid: ae83e56a5004abe439e493c852ff3e9a, type: 3}
   MaxSpeed: 70
   ControlSpeed: 70
-  MinHitDistance: 12
+  MinHitDistance: 5
   Colour: {r: 1, g: 0.92332065, b: 0, a: 1}
   CarType: 0
   Tag: Car

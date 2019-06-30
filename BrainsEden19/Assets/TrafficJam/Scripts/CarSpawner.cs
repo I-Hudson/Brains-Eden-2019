@@ -79,6 +79,19 @@ public class CarSpawner : MonoBehaviour
         carCount -= 1;
     }
 
+    private CarColour IntToCarColour(int aInt)
+    {
+        for (int i = 0; i < CarColourKey.Length; i++)
+        {
+            if((int)CarColourKey[i] == aInt)
+            {
+                return CarColourKey[i];
+            }
+        }
+
+        return CarColour.Blue;
+    }
+
     IEnumerator SpawnCars()
     {
         List<int> spawnLocationsUsed = new List<int> { 0, 1, 2, 3 };
@@ -114,17 +127,16 @@ public class CarSpawner : MonoBehaviour
 
                 if (isFirstSpawn && initalIndex < 4)
                 {
-                    SpawnCar(randomCar, randomSpawnLocation, initalColours[i]);
+                    SpawnCar(randomCar, randomSpawnLocation, i);
                 }
 
                 int randomColour = Random.Range(0, spawnColourUsed.Count);
                 randomColour = spawnColourUsed[randomColour];
-                Debug.Log(randomColour);
                 spawnColourUsed.Remove(randomColour);
 
                 Color rColour = Colours[randomColour];
                 line1Colours.Add(rColour);
-                SpawnCar(randomCar, randomSpawnLocation, rColour);
+                SpawnCar(randomCar, randomSpawnLocation, randomColour);
 
                 yield return new WaitForSeconds(SingleCarDelay);
             }
@@ -216,7 +228,7 @@ public class CarSpawner : MonoBehaviour
         return aColour;
     }
 
-    private void SpawnCar(int aRandomCar, int aSpawnLocIndex, Color aColor)
+    private void SpawnCar(int aRandomCar, int aSpawnLocIndex, int aColor)
     {
         GameObject go = Instantiate(Cars[aRandomCar].Model, new Vector3(SpawnLocations[aSpawnLocIndex].position.x,
                                                                         Cars[aRandomCar].Model.transform.position.y, 
@@ -235,17 +247,24 @@ public class CarSpawner : MonoBehaviour
         go.GetComponent<CarUpdate>().MinHitDistance = Cars[aRandomCar].MinHitDistance;
         go.GetComponent<CarUpdate>().CarType = Cars[aRandomCar].CarType;
 
+        int index = 0;
+        //for (int i = 0; i < CarColourKey.Length; i++)
+        //{
+        //    if(CarColourKey[i] == IntToCarColour(aColor))
+        //    {
+        //        go.GetComponent<CarUpdate>().CarColour = CarColourKey[i];
+        //        index = i;
+        //        break;
+        //    }
+        //}
+        go.GetComponent<CarUpdate>().CarColour = (CarColour)aColor;
 
-        for (int i = 0; i < CarColourKey.Length; i++)
-        {
-            if(Colours[i] == aColor)
-            {
-                go.GetComponent<CarUpdate>().CarColour = CarColourKey[i];
-                break;
-            }
-        }
         go.tag = Cars[aRandomCar].Tag;
-        go.transform.GetChild(0).GetComponent<MeshRenderer>().material.SetColor("Color_891AA065", aColor);
+        go.transform.GetChild(0).GetComponent<MeshRenderer>().material.SetColor("Color_891AA065", Colours[aColor]);
+        go.transform.GetChild(0).GetComponent<MeshRenderer>().material.SetColor("Color_F912405B", Colours[aColor]);
+        go.transform.GetChild(0).GetComponent<MeshRenderer>().material.SetColor("Color_431FB305", Colours[aColor]);
+        go.transform.GetChild(0).GetComponent<MeshRenderer>().material.SetColor("Color_7C7BF4A4", Colours[aColor]);
+        Debug.Log(aColor);
 
         if (aSpawnLocIndex == 0 || aSpawnLocIndex == 1)
         {
