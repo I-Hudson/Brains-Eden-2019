@@ -70,7 +70,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.871952, y: 6.390437, z: 11.957608}
+  m_Size: {x: 3.871952, y: 6.390437, z: 11}
   m_Center: {x: -0.022092104, y: 3.2254243, z: 0.08836794}
 --- !u!65 &5819585286627823386
 BoxCollider:
@@ -83,7 +83,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.871952, y: 6.390437, z: 11.957608}
+  m_Size: {x: 3.871952, y: 6.390437, z: 11}
   m_Center: {x: -0.022092104, y: 3.2254243, z: 0.08836794}
 --- !u!54 &2105579531945814764
 Rigidbody:
@@ -488,6 +488,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3024799992973363119}
     m_Modifications:
+    - target: {fileID: 1115432127457336205, guid: 616d3dfe95a9909479d377eb1dec2707,
+        type: 3}
+      propertyPath: m_Name
+      value: SmokeDuskTrail
+      objectReference: {fileID: 0}
     - target: {fileID: 1115432127457336206, guid: 616d3dfe95a9909479d377eb1dec2707,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -552,11 +557,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1115432127457336205, guid: 616d3dfe95a9909479d377eb1dec2707,
-        type: 3}
-      propertyPath: m_Name
-      value: SmokeDuskTrail
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 616d3dfe95a9909479d377eb1dec2707, type: 3}
