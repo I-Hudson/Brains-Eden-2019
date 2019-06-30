@@ -17,9 +17,17 @@ public class ScoreSystem : MonoBehaviour
     int scoreI = 0;
     int scoreD = 0;
 
+    [SerializeField]
+    private AudioCenter ac;
+    [SerializeField]
+    private AudioClip plussound;
+    [SerializeField]
+    private AudioClip minussound;
+
     private void Awake()
     {
-        if(instance == null)
+        ac = GameObject.FindObjectOfType<AudioCenter>();
+        if (instance == null)
         {
             instance = this;
         }
@@ -31,6 +39,7 @@ public class ScoreSystem : MonoBehaviour
 
     public void IncermentScore(CarColour aPlayer, int aScoreToAdd)
     {
+        ac.PlayLayered(plussound);
         if (!PlayerScore.ContainsKey(aPlayer))
         {
             PlayerScore.Add(aPlayer, aScoreToAdd);
@@ -43,6 +52,7 @@ public class ScoreSystem : MonoBehaviour
 
     public void RemoveScore(CarColour aPlayer, int aScoreToRemove)
     {
+        ac.PlayLayered(minussound);
         if (!PlayerScore.ContainsKey(aPlayer))
         {
             PlayerScore.Add(aPlayer, -aScoreToRemove);
