@@ -12,14 +12,10 @@ public class ScoreSystem : MonoBehaviour
     GameObject crashPrefab;
     int crashI = 0;
 
-    [SerializeField]
-    private AudioCenter audioCenter;
-    [SerializeField]
-    private AudioClip plusscore;
-    [SerializeField]
-    private AudioClip minusscore;
 
     private Dictionary<CarColour, int> PlayerScore = new Dictionary<CarColour, int>();
+    int scoreI = 0;
+    int scoreD = 0;
 
     private void Awake()
     {
@@ -31,13 +27,10 @@ public class ScoreSystem : MonoBehaviour
         {
             Destroy(this);
         }
-
-        audioCenter = GameObject.FindObjectOfType<AudioCenter>();
     }
 
     public void IncermentScore(CarColour aPlayer, int aScoreToAdd)
     {
-        audioCenter.PlayLayered(plusscore);
         if (!PlayerScore.ContainsKey(aPlayer))
         {
             PlayerScore.Add(aPlayer, aScoreToAdd);
@@ -50,7 +43,6 @@ public class ScoreSystem : MonoBehaviour
 
     public void RemoveScore(CarColour aPlayer, int aScoreToRemove)
     {
-        audioCenter.PlayLayered(minusscore);
         if (!PlayerScore.ContainsKey(aPlayer))
         {
             PlayerScore.Add(aPlayer, -aScoreToRemove);

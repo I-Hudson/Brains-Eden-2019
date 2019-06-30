@@ -14,15 +14,17 @@ public class ScoreTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "Car" && PlayeColour == other.GetComponent<CarUpdate>().CarColour)
+        if(other.tag == "Car" && PlayeColour == other.GetComponent<CarUpdate>().CarColour && other.isTrigger)
         {
             carSpawner.RemoveCar();
-            ScoreSystem.Instance.IncermentScore(other.gameObject.GetComponent<CarUpdate>().CarColour, 1);
-            Destroy(other.gameObject);
+            ScoreSystem.Instance.IncermentScore(PlayeColour, 2);
+            Destroy(other.gameObject, 3.0f);
         }
-        else if(other.tag == "Car" && PlayeColour != other.GetComponent<CarUpdate>().CarColour)
+        else if(other.tag == "Car" && PlayeColour != other.GetComponent<CarUpdate>().CarColour && other.isTrigger)
         {
-
+            carSpawner.RemoveCar();
+            ScoreSystem.Instance.RemoveScore(PlayeColour, 1);
+            Destroy(other.gameObject, 3.0f);
         }
     }
 }
