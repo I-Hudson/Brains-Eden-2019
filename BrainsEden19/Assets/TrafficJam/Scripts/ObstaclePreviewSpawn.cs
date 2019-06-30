@@ -28,6 +28,8 @@ public class ObstaclePreviewSpawn : MonoBehaviour
         {
             spawnCoros[playerIndex] = StartCoroutine(Timer(obstacle, playerIndex));
         }
+
+        
     }
 
     IEnumerator Timer(GameObject obstacle, int playerIndex)
@@ -42,5 +44,10 @@ public class ObstaclePreviewSpawn : MonoBehaviour
 
         currentObstacle[playerIndex] = Instantiate(obstacle, ObstaclePreviewPos[playerIndex].position, transform.rotation);
         spawnCoros[playerIndex] = null;
+
+        foreach (SpriteRenderer sr in currentObstacle[playerIndex].GetComponentsInChildren<SpriteRenderer>())
+        {
+            sr.enabled = false;
+        }
     }
 }
