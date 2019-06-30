@@ -239,6 +239,17 @@ public class CarUpdate : MonoBehaviour
     {
         yield return new WaitForSeconds(5.0f);
 
+        List<GameObject> sectionTriggerBoxs = new List<GameObject>();
+        sectionTriggerBoxs.Add(GameObject.FindGameObjectWithTag("YellowSectionBox"));
+        sectionTriggerBoxs.Add(GameObject.FindGameObjectWithTag("BlueSectionBox"));
+        sectionTriggerBoxs.Add(GameObject.FindGameObjectWithTag("GreenSectionBox"));
+        sectionTriggerBoxs.Add(GameObject.FindGameObjectWithTag("RedSectionBox"));
+
+        for (int i = 0; i < sectionTriggerBoxs.Count; i++)
+        {
+
+        }
+
         FindObjectOfType<CarSpawner>().RemoveCar();
         Destroy(gameObject);
     }

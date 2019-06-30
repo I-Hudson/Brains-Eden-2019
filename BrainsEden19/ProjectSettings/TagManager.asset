@@ -14,6 +14,10 @@ TagManager:
   - Obstacle_RoadWorks
   - Obstacle_SpeedBump
   - Obstacle_WomanCrossing
+  - YellowSectionBox
+  - BlueSectionBox
+  - GreenSectionBox
+  - RedSectionBox
   layers:
   - Default
   - TransparentFX
