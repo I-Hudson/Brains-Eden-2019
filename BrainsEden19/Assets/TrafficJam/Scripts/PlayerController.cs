@@ -231,8 +231,11 @@ public class PlayerController : MonoBehaviour
         
         if (selectedRoad)
         {
-            selectedRoad.StartCoroutine(selectedRoad.SpawnObstacle(obstaclePrefabs[(int)currentObstacle], iPlayerIndex));
+            if (FindObjectOfType<ObstaclePreviewSpawn>().spawnCoros[iPlayerIndex] == null)
+            {
+                selectedRoad.StartCoroutine(selectedRoad.SpawnObstacle(obstaclePrefabs[(int)currentObstacle], iPlayerIndex));
+            }
+            SwitchObstacleType(Random.Range(0, 4));
         }
-        SwitchObstacleType(Random.Range(0, 4));
     }
 }

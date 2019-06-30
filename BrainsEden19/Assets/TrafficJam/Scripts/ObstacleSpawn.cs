@@ -5,8 +5,7 @@ public class ObstacleSpawn : MonoBehaviour
 {
     public int iPlayerIndex = 0;
 
-    [SerializeField]
-    private float iTimeTillRemoved = 5.0f;
+    private float iTimeTillRemoved = 8.0f;
 
     public PlayerManager playerManager;
     private PlayerController myPlayer;
@@ -44,7 +43,7 @@ public class ObstacleSpawn : MonoBehaviour
         currentObstacle = Instantiate(obstacle, transform.position, transform.rotation);
         currentObstacle.GetComponent<Obstacle>().SetColor(playerIndex);
 
-        yield return new WaitForSeconds(iTimeTillRemoved);
+       yield return new WaitForSeconds(iTimeTillRemoved);
 
         RemoveObstacle();
     }
