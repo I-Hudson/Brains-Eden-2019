@@ -116,6 +116,7 @@ GameObject:
   - component: {fileID: 1089294945127592657}
   - component: {fileID: -8448896299734818347}
   - component: {fileID: 832558449492844782}
+  - component: {fileID: 290327017}
   m_Layer: 0
   m_Name: Obstacle_SpeedBump
   m_TagString: Obstacle_SpeedBump
@@ -222,9 +223,9 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9183985564174583701}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 4185ce07002ca184fb0b8950e69ec3c0, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -233,6 +234,22 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!111 &290327017
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9183985564174583701}
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Animation: {fileID: 0}
+  m_Animations:
+  - {fileID: 0}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1001 &3379121050151150680
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -473,11 +490,6 @@ PrefabInstance:
     - target: {fileID: 3402050029750535969, guid: b4a4c376a482a9649a56e2b53af6aed4,
         type: 3}
       propertyPath: EmissionModule.m_BurstCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3402050029750535969, guid: b4a4c376a482a9649a56e2b53af6aed4,
-        type: 3}
-      propertyPath: EmissionModule.m_Bursts.Array.data[0].time
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3402050029750535969, guid: b4a4c376a482a9649a56e2b53af6aed4,
@@ -880,6 +892,16 @@ PrefabInstance:
       propertyPath: NoiseModule.enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3402050029750535969, guid: b4a4c376a482a9649a56e2b53af6aed4,
+        type: 3}
+      propertyPath: EmissionModule.m_Bursts.Array.data[0].time
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7673282520564119432, guid: b4a4c376a482a9649a56e2b53af6aed4,
+        type: 3}
+      propertyPath: Timer
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b4a4c376a482a9649a56e2b53af6aed4, type: 3}
 --- !u!4 &7995863539132896281 stripped
@@ -895,6 +917,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8370482610282529492}
     m_Modifications:
+    - target: {fileID: -927199367670048503, guid: 7248392d93687e849b192b326a910bd3,
+        type: 3}
+      propertyPath: m_Name
+      value: Speed_Bump
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 7248392d93687e849b192b326a910bd3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -965,16 +992,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.32
       objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: 7248392d93687e849b192b326a910bd3,
-        type: 3}
-      propertyPath: m_Name
-      value: Speed_Bump
-      objectReference: {fileID: 0}
     - target: {fileID: -1504981713932161579, guid: 7248392d93687e849b192b326a910bd3,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: fa2f526a9b0b01646a1590a2e333319c, type: 2}
+      objectReference: {fileID: 2100000, guid: 77938b387a84c4a4ea2c406ac3f063c7, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7248392d93687e849b192b326a910bd3, type: 3}
 --- !u!4 &3256138615267649361 stripped

@@ -3440,6 +3440,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8587131745241192109, guid: d043870ba9ae6eb4f87303a4a5bfb360,
+        type: 3}
+      propertyPath: overideNeededPlayers
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8587131744348099297, guid: d043870ba9ae6eb4f87303a4a5bfb360,
         type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -9007,8 +9012,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debugTextUI: {fileID: 896372928}
   maxResetTimer: 3
-  levelMaxTime: 3
-  leveltimer: 3
+  levelMaxTime: 1.5
+  leveltimer: 1.5
   tempTimer: 0
   resetting: 0
   timerLeftBar: {fileID: 637216682}
@@ -15679,13 +15684,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ObstaclePreviewPos:
   - {fileID: 1383622146}
-  - {fileID: 733468420}
   - {fileID: 522050415}
+  - {fileID: 733468420}
   - {fileID: 400940260}
   previewImages:
   - {fileID: 1497734556}
-  - {fileID: 1166681880}
   - {fileID: 1885029684}
+  - {fileID: 1166681880}
   - {fileID: 100199539}
   timerCooldown: 8
 --- !u!4 &1938227547

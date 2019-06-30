@@ -206,6 +206,7 @@ public class CarUpdate : MonoBehaviour
         {
             isOnMainRoad = false;
 
+            
             //slow down car speed by some amount for some time
             StartCoroutine(SlowDown());
         }
@@ -232,9 +233,9 @@ public class CarUpdate : MonoBehaviour
 
     IEnumerator SlowDown()
     {
-        speed_ *= 0.5f;
+        speed_ = 0.01f;
         Debug.Log("Start Slow Down");
-        yield return new WaitForSecondsRealtime(3.5f);
+        yield return new WaitForSeconds(3.5f);
         Debug.Log("Stop Slow Down");
         speed_ = NormalSpeed;
     }

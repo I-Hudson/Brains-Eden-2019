@@ -43,7 +43,7 @@ public class ObstacleSpawn : MonoBehaviour
         currentObstacle = Instantiate(obstacle, transform.position, transform.rotation);
         currentObstacle.GetComponent<Obstacle>().SetColor(playerIndex);
 
-       yield return new WaitForSeconds(iTimeTillRemoved);
+        yield return new WaitForSeconds(iTimeTillRemoved);
 
         RemoveObstacle();
     }

@@ -70,7 +70,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.871952, y: 6.390437, z: 11}
+  m_Size: {x: 3.871952, y: 6.390437, z: 11.8}
   m_Center: {x: -0.022092104, y: 3.2254243, z: 0.08836794}
 --- !u!65 &5819585286627823386
 BoxCollider:
@@ -83,7 +83,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.871952, y: 6.390437, z: 11}
+  m_Size: {x: 3.871952, y: 6.390437, z: 11.8}
   m_Center: {x: -0.022092104, y: 3.2254243, z: 0.08836794}
 --- !u!54 &2105579531945814764
 Rigidbody:
