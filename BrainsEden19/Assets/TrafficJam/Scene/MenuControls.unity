@@ -1017,7 +1017,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   iPlayerIndex: 0
-  iTimeTillRemoved: 20
   playerManager: {fileID: 0}
   currentObstacle: {fileID: 0}
   highlightedArea: {fileID: 338063410}
@@ -1957,7 +1956,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   iPlayerIndex: 3
-  iTimeTillRemoved: 20
   playerManager: {fileID: 0}
   currentObstacle: {fileID: 0}
   highlightedArea: {fileID: 564171888}
@@ -2260,7 +2258,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   iPlayerIndex: 2
-  iTimeTillRemoved: 20
   playerManager: {fileID: 0}
   currentObstacle: {fileID: 0}
   highlightedArea: {fileID: 209875744}
@@ -2550,7 +2547,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   iPlayerIndex: 3
-  iTimeTillRemoved: 20
   playerManager: {fileID: 0}
   currentObstacle: {fileID: 0}
   highlightedArea: {fileID: 195624695}
@@ -2715,7 +2711,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   iPlayerIndex: 1
-  iTimeTillRemoved: 20
   playerManager: {fileID: 0}
   currentObstacle: {fileID: 0}
   highlightedArea: {fileID: 1471723770}
@@ -3153,7 +3148,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   iPlayerIndex: 0
-  iTimeTillRemoved: 20
   playerManager: {fileID: 0}
   currentObstacle: {fileID: 0}
   highlightedArea: {fileID: 768624029}
@@ -5137,7 +5131,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   iPlayerIndex: 3
-  iTimeTillRemoved: 20
   playerManager: {fileID: 0}
   currentObstacle: {fileID: 0}
   highlightedArea: {fileID: 564003544}
@@ -6452,7 +6445,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   iPlayerIndex: 3
-  iTimeTillRemoved: 20
   playerManager: {fileID: 0}
   currentObstacle: {fileID: 0}
   highlightedArea: {fileID: 656313245}
@@ -7074,7 +7066,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   iPlayerIndex: 2
-  iTimeTillRemoved: 20
   playerManager: {fileID: 0}
   currentObstacle: {fileID: 0}
   highlightedArea: {fileID: 407616683}
@@ -8961,7 +8952,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   iPlayerIndex: 1
-  iTimeTillRemoved: 20
   playerManager: {fileID: 0}
   currentObstacle: {fileID: 0}
   highlightedArea: {fileID: 1106593207}
@@ -9013,7 +9003,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   iPlayerIndex: 2
-  iTimeTillRemoved: 20
   playerManager: {fileID: 0}
   currentObstacle: {fileID: 0}
   highlightedArea: {fileID: 442704549}
@@ -10340,7 +10329,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -765, y: 188}
+  m_AnchoredPosition: {x: -640.8, y: 188}
   m_SizeDelta: {x: 250.4, y: 182.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1068172599
@@ -12014,7 +12003,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1386112581
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12732,7 +12721,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   iPlayerIndex: 0
-  iTimeTillRemoved: 20
   playerManager: {fileID: 0}
   currentObstacle: {fileID: 0}
   highlightedArea: {fileID: 1044896426}
@@ -12784,7 +12772,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   iPlayerIndex: 2
-  iTimeTillRemoved: 20
   playerManager: {fileID: 0}
   currentObstacle: {fileID: 0}
   highlightedArea: {fileID: 1505906146}
@@ -15494,7 +15481,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   iPlayerIndex: 1
-  iTimeTillRemoved: 20
   playerManager: {fileID: 0}
   currentObstacle: {fileID: 0}
   highlightedArea: {fileID: 1709275361}
@@ -16242,7 +16228,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   iPlayerIndex: 1
-  iTimeTillRemoved: 20
   playerManager: {fileID: 0}
   currentObstacle: {fileID: 0}
   highlightedArea: {fileID: 134501797}
@@ -16513,7 +16498,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 159, y: 204.8}
+  m_AnchoredPosition: {x: 9.4, y: 204.8}
   m_SizeDelta: {x: 528.7, y: 60.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1894232831
@@ -17112,7 +17097,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   iPlayerIndex: 0
-  iTimeTillRemoved: 20
   playerManager: {fileID: 0}
   currentObstacle: {fileID: 0}
   highlightedArea: {fileID: 1800903307}
