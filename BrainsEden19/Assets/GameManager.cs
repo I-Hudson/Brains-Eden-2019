@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -23,6 +24,8 @@ public class GameManager : MonoBehaviour
 
     public bool resetting = false;
 
+    [SerializeField]
+    private Image timerLeftBar;
 
     // Start is called before the first frame update
     void Awake()
@@ -54,6 +57,7 @@ public class GameManager : MonoBehaviour
         {
             leveltimer -= Time.deltaTime;
             debugTextUI.text = "Time Remaining: " + Mathf.Round(leveltimer) + "secs";
+            timerLeftBar.transform.localScale = new Vector3((leveltimer / levelMaxTime), 1, 1);
         }
 
         if (Input.GetKeyDown(KeyCode.LeftControl) && Input.GetKeyDown(KeyCode.R))
