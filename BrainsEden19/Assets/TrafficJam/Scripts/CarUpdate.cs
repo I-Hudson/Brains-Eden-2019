@@ -268,6 +268,7 @@ public class CarUpdate : MonoBehaviour
             if (sectionTriggerBoxs[i].GetComponent<Collider>().bounds.Contains(transform.position))
             {
                 ScoreSystem.Instance.RemoveScore(SectionToCarColour(sectionTriggerBoxs[i].tag), 1);
+                ScoreSystem.Instance.Crash(transform.position);
                 break;
             }
         }

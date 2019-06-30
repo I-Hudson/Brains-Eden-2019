@@ -8,6 +8,10 @@ public class ScoreSystem : MonoBehaviour
     public static ScoreSystem Instance
     { get { return instance; } }
 
+    [SerializeField]
+    GameObject crashPrefab;
+    int crashI = 0;
+
     private Dictionary<CarColour, int> PlayerScore = new Dictionary<CarColour, int>();
 
     private void Awake()
@@ -43,6 +47,21 @@ public class ScoreSystem : MonoBehaviour
         else
         {
             PlayerScore[aPlayer] -= aScoreToRemove;
+        }
+    }
+
+    public void Crash(Vector3 aPosition)
+    {
+        if(crashI == 0)
+        {
+            GameObject go = GameObject.Instantiate(crashPrefab);
+            go.transform.position = aPosition;
+
+            crashI += 1;
+        }
+        else if(crashI == 1)
+        {
+            crashI = 0;
         }
     }
 }

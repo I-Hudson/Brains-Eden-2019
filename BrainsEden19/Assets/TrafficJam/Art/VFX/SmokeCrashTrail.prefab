@@ -7,6 +7,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5345970850844928809, guid: 616d3dfe95a9909479d377eb1dec2707,
+        type: 3}
+      propertyPath: Timer
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 1115432127457336205, guid: 616d3dfe95a9909479d377eb1dec2707,
         type: 3}
       propertyPath: m_Name
@@ -85,7 +90,7 @@ PrefabInstance:
     - target: {fileID: 1115432127457336192, guid: 616d3dfe95a9909479d377eb1dec2707,
         type: 3}
       propertyPath: InitialModule.startLifetime.scalar
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1115432127457336192, guid: 616d3dfe95a9909479d377eb1dec2707,
         type: 3}
@@ -116,6 +121,26 @@ PrefabInstance:
         type: 3}
       propertyPath: NoiseModule.strength.scalar
       value: 0.59
+      objectReference: {fileID: 0}
+    - target: {fileID: 1115432127457336192, guid: 616d3dfe95a9909479d377eb1dec2707,
+        type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key0.r
+      value: 0.9811321
+      objectReference: {fileID: 0}
+    - target: {fileID: 1115432127457336192, guid: 616d3dfe95a9909479d377eb1dec2707,
+        type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key0.g
+      value: 0.7954928
+      objectReference: {fileID: 0}
+    - target: {fileID: 1115432127457336192, guid: 616d3dfe95a9909479d377eb1dec2707,
+        type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key0.b
+      value: 0.49519405
+      objectReference: {fileID: 0}
+    - target: {fileID: 1115432127457336192, guid: 616d3dfe95a9909479d377eb1dec2707,
+        type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key0.a
+      value: 0.30980393
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 616d3dfe95a9909479d377eb1dec2707, type: 3}
