@@ -13,6 +13,12 @@ public class ObstaclePreviewSpawn : MonoBehaviour
         {
             Destroy(currentObstacle[playerIndex]);
         }
+
+        foreach (SpriteRenderer ob in obstacle.GetComponentsInChildren<SpriteRenderer>())
+        {
+            ob.enabled = false;
+        }
+        
         currentObstacle[playerIndex] = Instantiate(obstacle, ObstaclePreviewPos[playerIndex].position, transform.rotation);
     }
 }

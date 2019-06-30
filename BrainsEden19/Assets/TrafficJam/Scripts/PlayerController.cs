@@ -193,10 +193,10 @@ public class PlayerController : MonoBehaviour
                 currentObstacle = Obstacles.Speed_Bumps;
                 break;
             case 3:
-                currentObstacle = Obstacles.Jam_Spill;
+                currentObstacle = Obstacles.Speed_Bumps;
                 break;
             case 4:
-                currentObstacle = Obstacles.Jam_Spill;
+                currentObstacle = Obstacles.Speed_Bumps;
                 break;
             default:
                 break;
