@@ -26,4 +26,13 @@ public class Obstacle : MonoBehaviour
                 break;
         }
     }
+
+    private void Update()
+    {
+        Transform lastTransform = ArrowSpriteRenderer.transform;
+        lastTransform.LookAt(Camera.main.transform);
+        Quaternion rot = lastTransform.rotation;
+        rot.eulerAngles = new Vector3(0, rot.eulerAngles.y, 0);
+        ArrowSpriteRenderer.transform.rotation = rot;
+    }
 }

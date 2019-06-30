@@ -34,8 +34,6 @@ public class TrafficLight : MonoBehaviour
     [SerializeField]
     private Light greenLight;
     [SerializeField]
-    private Light amberLight;
-    [SerializeField]
     private Light redLight;
 
     [SerializeField]
@@ -49,10 +47,12 @@ public class TrafficLight : MonoBehaviour
     [SerializeField]
     private GameObject selectionArrow;
 
+    [SerializeField]
+    private TextMesh controlInidcation;
+
     private void Start()
     {
         greenLight.enabled = false;
-        amberLight.enabled = false;
         redLight.enabled = true;
 
         junctionArrow.sprite = StreightArrow;
@@ -110,6 +110,8 @@ public class TrafficLight : MonoBehaviour
             greenLight.enabled = true;
             redLight.enabled = false;
             junctionArrow.sprite = LeftArrow;
+            junctionArrow.color = Color.green;
+            controlInidcation.color = Color.green;
         }
         else if(bActive)
         {
@@ -117,6 +119,8 @@ public class TrafficLight : MonoBehaviour
             junctionArrow.sprite = StreightArrow;
             greenLight.enabled = false;
             redLight.enabled = true;
+            junctionArrow.color = Color.white;
+            controlInidcation.color = Color.white;
         }
     }
 
