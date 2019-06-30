@@ -67,6 +67,10 @@ public class ScoreSystem : MonoBehaviour
 
     public int GetScore(CarColour color)
     {
-        return PlayerScore[color];
+        if (PlayerScore.ContainsKey(color))
+        {
+            return PlayerScore[color];
+        }
+        return 0;
     }
 }
