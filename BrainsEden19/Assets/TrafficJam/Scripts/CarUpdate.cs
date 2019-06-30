@@ -93,7 +93,7 @@ public class CarUpdate : MonoBehaviour
                     {
                         if (hits[i].collider.tag == "CenterTrafficLight")
                         {
-                            if (hits[i].distance <= 1.0f)
+                            if (hits[i].distance <= 5.0f)
                             {
                                 if (!forceForward)
                                 {
@@ -176,7 +176,6 @@ public class CarUpdate : MonoBehaviour
         if (other.tag == "Car")
         {
             update = false;
-            ScoreSystem.Instance.RemoveScore(CarColour, 1);
             StartCoroutine(CarCrashed());
         }
 
@@ -184,7 +183,7 @@ public class CarUpdate : MonoBehaviour
         {
             if (!forceForward)
             {
-                speed_ = 0;
+                //speed_ = 0;
             }
             forceStop = true;
         }
@@ -257,25 +256,28 @@ public class CarUpdate : MonoBehaviour
 
     IEnumerator CarCrashed()
     {
-        List<GameObject> sectionTriggerBoxs = new List<GameObject>();
-        sectionTriggerBoxs.Add(GameObject.FindGameObjectWithTag("YellowSectionBox"));
-        sectionTriggerBoxs.Add(GameObject.FindGameObjectWithTag("BlueSectionBox"));
-        sectionTriggerBoxs.Add(GameObject.FindGameObjectWithTag("GreenSectionBox"));
-        sectionTriggerBoxs.Add(GameObject.FindGameObjectWithTag("RedSectionBox"));
-
-        for (int i = 0; i < sectionTriggerBoxs.Count; i++)
-        {
-            if (sectionTriggerBoxs[i].GetComponent<Collider>().bounds.Contains(transform.position))
-            {
-                ScoreSystem.Instance.RemoveScore(SectionToCarColour(sectionTriggerBoxs[i].tag), 1);
-                ScoreSystem.Instance.Crash(transform.position);
-                break;
-            }
-        }
-
+        ScoreSystem.Instance.Crash(transform.position);
         yield return new WaitForSeconds(5.0f);
 
         FindObjectOfType<CarSpawner>().RemoveCar();
         Destroy(gameObject);
+
+        //List<GameObject> sectionTriggerBoxs = new List<GameObject>();
+        //sectionTriggerBoxs.Add(GameObject.FindGameObjectWithTag("YellowSectionBox"));
+        //sectionTriggerBoxs.Add(GameObject.FindGameObjectWithTag("BlueSectionBox"));
+        //sectionTriggerBoxs.Add(GameObject.FindGameObjectWithTag("GreenSectionBox"));
+        //sectionTriggerBoxs.Add(GameObject.FindGameObjectWithTag("RedSectionBox"));
+
+        //for (int i = 0; i < sectionTriggerBoxs.Count; i++)
+        //{
+        //    if (sectionTriggerBoxs[i].GetComponent<Collider>().bounds.Contains(transform.position))
+        //    {
+        //        ScoreSystem.Instance.RemoveScore(SectionToCarColour(sectionTriggerBoxs[i].tag), 1);
+        //        
+        //        break;
+        //    }
+        //}
+
+        //yield return new WaitForSeconds(5.0f);
     }
 }

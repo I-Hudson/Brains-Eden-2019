@@ -62,14 +62,18 @@ public class CarSpawner : MonoBehaviour
         {
             spawnCars = false;
         }
-        else if(carCount < minCarCount)
+        else if(carCount < (maxCarCount - 4))
         {
+            if(spawnCoro != null && !spawnCars)
+            {
+                StopCoroutine(spawnCoro);
+                spawnCoro = null;
+            }
             spawnCars = true;
         }
 
         if (spawnCoro == null && spawnCars)
         {
-            StopCoroutine(spawnCoro);
             spawnCoro = StartCoroutine(SpawnCars());
         }
     }
@@ -100,11 +104,11 @@ public class CarSpawner : MonoBehaviour
 
         while (spawnCars)
         {
-            if(spawnLocationsUsed.Count == 0)
+            if (spawnLocationsUsed.Count == 0)
             {
                 spawnLocationsUsed = new List<int> { 0, 1, 2, 3 };
             }
-            if(spawnColourUsed.Count == 0)
+            if (spawnColourUsed.Count == 0)
             {
                 spawnColourUsed = new List<int> { 0, 1, 2, 3 };
             }
@@ -116,7 +120,7 @@ public class CarSpawner : MonoBehaviour
             randomSpawnLocation = spawnLocationsUsed[randomSpawnLocation];
             spawnLocationsUsed.Remove(randomSpawnLocation);
 
-            if(!CheckIfSpawnIsPossible(SpawnLocations[randomSpawnLocation].position))
+            if (!CheckIfSpawnIsPossible(SpawnLocations[randomSpawnLocation].position))
             {
                 yield return new WaitForSeconds(Random.Range(3.0f, 3.5f));
             }

@@ -12,7 +12,10 @@ public class ScoreSystem : MonoBehaviour
     GameObject crashPrefab;
     int crashI = 0;
 
+
     private Dictionary<CarColour, int> PlayerScore = new Dictionary<CarColour, int>();
+    int scoreI = 0;
+    int scoreD = 0;
 
     private void Awake()
     {
@@ -28,7 +31,7 @@ public class ScoreSystem : MonoBehaviour
 
     public void IncermentScore(CarColour aPlayer, int aScoreToAdd)
     {
-        if(!PlayerScore.ContainsKey(aPlayer))
+        if (!PlayerScore.ContainsKey(aPlayer))
         {
             PlayerScore.Add(aPlayer, aScoreToAdd);
         }
