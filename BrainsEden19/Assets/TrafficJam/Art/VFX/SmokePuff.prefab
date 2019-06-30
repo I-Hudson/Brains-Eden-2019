@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 1115432127457336205, guid: 616d3dfe95a9909479d377eb1dec2707,
         type: 3}
       propertyPath: m_Name
-      value: SmokeDuskTrail
+      value: SmokePuff
       objectReference: {fileID: 0}
     - target: {fileID: 1115432127457336206, guid: 616d3dfe95a9909479d377eb1dec2707,
         type: 3}
