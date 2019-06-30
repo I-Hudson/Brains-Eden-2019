@@ -232,7 +232,7 @@ public class CarUpdate : MonoBehaviour
 
     IEnumerator SlowDown()
     {
-        speed_ = 4;
+        speed_ *= 0.5f;
         Debug.Log("Start Slow Down");
         yield return new WaitForSecondsRealtime(3.5f);
         Debug.Log("Stop Slow Down");

@@ -13,6 +13,6 @@ public class AudioCenter : MonoBehaviour
     }
     public void PlayLayered(AudioClip clip)
     {
-        thisaudiosource.PlayOneShot(clip);
+        thisaudiosource.PlayOneShot(clip,0.5f);
     }
 }
