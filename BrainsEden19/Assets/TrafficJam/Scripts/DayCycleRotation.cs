@@ -21,8 +21,8 @@ public class DayCycleRotation : MonoBehaviour
 
     private void Start()
     {
-        gm = GameObject.FindObjectOfType<GameManager>();
-        rotationalSpeed = 180.0f / (gm.leveltimer);
+        //gm = GameObject.FindObjectOfType<GameManager>();
+        //rotationalSpeed = 180.0f / (gm.leveltimer);
     }
     // Update is called once per frame
     void Update()

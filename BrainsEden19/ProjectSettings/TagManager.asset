@@ -18,6 +18,7 @@ TagManager:
   - BlueSectionBox
   - GreenSectionBox
   - RedSectionBox
+  - AudioSource
   layers:
   - Default
   - TransparentFX
