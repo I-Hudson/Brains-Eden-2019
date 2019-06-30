@@ -9,7 +9,7 @@ public class Car : ScriptableObject
     public float MaxSpeed;
     public float ControlSpeed;
     public float MinHitDistance;
-    public Color Colour;
+    public CarColour Colour;
     public CarType CarType;
     public string Tag;
     
